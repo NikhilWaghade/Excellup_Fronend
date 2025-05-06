@@ -1,0 +1,196 @@
+import React from "react";
+import { motion } from "framer-motion";
+
+// Replace with your actual team images or URLs
+const teamMembers = [
+  {
+    name: "Amit Sharma",
+    role: "Founder & Lead Instructor",
+    bio: "Amit has 10+ years of experience in software development and has mentored over 500 students.",
+    img: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Neha Verma",
+    role: "Full Stack Instructor",
+    bio: "Expert in MERN stack and passionate about teaching modern web development.",
+    img: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Ravi Singh",
+    role: "Data Structures Mentor",
+    bio: "Loves algorithms and helps students crack coding interviews with DSA mastery.",
+    img: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Priya Chauhan",
+    role: "Frontend Mentor",
+    bio: "Focuses on UI/UX and React.js, guiding students to build elegant interfaces.",
+    img: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Kunal Yadav",
+    role: "Backend Specialist",
+    bio: "Specializes in Node.js and databases, helps students build secure and scalable apps.",
+    img: "https://via.placeholder.com/150",
+  },
+];
+
+export default function About() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-[#1a0033] to-black text-white px-4 py-10 sm:px-8">
+      <div className="max-w-6xl mx-auto">
+        
+        {/* About Excellup Section (Text on left, Logo on right) */}
+        <section className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="flex flex-col justify-center text-center md:text-left">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="text-4xl font-bold mb-4 text-white"
+            >
+              About Excellup Coding Coaching
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, delay: 0.3 }}
+              className="text-lg text-gray-300 leading-relaxed max-w-xl mx-auto"
+            >
+              <strong>Excellup Coding Coaching</strong> is a premier institute focused on developing job-ready coding skills.
+              With real-world training, project-based learning, and expert mentorship, we help students transform their potential into professional success.
+              Whether you're starting from scratch or enhancing your skills, we provide the platform to thrive in the tech world.
+            </motion.p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            className="flex justify-center"
+          >
+            <motion.img
+              src="src/assets/Images/Excellup(logo).jpg"
+              alt="Excellup Logo"
+              className="rounded-3xl shadow-2xl w-full max-w-md md:max-w-lg"
+              animate={{ y: [0, -20, 0] }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut",
+              }}
+            />
+          </motion.div>
+        </section>
+
+        {/* Community Image Section with Hover and Animation */}
+        <section className="mb-16">
+  <div className="flex justify-center items-center py-20">
+    <motion.img
+      src="https://images.unsplash.com/photo-1734519654307-ceb306e4073a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRlYW0lMjBsb29rJTIwYWxsJTIwbWVtYmUlMjBmYWNlJTIwaW1hZ2V8ZW58MHx8MHx8fDA%3D" // Replace with your community image
+      alt="Excellup Coding Community"
+      className="rounded-xl shadow-2xl w-full max-w-4xl object-cover cursor-pointer"
+      animate={{ y: [0, -15, 0] }} // 👈 automatic up and down
+      transition={{
+        duration: 2,
+        repeat: Infinity,
+        repeatType: "loop",
+        ease: "easeInOut",
+      }}
+      whileHover={{ scale: 1.05 }} // 👈 Hover scale effect
+    />
+  </div>
+       </section>
+
+       {/* /* Follow Us Section */} 
+<motion.div
+ animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  className="w-full mt-5 text-center "
+>
+  <h2 className="text-white text-2xl md:text-3xl font-bold mb-8">
+    Follow Us <span className="inline-block">🚀</span>
+  </h2>
+  <div className="flex justify-center gap-10 md:gap-20 flex-wrap">
+    {[
+      {
+        name: "YouTube",
+        src: "https://img.icons8.com/3d-fluency/94/youtube-play.png",
+        link: "https://youtube.com",
+      },
+      {
+        name: "LinkedIn",
+        src: "https://img.icons8.com/3d-fluency/94/linkedin.png",
+        link: "https://linkedin.com",
+      },
+      {
+        name: "Instagram",
+        src: "https://img.icons8.com/3d-fluency/94/instagram-new.png",
+        link: "https://instagram.com",
+      },
+      {
+        name: "WhatsApp",
+        src: "https://img.icons8.com/3d-fluency/94/whatsapp.png",
+        link: "https://wa.me/",
+      },
+    ].map((icon, index) => (
+      <motion.a
+        key={icon.name}
+        href={icon.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-16 h-16"
+        animate={{ y: [0, -10, 0] }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: "easeInOut",
+          delay: index * 0.2,
+        }}
+        whileHover={{ scale: 1.2 }}
+      >
+        <img
+          src={icon.src}
+          alt={icon.name}
+          className="w-full h-full"
+        />
+      </motion.a>
+    ))}
+  </div>
+</motion.div>
+
+        {/* Team Section */}
+        <section>
+          <h2 className="text-3xl font-semibold mb-16 mt-16 text-center text-white">Meet Our Team</h2>
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            {teamMembers.map((member, index) => (
+              <motion.div
+                key={index}
+                className="bg-white/10 backdrop-blur-md rounded-2xl shadow-xl p-6 text-center transition-all hover:shadow-yellow-500/30 hover:ring-2 hover:ring-yellow-400"
+                animate={{ y: [0, -15, 0] }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "easeInOut",
+                  delay: index * 0.3,
+                }}
+              >
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-white"
+                />
+                <h3 className="text-xl font-semibold text-white">{member.name}</h3>
+                <p className="text-indigo-300">{member.role}</p>
+                <p className="text-sm text-gray-300 mt-2">{member.bio}</p>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}
