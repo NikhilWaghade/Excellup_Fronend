@@ -5,17 +5,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className=" bg-gradient-to-br from-black via-[#1a0033] to-black text-white p-4">
+    <nav className=" bg-gradient-to-br from-black via-[#1a0033] to-black text-white ">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
 
         {/* Logo */}
- 
-
 <div className="flex items-center flex-shrink-0">
   <Link to="/">
     <img
-      className="w-32 h-auto"
-      src="src\assets\Images\Excellup(logo).jpg" 
+      className="w-32 h-28"
+      src="src\assets\Images\logobgremove.png" 
       alt="Excellup Logo"
     />
   </Link>

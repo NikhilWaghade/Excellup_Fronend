@@ -69,7 +69,7 @@ export default function HomePage() {
     className="flex justify-center px-4 md:px-0 "
   >
     <motion.img
-      src="src\assets\Images\Excellup(logo).jpg"
+      src="src\assets\Images\logobgremove.png"
       alt="Coding Students"
       className="rounded-3xl shadow-2xl w-full max-w-md md:max-w-lg"
       animate={{ y: [0, -20, 0] }}

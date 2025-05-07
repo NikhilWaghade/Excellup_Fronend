@@ -22,9 +22,9 @@ const Footer = () => {
         <div>
           <div className="flex items-center gap-2 mb-4">
             <img
-              src="src\assets\Images\Excellup(logo).jpg"
+              src="src\assets\Images\logobgremove.png"
               alt="logo"
-              className="w-10 h-10"
+              className="w-24 h-24"
             />
             <span className="text-gray-300">
               Let's connect with our socials
