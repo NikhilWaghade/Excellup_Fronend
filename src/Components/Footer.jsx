@@ -26,13 +26,13 @@ const Footer = () => {
               alt="logo"
               className="w-24 h-24"
             />
-            <span className="text-gray-300 dark:text-gray-800">
+            <span className="text-white ">
               Let's connect with our socials
             </span>
           </div>
-          <div className="flex gap-4 text-xl text-white dark:text-black">
+          <div className="flex gap-4 text-xl text-white ">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/excellup_?igsh=YWw0MzhzbHpkaW1p"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -40,7 +40,7 @@ const Footer = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/excellup-hub-393700360?"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -56,7 +56,7 @@ const Footer = () => {
               <FaDiscord />
             </a>
             <a
-              href="https://youtube.com"
+              href="https://youtube.com/@excellup_hub?si=HxFhFR3Dr6ql5Tzd"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
@@ -76,8 +76,8 @@ const Footer = () => {
 
         {/* Company Links */}
         <div>
-          <h4 className="font-semibold text-white dark:text-black mb-3">COMPANY</h4>
-          <ul className="space-y-2 text-gray-300 dark:text-gray-800">
+          <h4 className="font-semibold text-white  mb-3">COMPANY</h4>
+          <ul className="space-y-2 text-white ">
             <li>
               <a href="about">About Us</a>
             </li>
@@ -101,8 +101,8 @@ const Footer = () => {
 
         {/* Community Links */}
         <div>
-          <h4 className="font-semibold text-white dark:text-black mb-3">COMMUNITY</h4>
-          <ul className="space-y-2 text-gray-300 dark:text-gray-800">
+          <h4 className="font-semibold text-white  mb-3">COMMUNITY</h4>
+          <ul className="space-y-2  text-gray-300 ">
             <li>
               <a href="#">Inertia</a>
             </li>
@@ -114,8 +114,8 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div>
-          <h4 className="font-semibold text-white dark:text-black mb-3">Get In Touch</h4>
-          <ul className="space-y-2 text-gray-300 dark:text-gray-800 text-sm">
+          <h4 className="font-semibold text-white mb-3">Get In Touch</h4>
+          <ul className="space-y-2 text-gray-300 text-lg">
             <li>+91 6263911619</li>
             <li>+91 1234567890</li>
             <li>excellup.hub@.com</li>
@@ -130,10 +130,10 @@ const Footer = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1.2 }}
-        className="border-t border-gray-700 dark:border-gray-800 mt-10 pt-4 text-center text-sm text-gray-400 dark:text-gray-300"
+        className="border-t  mt-10 pt-4 text-center text-sm text-gray-400 dark:text-gray-300"
       >
-        <p className="dark:text-black text-lg">Copyright © 2025 Excellup Pvt. Ltd.</p>
-        <p className="dark:text-black text-lg">All Rights Reserved.</p>
+        <p className="dark:text-white text-lg">Copyright © 2025 Excellup Pvt. Ltd.</p>
+        <p className="dark:text-white text-lg">All Rights Reserved.</p>
       </motion.div>
     </footer>
   );

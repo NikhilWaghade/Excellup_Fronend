@@ -173,17 +173,17 @@ export default function HomePage() {
             {
               name: "YouTube",
               src: "https://img.icons8.com/3d-fluency/94/youtube-play.png",
-              link: "https://youtube.com",
+              link: "https://youtube.com/@excellup_hub?si=HxFhFR3Dr6ql5Tzd",
             },
             {
               name: "LinkedIn",
               src: "https://img.icons8.com/3d-fluency/94/linkedin.png",
-              link: "https://linkedin.com",
+              link: "https://www.linkedin.com/in/excellup-hub-393700360/",
             },
             {
               name: "Instagram",
               src: "https://img.icons8.com/3d-fluency/94/instagram-new.png",
-              link: "https://instagram.com",
+              link: "https://www.instagram.com/excellup_?igsh=YWw0MzhzbHpkaW1p",
             },
             {
               name: "WhatsApp",

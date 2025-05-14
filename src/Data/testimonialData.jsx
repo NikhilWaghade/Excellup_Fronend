@@ -55,9 +55,9 @@ export const technologies = [
   { name: "React", icon: <FaReact className="text-cyan-400" /> },
   { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
   { name: "MongoDB", icon: <SiMongodb className="text-green-400" /> },
-  { name: "Express", icon: <SiExpress className="text-gray-200" /> },
+  { name: "Express", icon: <SiExpress className="text-green-400" /> },
   { name: "Tailwind", icon: <SiTailwindcss className="text-teal-400" /> },
-  { name: "GitHub", icon: <FaGithub className="text-white" /> },
+  { name: "GitHub", icon: <FaGithub className="text-gray-950" /> },
 ];
 
 // Features data
