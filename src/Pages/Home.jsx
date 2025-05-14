@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import { testimonials, features, technologies } from "/src/Data/testimonialData.jsx";
+import logo from '../assets/Images/logo.png'
 
 export default function HomePage() {
   const [text] = useTypewriter({
@@ -44,7 +45,7 @@ export default function HomePage() {
 
     <div className="flex flex-wrap gap-4 z-10">
       <Link to="/courses">
-        <button className="bg-[#7a56d6] text-black px-6 py-3 rounded-xl font-semibold hover:bg-yellow-300 transition flex items-center shadow-lg">
+        <button className="bg-[#7a56d6] text-white px-6 py-3 rounded-xl font-semibold hover:bg-yellow-300 transition flex items-center shadow-lg">
           🚀 Start Learning
         </button>
       </Link>
@@ -68,7 +69,7 @@ export default function HomePage() {
     className="flex justify-center"
   >
     <motion.img
-      src="src/assets/Images/Excellup_logo_-removebg-preview.png"
+      src={logo}
       alt="Coding Students"
       className="rounded-3xl w-full max-w-md md:max-w-lg z-0"
       animate={{ y: [0, -20, 0] }}

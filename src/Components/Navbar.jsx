@@ -1,19 +1,20 @@
 import React, { useState } from 'react'; 
 import { Link } from 'react-router-dom';
+import logosvg from '../assets/Images/linear-dark(svg).svg'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-        <nav className="z-50 relative bg-[#7a56d6] via-[#1a0033] text-white  ">
+        <nav className="z-50 relative bg-[#7a56d6] via-[#1a0033] text-white py-2  ">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
 
         {/* Logo */}
 <div className="flex items-center flex-shrink-0">
   <Link to="/">
     <img
-      className="w-32 h-28"
-      src="src\assets\Images\logobgremove.png" 
+      className="w-40 "
+      src={logosvg}
       alt="Excellup Logo"
     />
   </Link>
