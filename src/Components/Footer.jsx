@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#7a56d6] dark:from-gray-500 dark:via-gray-200 dark:to-white text-white px-6 md:px-20 py-10 -mt-[0.99em] dark:bg-black">
+    <footer className="bg-[#7a56d6]  text-white px-6 md:px-20 py-10 -mt-[0.99em] ">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
