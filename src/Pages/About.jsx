@@ -37,17 +37,17 @@ const teamMembers = [
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-[#1a0033] to-black text-white px-4 py-10 sm:px-8">
+    <div className="min-h-screen bg-white from-black via-[#1a0033] to-black text-white px-4 py-10 sm:px-8">
       <div className="max-w-6xl mx-auto">
         
         {/* About Excellup Section (Text on left, Logo on right) */}
-        <section className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <section className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="flex flex-col justify-center text-center md:text-left">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className="text-4xl font-bold mb-4 text-white"
+              className="text-4xl font-bold mb-4 text-[#7a56d6]"
             >
               About Excellup Coding Coaching
             </motion.h1>
@@ -55,7 +55,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.3 }}
-              className="text-lg text-gray-300 leading-relaxed max-w-xl mx-auto"
+              className="text-lg text-black leading-relaxed max-w-xl mx-auto"
             >
               <strong>Excellup Coding Coaching</strong> is a premier institute focused on developing job-ready coding skills.
               With real-world training, project-based learning, and expert mentorship, we help students transform their potential into professional success.
@@ -70,9 +70,9 @@ export default function About() {
             className="flex justify-center"
           >
             <motion.img
-              src="src/assets/Images/Excellup(logo).jpg"
+                src="src\assets\Images\Excellup_logo_-removebg-preview.png"
               alt="Excellup Logo"
-              className="rounded-3xl shadow-2xl w-full max-w-md md:max-w-lg"
+              className="rounded-3xl  w-full max-w-md md:max-w-lg"
               animate={{ y: [0, -20, 0] }}
               transition={{
                 duration: 4,
@@ -109,7 +109,7 @@ export default function About() {
   transition={{ duration: 1 }}
   className="w-full mt-5 text-center "
 >
-  <h2 className="text-white text-2xl md:text-3xl font-bold mb-8">
+  <h2 className="text-[#7a56d6] text-2xl md:text-3xl font-bold mb-8">
     Follow Us <span className="inline-block">🚀</span>
   </h2>
   <div className="flex justify-center gap-10 md:gap-20 flex-wrap">
@@ -163,7 +163,7 @@ export default function About() {
 
         {/* Team Section */}
         <section>
-          <h2 className="text-3xl font-semibold mb-16 mt-16 text-center text-white">Meet Our Team</h2>
+          <h2 className="text-3xl font-bold mb-16 mt-16 text-center text-[#7a56d6]">Meet Our Team</h2>
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {teamMembers.map((member, index) => (
               <motion.div
@@ -181,11 +181,11 @@ export default function About() {
                 <img
                   src={member.img}
                   alt={member.name}
-                  className="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-white"
+                  className="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-[#7a56d6] text-black"
                 />
-                <h3 className="text-xl font-semibold text-white">{member.name}</h3>
-                <p className="text-indigo-300">{member.role}</p>
-                <p className="text-sm text-gray-300 mt-2">{member.bio}</p>
+                <h3 className="text-xl font-semibold text-black">{member.name}</h3>
+                <p className="text-[#7a56d6] text-lg">{member.role}</p>
+                <p className="text-sm text-black mt-2">{member.bio}</p>
               </motion.div>
             ))}
           </div>

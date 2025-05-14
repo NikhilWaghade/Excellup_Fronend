@@ -52,7 +52,7 @@ export default function Contact() {
   }, [showPopup, countdown]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-[#1a0033] to-black text-white px-4 py-16 flex items-center justify-center">
+    <div className="min-h-screen bg-white from-black via-[#1a0033] to-black text-white px-4 py-16 flex items-center justify-center">
       <div className="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
         {/* Contact Info */}
         <motion.div
@@ -61,26 +61,26 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="space-y-6"
         >
-          <h2 className="text-4xl font-bold text-yellow-400 mb-4">Get in Touch</h2>
-          <p className="text-gray-300">
+          <h2 className="text-4xl font-bold text-[#7a56d6] mb-4">Get in Touch</h2>
+          <p className="text-black">
             We’d love to hear from you. Fill out the form or contact us directly below.
           </p>
           <div className="space-y-4">
             <div className="flex items-center gap-4">
-              <FaPhoneAlt className="text-yellow-400 text-xl" />
-              <span>+91 6263911619</span>
+              <FaPhoneAlt className="text-[#7a56d6] text-xl" />
+              <span className="text-black">+91 6263911619</span>
             </div>
             <div className="flex items-center gap-4">
-              <FaPhoneAlt className="text-yellow-400 text-xl" />
-              <span>+91 7999786513</span>
+              <FaPhoneAlt className="text-[#7a56d6] text-xl" />
+              <span className="text-black">+91 7999786513</span>
             </div>
             <div className="flex items-center gap-4">
-              <FaEnvelope className="text-yellow-400 text-xl" />
-              <span>excellup.hub@gmail.com</span>
+              <FaEnvelope className="text-[#7a56d6] text-xl" />
+              <span className="text-black">excellup.hub@gmail.com</span>
             </div>
             <div className="flex items-center gap-4">
-              <FaMapMarkerAlt className="text-yellow-400 text-xl" />
-              <span>Balaghat, Madhya Pradesh, India</span>
+              <FaMapMarkerAlt className="text-[#7a56d6] cla text-xl" />
+              <span className="text-black">Balaghat, Madhya Pradesh, India</span>
             </div>
           </div>
         </motion.div>
@@ -95,38 +95,38 @@ export default function Contact() {
           className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-2xl space-y-6"
         >
           <div>
-            <label className="block text-sm font-semibold text-yellow-300 mb-1">Name</label>
+            <label className="block text-sm font-semibold text-[#7a56d6] mb-1">Name</label>
             <input
               type="text"
               name="user_name"
               required
               placeholder="Your Name"
-              className="w-full p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full p-3 rounded-lg bg-white/20 text-black placeholder-gray-500 outline-none focus:ring-2 focus:ring-yellow-400"
             />
           </div>
           <div>
-            <label className="block text-sm font-semibold text-yellow-300 mb-1">Email</label>
+            <label className="block text-sm font-semibold text-[#7a56d6] mb-1">Email</label>
             <input
               type="email"
               name="user_email"
               required
               placeholder="Your Email"
-              className="w-full p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full p-3 rounded-lg bg-white/20 text-black placeholder-gray-500 outline-none focus:ring-2 focus:ring-yellow-400"
             />
           </div>
           <div>
-            <label className="block text-sm font-semibold text-yellow-300 mb-1">Message</label>
+            <label className="block text-sm font-semibold text-[#7a56d6] mb-1">Message</label>
             <textarea
               name="message"
               required
               placeholder="Your Message"
               rows={5}
-              className="w-full p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full p-3 rounded-lg bg-white/20 text-black placeholder-gray-500 outline-none focus:ring-2 focus:ring-yellow-400"
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-yellow-400 text-black py-3 rounded-lg font-semibold hover:bg-yellow-300 transition shadow-lg"
+            className="w-full bg-[#7a56d6] text-black py-3 rounded-lg font-semibold hover:bg-purple-600 transition shadow-lg"
           >
             Send Message
           </button>

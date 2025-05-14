@@ -8,9 +8,11 @@ import Contact from './Pages/Contact';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import CourseDetail from './Components/CourseComponents/CourseDetail';
+import { DarkModeProvider } from './Context/DarkModeContext';
 
 function App() {
   return (
+     <DarkModeProvider>
     <BrowserRouter>
     <Navbar/>
       <main >
@@ -29,6 +31,7 @@ function App() {
       </main>
       <Footer/>
     </BrowserRouter>
+    </DarkModeProvider>
   );
 }
 

@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-black via-[#1a0033] to-black bg-[length:200%_200%] animate-gradient-x text-white px-6 md:px-20 py-10 -mt-[0.99em]">
+    <footer className="bg-[#7a56d6] from-black via-[#1a0033] to-black dark:from-gray-500 dark:via-gray-200 dark:to-white dark:text-black text-white px-6 md:px-20 py-10 -mt-[0.99em] dark:bg-black">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -22,15 +22,15 @@ const Footer = () => {
         <div>
           <div className="flex items-center gap-2 mb-4">
             <img
-              src="src\assets\Images\logobgremove.png"
+              src="src/assets/Images/logobgremove.png"
               alt="logo"
               className="w-24 h-24"
             />
-            <span className="text-gray-300">
+            <span className="text-gray-300 dark:text-gray-800">
               Let's connect with our socials
             </span>
           </div>
-          <div className="flex gap-4 text-xl text-white">
+          <div className="flex gap-4 text-xl text-white dark:text-black">
             <a
               href="https://instagram.com"
               target="_blank"
@@ -76,8 +76,8 @@ const Footer = () => {
 
         {/* Company Links */}
         <div>
-          <h4 className="font-semibold text-white mb-3">COMPANY</h4>
-          <ul className="space-y-2 text-gray-300">
+          <h4 className="font-semibold text-white dark:text-black mb-3">COMPANY</h4>
+          <ul className="space-y-2 text-gray-300 dark:text-gray-800">
             <li>
               <a href="about">About Us</a>
             </li>
@@ -101,8 +101,8 @@ const Footer = () => {
 
         {/* Community Links */}
         <div>
-          <h4 className="font-semibold text-white mb-3">COMMUNITY</h4>
-          <ul className="space-y-2 text-gray-300">
+          <h4 className="font-semibold text-white dark:text-black mb-3">COMMUNITY</h4>
+          <ul className="space-y-2 text-gray-300 dark:text-gray-800">
             <li>
               <a href="#">Inertia</a>
             </li>
@@ -114,8 +114,8 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div>
-          <h4 className="font-semibold text-white mb-3">Get In Touch</h4>
-          <ul className="space-y-2 text-gray-300 text-sm">
+          <h4 className="font-semibold text-white dark:text-black mb-3">Get In Touch</h4>
+          <ul className="space-y-2 text-gray-300 dark:text-gray-800 text-sm">
             <li>+91 6263911619</li>
             <li>+91 1234567890</li>
             <li>excellup.hub@.com</li>
@@ -130,10 +130,10 @@ const Footer = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1.2 }}
-        className="border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-400"
+        className="border-t border-gray-700 dark:border-gray-800 mt-10 pt-4 text-center text-sm text-gray-400 dark:text-gray-300"
       >
-        <p>Copyright © 2025 Excellup Pvt. Ltd.</p>
-        <p>All Rights Reserved.</p>
+        <p className="dark:text-black text-lg">Copyright © 2025 Excellup Pvt. Ltd.</p>
+        <p className="dark:text-black text-lg">All Rights Reserved.</p>
       </motion.div>
     </footer>
   );

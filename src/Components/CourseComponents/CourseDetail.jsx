@@ -13,7 +13,7 @@ export default function CourseDetail() {
   if (!course) return <div className="text-white p-10">Course not found</div>;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-[#1a0033] to-black text-white px-6 py-16">
+    <div className="min-h-screen bg-white  px-6 py-16">
       <div className="max-w-6xl mx-auto">
         {/* Course Info + Video */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -23,11 +23,11 @@ export default function CourseDetail() {
             transition={{ duration: 1 }}
             className="text-white space-y-6"
           >
-            <h1 className="text-4xl font-bold text-yellow-400">{course.title}</h1>
-            <p className="text-gray-300">{course.description}</p>
+            <h1 className="text-4xl font-bold text-[#7a56d6]">{course.title}</h1>
+            <p className="text-black">{course.description}</p>
             <div className="text-lg font-semibold mb-4">
-              <span className="line-through text-red-500 mr-4">{course.fee}</span>
-              <span className="text-yellow-400">{course.discount}</span>
+              <span className="line-through text-yellow-500 mr-4">{course.fee}</span>
+              <span className="text-red-400">{course.discount}</span>
             </div>
             <div><span className="font-semibold">Duration:</span> {course.duration}</div>
           </motion.div>
@@ -57,7 +57,7 @@ export default function CourseDetail() {
           transition={{ duration: 1 }}
           className="my-16"
         >
-          <h2 className="text-3xl text-yellow-400 font-bold text-center mb-6">Projects</h2>
+          <h2 className="text-3xl text-[#7a56d6] font-bold text-center mb-6">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {course.projects.map((project, idx) => (
               <motion.div
@@ -71,11 +71,12 @@ export default function CourseDetail() {
                   ease: "easeInOut",
                 }}
               >
-                <h3 className="text-2xl font-semibold text-yellow-400 mb-4">
+                <h3 className="text-2xl font-semibold text-[#7a56d6] mb-4">
                   {project.title}
                 </h3>
                 <iframe
-                  width="505"
+                className="md:w-[32.8vw]"
+                  // width="500"
                   height="315"
                   src={project.videoLink}
                   title="Project Video"
@@ -96,7 +97,7 @@ export default function CourseDetail() {
   transition={{ duration: 1 }}
   className="my-16"
 >
-  <h2 className="text-3xl text-yellow-400 font-bold text-center mb-6">
+  <h2 className="text-3xl text-[#7a56d6] font-bold text-center mb-6">
     Course Syllabus
   </h2>
   <div className="space-y-4">
@@ -111,7 +112,7 @@ export default function CourseDetail() {
           onClick={() => toggle(idx)}
         >
           <div className="flex justify-between items-center">
-            <h3 className="font-semibold text-white">
+            <h3 className="font-semibold text-[#7a56d6]">
               Lesson {idx + 1}
             </h3>
             <span className="text-yellow-400">
@@ -123,7 +124,7 @@ export default function CourseDetail() {
             </span>
           </div>
           {open === idx && (
-            <p className="text-gray-300 mt-2">{item}</p>
+            <p className="text-black mt-2">{item}</p>
           )}
         </div>
       );

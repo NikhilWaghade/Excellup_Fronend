@@ -51,7 +51,7 @@ const courses = [
 
 export default function Courses() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-[#1a0033] to-black text-white px-6 py-16">
+    <div className="min-h-screen bg-white from-black via-[#1a0033] to-black text-black px-6 py-16">
       <div className="max-w-7xl mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ export default function Courses() {
           {courses.map((course, index) => (
             <motion.div
               key={index}
-              className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-xl text-center hover:ring-2 hover:ring-yellow-400 transition-all"
+              className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-xl text-center hover:ring-2 hover:ring-[#7a56d6] transition-all"
               animate={{ y: [0, -10, 0] }}
               transition={{
                 duration: 3,
@@ -78,11 +78,11 @@ export default function Courses() {
               whileHover={{ scale: 1.05 }}
             >
               <div className="mb-4">{course.icon}</div>
-              <h3 className="text-xl font-semibold text-white mb-2">{course.title}</h3>
-              <p className="text-gray-300 text-sm mb-4">{course.description}</p>
+              <h3 className="text-xl font-semibold text-[#7a56d6] mb-2">{course.title}</h3>
+              <p className="text-black text-sm mb-4">{course.description}</p>
               <Link
                 to={`/courses/${course.slug}`}
-                className="inline-block mt-2 bg-yellow-400 text-black font-semibold py-1 px-4 rounded hover:bg-yellow-300 transition"
+                className= "  inline-block mt-2 bg-yellow-400 text-black font-semibold py-1 px-4 rounded hover:bg-[#7a56d6] transition"
               >
                 View Details
               </Link>

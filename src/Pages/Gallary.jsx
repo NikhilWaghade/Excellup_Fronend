@@ -40,9 +40,9 @@ export default function Gallery() {
   const [currentIndex, setCurrentIndex] = useState(null);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-[#1a0033] to-black text-white px-4 py-10">
+    <div className="min-h-screen bg-white from-black via-[#1a0033] to-black text-white px-4 py-10">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-yellow-400 mb-10">Gallery</h2>
+        <h2 className="text-4xl font-bold text-center text-[#7a56d6] mb-10">Gallery</h2>
 
         {/* Image Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
