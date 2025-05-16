@@ -100,7 +100,7 @@ export default function HomePage() {
           className="flex gap-12 w-max"
           animate={{ x: ["-100%", "100%"] }}
           transition={{
-            duration: 20,
+            duration: 30,
             repeat: Infinity,
             ease: "linear",
           }}
@@ -108,7 +108,7 @@ export default function HomePage() {
           {[...technologies, ...technologies].map((tech, index) => (
             <div
               key={index}
-              className="w-24 md:w-28 h-28 md:h-32 flex-shrink-0 flex flex-col items-center justify-center text-4xl bg-white rounded-xl shadow-md"
+              className="w-24 md:w-28 h-28 md:h-32 flex-shrink-0 flex flex-col items-center justify-center text-4xl bg-white rounded-xl "
             >
               {tech.icon}
               <span className="text-lg mt-2 text-black text-center">
