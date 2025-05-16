@@ -1,12 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  FaInstagram,
-  FaLinkedinIn,
-  FaDiscord,
-  FaYoutube,
-  FaTwitter,
-} from "react-icons/fa";
+import {FaInstagram,FaLinkedinIn,FaDiscord, FaYoutube,FaTwitter,} from "react-icons/fa";
+import logo from '../assets/Images/logo.png'
 
 const Footer = () => {
   return (
@@ -22,7 +17,7 @@ const Footer = () => {
         <div>
           <div className="flex items-center gap-2 mb-4">
             <img
-              src="src/assets/Images/logobgremove.png"
+              src={logo}
               alt="logo"
               className="w-24 h-24"
             />

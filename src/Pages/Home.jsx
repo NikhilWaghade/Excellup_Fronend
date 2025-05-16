@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 import { useTypewriter } from "react-simple-typewriter";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -20,6 +21,9 @@ export default function HomePage() {
     loop: true,
     delaySpeed: 2000,
   });
+
+  // slider animation
+   
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center bg-white text-black p-6 md:p-12 -mt-20">
@@ -80,42 +84,42 @@ export default function HomePage() {
   
 
       {/* Technologies Icons Section */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, ease: "easeInOut" }}
-        className="w-full mt-16 flex flex-col items-center justify-center gap-6"
-      >
-        <div className="text-black text-2xl md:text-2xl font-bold md:mt-32">
-          Trusted by Leading Technologies Worldwide
-        </div>
+       <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1.2, ease: "easeInOut" }}
+      className="w-full mt-16 flex flex-col items-center justify-center gap-6 overflow-hidden"
+    >
+      <div className="text-black text-2xl md:text-2xl font-bold md:mt-32">
+        Trusted by Leading Technologies Worldwide
+      </div>
 
+      {/* Scrolling Row Container */}
+      <div className="relative w-full overflow-hidden py-6">
         <motion.div
-          className="w-full flex flex-wrap justify-center gap-8 px-4"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
+          className="flex gap-12 w-max"
+          animate={{ x: ["-100%", "100%"] }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear",
+          }}
         >
-          {technologies.map((tech, index) => (
-            <motion.div
+          {[...technologies, ...technologies].map((tech, index) => (
+            <div
               key={index}
-              className="w-24 md:w-28 h-28 md:h-32 flex flex-col items-center justify-center text-4xl pt-4"
-              animate={{ y: [0, -10, 0] }}
-              whileHover={{ scale: 1.1 }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.2,
-                repeat: Infinity,
-                repeatType: "loop",
-                ease: "easeInOut",
-              }}
+              className="w-24 md:w-28 h-28 md:h-32 flex-shrink-0 flex flex-col items-center justify-center text-4xl bg-white rounded-xl shadow-md"
             >
               {tech.icon}
-              <span className="text-lg mt-2 text-black text-center">{tech.name}</span>
-            </motion.div>
+              <span className="text-lg mt-2 text-black text-center">
+                {tech.name}
+              </span>
+            </div>
           ))}
         </motion.div>
-      </motion.div>
+      </div>
+    </motion.div>
+
 
       {/* Why Choose Our Platform Section */}
       <motion.div
