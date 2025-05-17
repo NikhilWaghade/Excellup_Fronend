@@ -383,7 +383,7 @@ const formRef = useRef();
   >
     {/* Card 1 */}
     <motion.div
-      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer transition-all hover:shadow-xl hover:ring-2 hover:ring-[#7a56d6]"
+      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
       animate={{ y: [0, -6, 0] }}
       whileHover={{ scale: 1.05 }}
       transition={{
@@ -404,7 +404,7 @@ const formRef = useRef();
 
     {/* Card 2 */}
     <motion.div
-      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer transition-all hover:shadow-xl hover:ring-2 hover:ring-[#7a56d6]"
+      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
       animate={{ y: [0, -6, 0] }}
       whileHover={{ scale: 1.05 }}
       transition={{
@@ -426,7 +426,7 @@ const formRef = useRef();
 
     {/* Card 3 */}
     <motion.div
-      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer transition-all hover:shadow-xl hover:ring-2 hover:ring-[#7a56d6]"
+      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
       animate={{ y: [0, -6, 0] }}
       whileHover={{ scale: 1.05 }}
       transition={{
@@ -502,7 +502,7 @@ const formRef = useRef();
       return (
         <motion.div
           key={index}
-          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer transition-all hover:shadow-xl hover:ring-2 hover:ring-[#7a56d6]"
+          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
           animate={{ y: [0, -6, 0] }}
           whileHover={{ scale: 1.05 }}
           transition={{
@@ -558,7 +558,7 @@ const formRef = useRef();
       return (
         <motion.div
           key={idx}
-          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer transition-all hover:shadow-xl hover:ring-2 hover:ring-[#7a56d6]"
+          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
           animate={{ y: [0, -6, 0] }}
           whileHover={{ scale: 1.05 }}
           transition={{
@@ -610,7 +610,7 @@ const formRef = useRef();
         {whoWeHelpData.map((item, idx) => (
           <motion.div
             key={idx}
-            className="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center cursor-pointer transition-all hover:shadow-xl hover:ring-2 hover:ring-[#7a56d6]"
+            className="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
             animate={{ y: [0, -6, 0] }}
             whileHover={{ scale: 1.05 }}
             transition={{
@@ -630,7 +630,6 @@ const formRef = useRef();
         ))}
       </motion.div>
     </motion.section>
-
 
       {/* Why Choose Our Platform Section */}
     <motion.div
@@ -659,7 +658,7 @@ const formRef = useRef();
       return (
         <motion.div
           key={idx}
-          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer transition-all hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6]"
+          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
           animate={{ y: [0, -6, 0] }}
           whileHover={{ scale: 1.05 }}
           transition={{
@@ -931,7 +930,7 @@ const formRef = useRef();
   </div>
 </motion.div>
 
-      {/* Testimonials Section */}
+      {/* Student story Section */}
      <motion.div
   initial={{ opacity: 0, y: 40 }}
   whileInView={{ opacity: 1, y: 0 }}
@@ -962,7 +961,7 @@ const formRef = useRef();
     {testimonials.map((student, index) => (
       <SwiperSlide key={index}>
         <motion.div
-          className="bg-white text-black p-6 rounded-2xl shadow-xl min-h-[300px] flex flex-col justify-between mt-6 border hover:border-yellow-400 transition-all hover:shadow-yellow-400/40"
+          className="bg-white text-black p-6 rounded-2xl shadow-xl min-h-[300px] flex flex-col justify-between mt-6 border hover:shadow-2xl hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
           animate={{ y: [0, -10, 0] }}
           transition={{
             duration: 2,
