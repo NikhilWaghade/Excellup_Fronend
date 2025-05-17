@@ -1,13 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {FaInstagram,FaLinkedinIn,FaDiscord, FaYoutube,FaTwitter,} from "react-icons/fa";
-import { Link } from 'react-router-dom';
-import logosvg from '../assets/Images/linear-dark(svg).svg'
-
+import { FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import logosvg from "../assets/Images/linear-dark(svg).svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#7a56d6]  text-white px-6 md:px-20 py-10 -mt-[0.99em] ">
+    <footer className="bg-[#7a56d6] text-white px-6 md:px-20 py-10 -mt-[0.99em]">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -15,107 +14,100 @@ const Footer = () => {
         transition={{ duration: 1 }}
         className="grid grid-cols-1 md:grid-cols-4 gap-10"
       >
-        {/* Social */}
+        {/* About */}
         <div>
-          <div className="flex items-center gap-2 mb-4">
-              <Link to="/">
-                  <img className="w-40 "src={logosvg} alt="Excellup Logo" />
-             </Link>
-            {/* <span className="text-white ">
-              Let's connect with our socials
-            </span> */}
-          </div>
-          <div className="flex gap-4 text-xl text-white ">
-            <a
-              href="https://www.instagram.com/excellup_?igsh=YWw0MzhzbHpkaW1p"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/excellup-hub-393700360?"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedinIn />
-            </a>
-            <a
-              href="https://discord.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Discord"
-            >
-              <FaDiscord />
-            </a>
-            <a
-              href="https://youtube.com/@excellup_hub?si=HxFhFR3Dr6ql5Tzd"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-            >
-              <FaYoutube />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-            >
-              <FaTwitter />
-            </a>
-          </div>
-        </div>
-
-        {/* Company Links */}
-        <div>
-          <h4 className="font-semibold text-white  mb-3">COMPANY</h4>
-          <ul className="space-y-2 text-white ">
+          <h4 className="font-semibold mb-3">About</h4>
+          <ul className="space-y-2 text-gray-300">
             <li>
-              <a href="about">About Us</a>
+              <Link to="/about">Who We Are</Link>
             </li>
             <li>
-              <a href="#">Support</a>
+              <Link to="/contact">Our Mission</Link>
             </li>
             <li>
-              <a href="#">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="#">Terms and Condition</a>
-            </li>
-            <li>
-              <a href="#">Pricing and Refund</a>
-            </li>
-            <li>
-              <a href="#">Hire From Us</a>
+              <Link to="/privacy">Privacy Policy</Link>
             </li>
           </ul>
         </div>
 
-        {/* Community Links */}
+        {/* Services */}
         <div>
-          <h4 className="font-semibold text-white  mb-3">COMMUNITY</h4>
-          <ul className="space-y-2  text-gray-300 ">
+          <h4 className="font-semibold mb-3">Services</h4>
+          <ul className="space-y-2 text-gray-300">
             <li>
-              <a href="#">Inertia</a>
+              <Link to="/courses">Courses</Link>
             </li>
             <li>
-              <a href="#">Discord</a>
+              <Link to="/hire">Hire From Us</Link>
+            </li>
+            <li>
+              <Link to="/support">Support</Link>
             </li>
           </ul>
         </div>
 
-        {/* Contact Info */}
+        {/* Learn */}
         <div>
-          <h4 className="font-semibold text-white mb-3">Get In Touch</h4>
-          <ul className="space-y-2 text-gray-300 text-lg">
-            <li>+91 6263911619</li>
-            <li>+91 1234567890</li>
-            <li>excellup.hub@.com</li>
-            <li>Balaghat</li>
+          <h4 className="font-semibold mb-3">Learn</h4>
+          <ul className="space-y-2 text-gray-300">
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link to="/community">Community</Link>
+            </li>
+            <li>
+              <Link to="/faq">FAQs</Link>
+            </li>
           </ul>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <h4 className="font-semibold mb-3">Contact</h4>
+          <ul className="space-y-2 text-gray-300 text-sm">
+            <li>📞 +91 6263911619</li>
+            <li>📞 +91 1234567890</li>
+            <li>📧 excellup.hub@gmail.com</li>
+            <li>📍 Balaghat, MP</li>
+          </ul>
+        </div>
+      </motion.div>
+
+      {/* Social Links */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        className="flex flex-col items-center mt-10"
+      >
+        <img className="w-40 mb-4" src={logosvg} alt="Excellup Logo" />
+        <div className="flex gap-6 text-2xl text-white mb-4">
+          <a
+            href="https://youtube.com/@excellup_hub?si=HxFhFR3Dr6ql5Tzd"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            <FaYoutube />
+          </a>
+          <a
+            href="https://www.instagram.com/excellup_?igsh=YWw0MzhzbHpkaW1p"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/excellup-hub-393700360?"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedinIn />
+          </a>
         </div>
       </motion.div>
 
@@ -125,10 +117,10 @@ const Footer = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1.2 }}
-        className="border-t  mt-10 pt-4 text-center text-sm text-gray-400 dark:text-gray-300"
+        className="border-t mt-8 pt-4 text-center text-sm text-gray-300"
       >
-        <p className="dark:text-white text-lg">Copyright © 2025 Excellup Pvt. Ltd.</p>
-        <p className="dark:text-white text-lg">All Rights Reserved.</p>
+        <p className="text-lg">Copyright © 2025 EXCELLUP</p>
+        <p className="text-sm">All Rights Reserved.</p>
       </motion.div>
     </footer>
   );
