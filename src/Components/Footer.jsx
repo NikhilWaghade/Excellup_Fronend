@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {FaInstagram,FaLinkedinIn,FaDiscord, FaYoutube,FaTwitter,} from "react-icons/fa";
-import logo from '../assets/Images/logo.png'
+import { Link } from 'react-router-dom';
+import logosvg from '../assets/Images/linear-dark(svg).svg'
+
 
 const Footer = () => {
   return (
@@ -16,14 +18,12 @@ const Footer = () => {
         {/* Social */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <img
-              src={logo}
-              alt="logo"
-              className="w-24 h-24"
-            />
-            <span className="text-white ">
+              <Link to="/">
+                  <img className="w-40 "src={logosvg} alt="Excellup Logo" />
+             </Link>
+            {/* <span className="text-white ">
               Let's connect with our socials
-            </span>
+            </span> */}
           </div>
           <div className="flex gap-4 text-xl text-white ">
             <a

@@ -1,12 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  FaCheckCircle,
-  FaTimesCircle,
-  FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
+import {  FaCheckCircle, FaTimesCircle, FaPhoneAlt,  FaEnvelope,FaMapMarkerAlt,} from "react-icons/fa";
 import emailjs from "emailjs-com";
 
 export default function Contact() {

@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* index.css */
+/* Global body styling */
 body {
-    @apply bg-white text-black dark:bg-black dark:text-white;
-  }
-  
+  @apply bg-white text-black dark:bg-black dark:text-white;
+}
+
+/* Custom font-face fallback (optional) */
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('/fonts/InterTight.woff2') format('woff2');
+  font-weight: 100 200;
+  font-style: normal;
+  font-display: swap;
+}

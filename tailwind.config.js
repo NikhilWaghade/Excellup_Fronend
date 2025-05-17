@@ -6,7 +6,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+  inter: ['"Inter Tight"', 'sans-serif'],
+  exile: ['"Exile"', 'system-ui'], // fixed quotes
+},
+
+    },
   },
   plugins: [],
 }
