@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { testimonials, features, technologies } from "/src/Data/testimonialData.jsx";
 import logo from '../assets/Images/logo.png'
 import { Users, Laptop, Rocket, Code2, MonitorSmartphone, TrendingUp, Video, Globe, Activity, Calendar } from 'lucide-react';
-import { FaBookOpen, FaCheckCircle, FaCogs, FaEnvelope, FaHandshake, FaMapMarkerAlt, FaPhoneAlt, FaRocket, FaTimesCircle, FaUsers } from "react-icons/fa";
+import { FaBookOpen, FaChalkboardTeacher, FaCheckCircle, FaCode, FaCogs, FaEnvelope, FaGlobe, FaHandshake, FaInstagram, FaLaptopCode, FaMapMarkerAlt, FaPaintBrush, FaPhoneAlt, FaRocket, FaStore, FaSuitcase, FaTimesCircle, FaUserGraduate, FaUsers, FaVideo, FaYoutube } from "react-icons/fa";
 import emailjs from "emailjs-com";
 
 
@@ -90,6 +90,103 @@ const combinedItems = [
   },
 ];
 
+// Features 
+const works = [
+  {
+    icon: <FaGlobe size={24} />,
+    title: "🌐 Global & Local Website",
+    description:
+      "A responsive website designed for a hometown bakery, featuring online orders, gallery, and real-time offers. Built with React, Tailwind CSS, and Firebase.",
+    link: "#",
+    linkText: "View Live",
+  },
+  {
+    icon: <FaInstagram size={24} />,
+    title: "🎬 Instagram Tech Reel",
+    description:
+      "A fast-paced, high-impact reel educating students on how algorithms power modern apps. Created using CapCut and Adobe Premiere Pro.",
+    link: "#",
+    linkText: "Watch Reel",
+  },
+{
+  icon: <FaLaptopCode size={24} />,
+  title: "💻 C Programming Crash Course",
+  description:
+    "A beginner-friendly crash course video covering the fundamentals of C Programming — variables, loops, functions, and real coding examples.",
+  link: "#",
+  linkText: "Watch on YouTube",
+},
+  {
+    icon: <FaPaintBrush size={24} />,
+    title: "🖼️ Business Promo Poster",
+    description:
+      "A clean, vibrant promotional poster designed for a tech startup, combining strategic layout, bold visuals, and AI-generated slogans.",
+    link: "#",
+    linkText: "View Sample",
+  },
+  {
+  icon: <FaCode size={24} />, 
+  title: "🌐 Web Development Bootcamp",
+  description:
+    "An immersive bootcamp-style video series covering HTML, CSS, JavaScript, and React with real-world projects and deployment tips.",
+  link: "#",
+  linkText: "Explore Course",
+},
+{
+  icon: <FaVideo size={24} />, 
+  title: "🎥 Video Editing Masterclass",
+  description:
+    "Learn professional video editing techniques using CapCut and Adobe Premiere Pro — perfect for content creators and social media managers.",
+  link: "#",
+  linkText: "Watch Masterclass",
+}
+];
+
+
+// wo is help 
+const whoWeHelpData = [
+  {
+    icon: <FaUserGraduate size={28} />,
+    title: "Students & Beginners",
+    description:
+      "Just starting out? We offer structured coding lessons, hands-on projects, and friendly mentorship to help you build skills with confidence — from C to full-stack development.",
+  },
+  {
+    icon: <FaCode size={28} />,
+    title: "Aspiring Creators & Developers",
+    description:
+      "Already coding? Stay ahead with the latest tech trends, real-world challenges, project showcases, and practical career-building resources to level up your journey.",
+  },
+  {
+    icon: <FaStore size={28} />,
+    title: "Local Business Owners",
+    description:
+      "Need a modern website, social media reel, or digital brand boost? We help turn your business ideas into engaging online experiences — fast, affordable, and effective.",
+  },
+  {
+    icon: <FaChalkboardTeacher size={28} />,
+    title: "Parents & Educators",
+    description:
+      "Want to support your child’s tech future or enhance your teaching methods? We provide resources, workshops, and personalized guidance to help you guide the next generation.",
+  },
+  {
+    icon: <FaSuitcase size={28} />,
+    title: "Freelancers & Career Changers",
+    description:
+      "Thinking of switching to tech or launching a freelance career? EXCELLUP provides a launchpad with flexible learning, portfolio help, and client-ready tools.",
+  },
+];
+
+const iconColors = [
+  "bg-blue-100 text-blue-600",
+  "bg-red-100 text-red-600",
+  "bg-green-100 text-green-600",
+  "bg-yellow-100 text-yellow-600",
+  "bg-purple-100 text-purple-600",
+];
+
+
+
 // contact 
 const formRef = useRef();
   const [feedback, setFeedback] = useState({ message: "", type: "" });
@@ -132,6 +229,7 @@ const formRef = useRef();
     return () => clearTimeout(timer);
   }, [showPopup, countdown]);
 
+
   return (
     <div className="min-h-screen w-full flex flex-col items-center bg-white text-black p-6 md:p-12 -mt-20">
       {/* Hero Section */}
@@ -144,10 +242,10 @@ const formRef = useRef();
       className="text-white space-y-8"
     >
       <h1 className="text-xl md:text-4xl font-extrabold leading-tight">
-        <span className="text-[#7a56d6] mt-20">{text}</span>
+        <span className="text-[#7a56d6] mt-20 text-4xl">{text}</span>
         <Cursor cursorStyle="|" />
         <br />
-        <span className="text-black text-3xl ">Build Your Future with Emerging Tech</span>
+        <span className="text-black text-2xl ">Build Your Future with Emerging Tech</span>
       </h1>
 
       <p className="text-black text-lg md:text-xl leading-relaxed max-w-2xl font-inter ">
@@ -164,7 +262,7 @@ const formRef = useRef();
         </Link>
 
         <a
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          href="https://youtu.be/ToZSFHUJdHM?si=qCJqiWzIAGUME63x"
           target="_blank"
           rel="noopener noreferrer"
           className="border-2 border-yellow-400 text-black px-6 py-3 rounded-xl font-semibold hover:bg-[#7a56d6] flex items-center shadow-lg"
@@ -255,127 +353,189 @@ const formRef = useRef();
     </motion.div>
   
     {/* About section  */}
-       <section className="bg-white py-16 px-4 md:px-10 lg:px-20" id="about-us">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="max-w-6xl mx-auto text-center"
-      >
-        <h2 className="text-4xl font-bold text-[#7a56d6] mb-6">Who We Are</h2>
-      <p className="text-gray-700 text-lg max-w-3xl mx-auto mb-12">
-  We’re a passionate team of innovators, developers, and tech educators from <strong>Balaghat, Madhya Pradesh</strong> — building <span className="text-blue-600 font-semibold">EXCELLUP</span> as a vibrant platform to democratize programming skills, ignite digital creativity, and empower individuals and businesses to thrive in a tech-driven world.
-</p>
+      <section className="bg-white py-16 px-4 md:px-10 lg:px-20" id="about-us">
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    viewport={{ once: true }}
+    className="max-w-6xl mx-auto text-center"
+  >
+    <h2 className="text-4xl font-bold text-[#7a56d6] mb-6">Who We Are</h2>
+    <p className="text-gray-700 text-lg max-w-3xl mx-auto mb-12">
+      We’re a passionate team of innovators, developers, and tech educators from <strong>Balaghat, Madhya Pradesh</strong> — building <span className="text-blue-600 font-semibold">EXCELLUP</span> as a vibrant platform to democratize programming skills, ignite digital creativity, and empower individuals and businesses to thrive in a tech-driven world.
+    </p>
+  </motion.div>
 
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
-      >
-        {/* Card 1 */}
-        <div className="p-6 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition duration-300 bg-gray-50">
-          <div className="flex items-center justify-center mb-4">
-            <Laptop className="w-10 h-10 text-blue-600" />
-          </div>
-          <h3 className="text-xl font-semibold mb-2">Tech Education</h3>
-          <p className="text-gray-600">Make tech education fun, local, and practical for students and learners in every corner of India.</p>
-        </div>
-
-        {/* Card 2 */}
-        <div className="p-6 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition duration-300 bg-gray-50">
-          <div className="flex items-center justify-center mb-4">
-            <Rocket className="w-10 h-10 text-green-600" />
-          </div>
-          <h3 className="text-xl font-semibold mb-2">Digital Empowerment</h3>
-          <p className="text-gray-600">Help local brands go digital with websites, videos, and online marketing tools.</p>
-        </div>
-
-        {/* Card 3 */}
-        <div className="p-6 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition duration-300 bg-gray-50">
-          <div className="flex items-center justify-center mb-4">
-            <Users className="w-10 h-10 text-purple-600" />
-          </div>
-          <h3 className="text-xl font-semibold mb-2">Creator-Led Brand</h3>
-          <p className="text-gray-600">Build a strong creator-led tech brand shaping India’s digital future from the ground up.</p>
-        </div>
-      </motion.div>
-
-      {/* Optional Visual: Image or Video */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
-        viewport={{ once: true }}
-        className="mt-16 text-center"
-      >
-        <img
-          src="https://img.freepik.com/premium-photo/team-celebrating-project-success_1265500-96079.jpg?ga=GA1.1.924705394.1747313358&semt=ais_hybrid&w=740"
-          alt="Team EXCELLUP"
-          className="rounded-2xl mx-auto shadow-lg w-full max-w-4xl"
-        />
-        {/* Or embed a video reel */}
-        {/* 
-        <video controls className="rounded-2xl mx-auto shadow-lg w-full max-w-4xl">
-          <source src="/videos/intro-reel.mp4" type="video/mp4" />
-        </video>
-        */}
-      </motion.div>
-    </section>
-
-    {/* WhatWeDoSection */}
-    <section className="bg-whitepy-20 px-4 md:px-10 lg:px-20" id="what-we-do">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-center max-w-4xl mx-auto mb-14"
-      >
-        <h2 className="text-4xl font-bold text-[#7a56d6]">
-          What We Do at EXCELLUP
-        </h2>
-        <p className="text-gray-700 text-lg max-w-3xl mx-auto mb-12 whitespace-pre-line">
-          At{" "}
-          <span className="text-blue-600 font-semibold">EXCELLUP</span>, we fuse
-          cutting-edge technology, purposeful design, and modern education to
-          craft impactful digital experiences that empower learners, creators,
-          and forward-thinking businesses. From foundational coding skills to
-          real-world project building, we aim to nurture future-ready talent,
-          share insightful tech knowledge, and support digital growth with
-          innovation at the core. Based in{" "}
-          <strong>Balaghat, Madhya Pradesh</strong>, we're building a community
-          where education meets technology to shape tomorrow’s digital leaders.
-        </p>
-      </motion.div>
-
-      {/* Unified Grid Section */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-        {combinedItems.map((item, index) => (
-          <motion.div
-            key={index}
-            className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center cursor-pointer hover:shadow-lg transition duration-300"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-            viewport={{ once: true }}
-          >
-            <div className="mb-4">{item.icon}</div>
-            <h3 className="text-xl font-semibold mb-2">{item.label}</h3>
-            <p className="text-gray-600">{item.description}</p>
-            <div className="mb-4">{item.image}</div>
-          </motion.div>
-        ))}
+  {/* Animated Cards Section */}
+  <motion.div
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={{
+      visible: {
+        transition: {
+          staggerChildren: 0.2,
+        },
+      },
+    }}
+    className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+  >
+    {/* Card 1 */}
+    <motion.div
+      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer transition-all hover:shadow-xl hover:ring-2 hover:ring-[#7a56d6]"
+      animate={{ y: [0, -6, 0] }}
+      whileHover={{ scale: 1.05 }}
+      transition={{
+        duration: 2.5,
+        repeat: Infinity,
+        repeatType: "loop",
+        ease: "easeInOut",
+      }}
+    >
+      <div className="p-4 rounded-full bg-blue-100 text-blue-600 text-2xl mb-4">
+        <Laptop className="w-8 h-8" />
       </div>
-    </section>
+      <h3 className="text-xl font-semibold mb-2">Tech Education</h3>
+      <p className="text-gray-600 text-sm">
+        Make tech education fun, local, and practical for students and learners in every corner of India.
+      </p>
+    </motion.div>
+
+    {/* Card 2 */}
+    <motion.div
+      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer transition-all hover:shadow-xl hover:ring-2 hover:ring-[#7a56d6]"
+      animate={{ y: [0, -6, 0] }}
+      whileHover={{ scale: 1.05 }}
+      transition={{
+        duration: 2.5,
+        repeat: Infinity,
+        repeatType: "loop",
+        ease: "easeInOut",
+        delay: 0.2,
+      }}
+    >
+      <div className="p-4 rounded-full bg-green-100 text-green-600 text-2xl mb-4">
+        <Rocket className="w-8 h-8" />
+      </div>
+      <h3 className="text-xl font-semibold mb-2">Digital Empowerment</h3>
+      <p className="text-gray-600 text-sm">
+        Help local brands go digital with websites, videos, and online marketing tools.
+      </p>
+    </motion.div>
+
+    {/* Card 3 */}
+    <motion.div
+      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer transition-all hover:shadow-xl hover:ring-2 hover:ring-[#7a56d6]"
+      animate={{ y: [0, -6, 0] }}
+      whileHover={{ scale: 1.05 }}
+      transition={{
+        duration: 2.5,
+        repeat: Infinity,
+        repeatType: "loop",
+        ease: "easeInOut",
+        delay: 0.4,
+      }}
+    >
+      <div className="p-4 rounded-full bg-purple-100 text-purple-600 text-2xl mb-4">
+        <Users className="w-8 h-8" />
+      </div>
+      <h3 className="text-xl font-semibold mb-2">Creator-Led Brand</h3>
+      <p className="text-gray-600 text-sm">
+        Build a strong creator-led tech brand shaping India’s digital future from the ground up.
+      </p>
+    </motion.div>
+  </motion.div>
+
+  {/* Optional Image Section */}
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7, delay: 0.2 }}
+    viewport={{ once: true }}
+    className="mt-16 text-center"
+  >
+    <img
+      src="https://img.freepik.com/premium-photo/team-celebrating-project-success_1265500-96079.jpg?ga=GA1.1.924705394.1747313358&semt=ais_hybrid&w=740"
+      alt="Team EXCELLUP"
+      className="rounded-2xl mx-auto shadow-lg w-full max-w-4xl"
+    />
+  </motion.div>
+</section>
+
+
+    {/* What We DoSection */}
+    <motion.section
+  id="what-we-do"
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1.2, ease: "easeInOut" }}
+  className="bg-white py-20 px-4 md:px-10 lg:px-20 mt-5"
+>
+  <div className="max-w-5xl mx-auto text-center mb-14">
+    <h2 className="text-4xl font-bold text-[#7a56d6] mb-4">
+      What We Do at EXCELLUP
+    </h2>
+    <p className="text-gray-700 text-lg max-w-3xl mx-auto mb-3 whitespace-pre-line">
+      At <span className="text-blue-600 font-semibold">EXCELLUP</span>, we fuse
+      cutting-edge technology, purposeful design, and modern education to craft
+      impactful digital experiences that empower learners, creators, and
+      forward-thinking businesses. From foundational coding skills to real-world
+      project building, we aim to nurture future-ready talent, share insightful
+      tech knowledge, and support digital growth with innovation at the core.
+    </p>
+    <p className="text-sm text-gray-500 italic">
+      Based in <strong>Balaghat, Madhya Pradesh</strong>, we're building a
+      community where education meets technology to shape tomorrow’s digital
+      leaders.
+    </p>
+  </div>
+
+  <motion.div
+    className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
+    initial="hidden"
+    animate="visible"
+    variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
+  >
+    {combinedItems.map((item, index) => {
+      const iconStyle = iconColors[index % iconColors.length]; // same as in your work section
+      return (
+        <motion.div
+          key={index}
+          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer transition-all hover:shadow-xl hover:ring-2 hover:ring-[#7a56d6]"
+          animate={{ y: [0, -6, 0] }}
+          whileHover={{ scale: 1.05 }}
+          transition={{
+            duration: 2.5,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut",
+            delay: index * 0.2,
+          }}
+        >
+          <div className={`p-4 rounded-full mb-4 text-2xl ${iconStyle}`}>
+            {item.icon}
+          </div>
+          <h3 className="text-xl font-semibold text-black mb-2">
+            {item.label}
+          </h3>
+          <p className="text-gray-600 text-sm mb-4">{item.description}</p>
+          <div>{item.image}</div>
+        </motion.div>
+      );
+    })}
+  </motion.div>
+</motion.section>
+
 
     {/* Featured  */}
-   <section className="bg-white py-20 px-4 md:px-10 lg:px-20 mt-5" id="our-work">
+ <motion.section
+  id="our-work"
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1.2, ease: "easeInOut" }}
+  className="bg-white py-20 px-4 md:px-10 lg:px-20 mt-5"
+>
   <div className="max-w-5xl mx-auto text-center mb-14">
     <h2 className="text-4xl font-bold text-[#7a56d6] mb-4">Our Work Speaks</h2>
     <p className="text-gray-700 text-lg max-w-3xl mx-auto">
@@ -387,102 +547,90 @@ const formRef = useRef();
     </p>
   </div>
 
-  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-    {/* Example 1 – Website Project */}
-    <div className=" rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
-      <h3 className="text-xl font-semibold text-black mb-2">🌐 Global & Local Website</h3>
-      <p className="text-gray-600 mb-3">
-        A responsive website designed for a hometown bakery, featuring online orders, gallery, and real-time offers. 
-        Built with React, Tailwind CSS, and Firebase.
-      </p>
-      <a href="#" className="text-blue-600 underline">View Live</a>
-    </div>
+  <motion.div
+    className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+    initial="hidden"
+    animate="visible"
+    variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
+  >
+    {works.map((work, idx) => {
+      const iconStyle = iconColors[idx % iconColors.length];
+      return (
+        <motion.div
+          key={idx}
+          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer transition-all hover:shadow-xl hover:ring-2 hover:ring-[#7a56d6]"
+          animate={{ y: [0, -6, 0] }}
+          whileHover={{ scale: 1.05 }}
+          transition={{
+            duration: 2.5,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut",
+            delay: idx * 0.2,
+          }}
+        >
+          <div className={`p-4 rounded-full mb-4 text-2xl ${iconStyle}`}>
+            {work.icon}
+          </div>
+          <h3 className="text-xl font-semibold text-black mb-2">{work.title}</h3>
+          <p className="text-gray-600 mb-3 text-sm">{work.description}</p>
+          <a href={work.link} className="text-blue-600 underline text-sm">
+            {work.linkText}
+          </a>
+        </motion.div>
+      );
+    })}
+  </motion.div>
+</motion.section>
 
-    {/* Example 2 – Instagram Reel */}
-    <div className=" rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
-      <h3 className="text-xl font-semibold text-black mb-2">🎬 Instagram Tech Reel</h3>
-      <p className="text-gray-600 mb-3">
-        A fast-paced, high-impact reel educating students on how algorithms power modern apps. Created using CapCut and Adobe Premiere Pro.
-      </p>
-      <a href="#" className="text-blue-600 underline">Watch Reel</a>
-    </div>
-
-    {/* Example 3 – YouTube Video */}
-    <div className=" rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
-      <h3 className="text-xl font-semibold text-black mb-2">💻 C Programming Crash Course</h3>
-      <p className="text-gray-600 mb-3">
-        A beginner-friendly crash course video covering the fundamentals of C Programming — variables, loops, functions, and real coding examples.
-      </p>
-      <a href="#" className="text-blue-600 underline">Watch on YouTube</a>
-    </div>
-
-    {/* Example 4 – Poster / Promo */}
-    <div className=" rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
-      <h3 className="text-xl font-semibold text-black mb-2">🖼️ Business Promo Poster</h3>
-      <p className="text-gray-600 mb-3">
-        A clean, vibrant promotional poster designed for a tech startup, combining strategic layout, bold visuals, and AI-generated slogans.
-      </p>
-      <a href="#" className="text-blue-600 underline">View Sample</a>
-    </div>
-  </div>
-</section>
 
     {/* Who We Help */}
-    <section className=" py-20 px-4 md:px-10 lg:px-20 mt-5" id="who-we-help">
-  <div className="max-w-5xl mx-auto text-center mb-14">
-    <h2 className="text-4xl font-bold text-[#7a56d6] mb-4">Who Is <span className="text-black">EXCELLUP</span> For?</h2>
-    <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-      We empower diverse learners and clients — from curious coders to growing businesses — to succeed in the digital world. Whether you’re starting out or scaling up, EXCELLUP is your tech partner.
-    </p>
-  </div>
+    <motion.section
+      id="who-we-help"
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1.2, ease: "easeInOut" }}
+      className="py-20 px-4 md:px-10 lg:px-20 mt-5"
+    >
+      <div className="max-w-5xl mx-auto text-center mb-14">
+        <h2 className="text-4xl font-bold text-[#7a56d6] mb-4">
+          Who Is <span className="text-black">EXCELLUP</span> For?
+        </h2>
+        <p className="text-gray-700 text-lg max-w-3xl mx-auto">
+          We empower diverse learners and clients — from curious coders to growing businesses — to succeed in the digital world. Whether you’re starting out or scaling up, EXCELLUP is your tech partner.
+        </p>
+      </div>
 
-  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-    {/* Students & Beginners */}
-    <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300 text-center">
-      <div className="text-4xl mb-3">👨‍🎓</div>
-      <h3 className="text-xl font-bold text-black mb-2">Students & Beginners</h3>
-      <p className="text-gray-600">
-        Just starting out? We offer structured coding lessons, hands-on projects, and friendly mentorship to help you build skills with confidence — from C to full-stack development.
-      </p>
-    </div>
+      <motion.div
+        className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+        initial="hidden"
+        animate="visible"
+        variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
+      >
+        {whoWeHelpData.map((item, idx) => (
+          <motion.div
+            key={idx}
+            className="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center cursor-pointer transition-all hover:shadow-xl hover:ring-2 hover:ring-[#7a56d6]"
+            animate={{ y: [0, -6, 0] }}
+            whileHover={{ scale: 1.05 }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+              delay: idx * 0.2,
+            }}
+          >
+            <div className={`p-4 rounded-full mb-4 text-2xl ${iconColors[idx % iconColors.length]}`}>
+              {item.icon}
+            </div>
+            <h3 className="text-xl font-bold text-black mb-2">{item.title}</h3>
+            <p className="text-gray-600 text-sm">{item.description}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </motion.section>
 
-    {/* Aspiring Creators & Developers */}
-    <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300 text-center">
-      <div className="text-4xl mb-3">🧑‍💻</div>
-      <h3 className="text-xl font-bold text-black mb-2">Aspiring Creators & Developers</h3>
-      <p className="text-gray-600">
-        Already coding? Stay ahead with the latest tech trends, real-world challenges, project showcases, and practical career-building resources to level up your journey.
-      </p>
-    </div>
-
-    {/* Local Business Owners */}
-    <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300 text-center">
-      <div className="text-4xl mb-3">🏪</div>
-      <h3 className="text-xl font-bold text-black mb-2">Local Business Owners</h3>
-      <p className="text-gray-600">
-        Need a modern website, social media reel, or digital brand boost? We help turn your business ideas into engaging online experiences — fast, affordable, and effective.
-      </p>
-    </div>
-
-    {/* Parents & Educators */}
-    <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300 text-center">
-      <div className="text-4xl mb-3">👩‍🏫</div>
-      <h3 className="text-xl font-bold text-black mb-2">Parents & Educators</h3>
-      <p className="text-gray-600">
-        Want to support your child’s tech future or enhance your teaching methods? We provide resources, workshops, and personalized guidance to help you guide the next generation.
-      </p>
-    </div>
-
-    {/* Freelancers & Career Changers */}
-    <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300 text-center">
-      <div className="text-4xl mb-3">🧳</div>
-      <h3 className="text-xl font-bold text-black mb-2">Freelancers & Career Changers</h3>
-      <p className="text-gray-600">
-        Thinking of switching to tech or launching a freelance career? EXCELLUP provides a launchpad with flexible learning, portfolio help, and client-ready tools.
-      </p>
-    </div>
-  </div>
-</section>
 
       {/* Why Choose Our Platform Section */}
     <motion.div
@@ -511,7 +659,7 @@ const formRef = useRef();
       return (
         <motion.div
           key={idx}
-          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer transition-all hover:shadow-lg hover:ring-2 hover:ring-yellow-400"
+          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer transition-all hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6]"
           animate={{ y: [0, -6, 0] }}
           whileHover={{ scale: 1.05 }}
           transition={{
@@ -525,7 +673,7 @@ const formRef = useRef();
           <div className={`p-4 rounded-full mb-4 text-2xl ${iconStyle}`}>
             {feature.icon}
           </div>
-          <h3 className="text-xl font-semibold text-[#7a56d6] mb-2">{feature.title}</h3>
+          <h3 className="text-xl font-semibold text-black mb-2">{feature.title}</h3>
           <p className="text-gray-600 text-sm">{feature.description}</p>
         </motion.div>
       );
@@ -572,7 +720,7 @@ const formRef = useRef();
      {/* final call action section */}    
 <section className="py-20 px-6 md:px-16 text-center max-w-4xl mx-auto">
   <h2 className="text-4xl font-extrabold mb-6 text-[#7a56d6]">
-    Ready to <span className="underline decoration-green-400 decoration-4">Start Your Journey  ?</span>
+    Ready to <span className=" ">Start Your Journey  ?</span>
   </h2>
 
   <p className="text-gray-600 text-lg md:text-xl mb-12 leading-relaxed">
@@ -620,7 +768,7 @@ const formRef = useRef();
             </div>
             <div className="flex items-center gap-4">
               <FaEnvelope className="text-[#7a56d6] text-xl" />
-              <span className="text-black">excellup.hub@gmail.com</span>
+              <span className="text-black"> excellup.hub@gmail.com</span>
             </div>
             <div className="flex items-center gap-4">
               <FaMapMarkerAlt className="text-[#7a56d6] cla text-xl" />
