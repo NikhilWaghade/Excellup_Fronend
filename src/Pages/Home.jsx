@@ -42,19 +42,19 @@ const combinedItems = [
     icon: <Code2 className="w-10 h-10 text-blue-600" />,
     label: "Tech Education",
     description: "Learn coding from basics to real-world projects.",
-    image: "/images/coding-education.jpg",//optional but not use this time dummy path
+   // image: "/images/coding-education.jpg",//optional but not use this time dummy path
   },
   {
     icon: <Video className="w-10 h-10 text-red-600" />,
     label: "Content Creation",
     description: "Engaging tech tutorials, productivity hacks, and programming reels.",
-    image: "/images/digital-services.jpg",
+   // image: "/images/digital-services.jpg",
   },
   {
     icon: <Globe className="w-10 h-10 text-green-600" />,
     label: "Digital Services",
     description: "Websites, reels, and social media management for local businesses.",
-    image: "/images/brand-growth.jpg",
+   // image: "/images/brand-growth.jpg",
   },
 
   // From gridItems
@@ -383,7 +383,7 @@ const formRef = useRef();
   >
     {/* Card 1 */}
     <motion.div
-      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
+      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-yellow-500  hover:shadow-yellow-500"
       animate={{ y: [0, -6, 0] }}
       whileHover={{ scale: 1.05 }}
       transition={{
@@ -393,7 +393,7 @@ const formRef = useRef();
         ease: "easeInOut",
       }}
     >
-      <div className="p-4 rounded-full bg-blue-100 text-blue-600 text-2xl mb-4">
+      <div className="p-4 rounded-full bg-blue-100 text-blue-600 text-2xl mb-4 ">
         <Laptop className="w-8 h-8" />
       </div>
       <h3 className="text-xl font-semibold mb-2">Tech Education</h3>
@@ -404,7 +404,7 @@ const formRef = useRef();
 
     {/* Card 2 */}
     <motion.div
-      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
+      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-yellow-500  hover:shadow-yellow-500"
       animate={{ y: [0, -6, 0] }}
       whileHover={{ scale: 1.05 }}
       transition={{
@@ -426,7 +426,7 @@ const formRef = useRef();
 
     {/* Card 3 */}
     <motion.div
-      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
+      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-yellow-500  hover:shadow-yellow-500"
       animate={{ y: [0, -6, 0] }}
       whileHover={{ scale: 1.05 }}
       transition={{
@@ -465,171 +465,162 @@ const formRef = useRef();
 
 
     {/* What We DoSection */}
-    <motion.section
+<motion.section
   id="what-we-do"
-  initial={{ opacity: 0, scale: 0.95 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 1.2, ease: "easeInOut" }}
-  className="bg-white py-20 px-4 md:px-10 lg:px-20 mt-5"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.2 }}
+  className="py-24 px-6 md:px-14 bg-white"
 >
-  <div className="max-w-5xl mx-auto text-center mb-14">
-    <h2 className="text-4xl font-bold text-[#7a56d6] mb-4">
-      What We Do at EXCELLUP
+  <div className="max-w-6xl mx-auto text-center mb-16">
+    <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
+      What We Do at <span className="text-[#7a56d6]">EXCELLUP</span>
     </h2>
-    <p className="text-gray-700 text-lg max-w-3xl mx-auto mb-3 whitespace-pre-line">
-      At <span className="text-blue-600 font-semibold">EXCELLUP</span>, we fuse
-      cutting-edge technology, purposeful design, and modern education to craft
-      impactful digital experiences that empower learners, creators, and
-      forward-thinking businesses. From foundational coding skills to real-world
-      project building, we aim to nurture future-ready talent, share insightful
-      tech knowledge, and support digital growth with innovation at the core.
+    <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+      Empowering future coders, creators, and digital leaders with real-world, project-based learning in tech, design, and innovation.
     </p>
-    <p className="text-sm text-gray-500 italic">
-      Based in <strong>Balaghat, Madhya Pradesh</strong>, we're building a
-      community where education meets technology to shape tomorrow’s digital
-      leaders.
+    <p className="text-sm text-gray-400 italic mt-2">
+      Based in <strong>Balaghat, Madhya Pradesh</strong>
     </p>
   </div>
 
-  <motion.div
-    className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
-    initial="hidden"
-    animate="visible"
-    variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
-  >
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
     {combinedItems.map((item, index) => {
-      const iconStyle = iconColors[index % iconColors.length]; // same as in your work section
+      const iconStyle = iconColors[index % iconColors.length];
       return (
         <motion.div
           key={index}
-          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
-          animate={{ y: [0, -6, 0] }}
-          whileHover={{ scale: 1.05 }}
-          transition={{
-            duration: 2.5,
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "easeInOut",
-            delay: index * 0.2,
-          }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="bg-white rounded-3xl border border-gray-100 shadow-md  transition-all p-6 text-center flex flex-col items-center hover:shadow-lg hover:ring-2 hover:ring-yellow-500  hover:shadow-yellow-500"
         >
-          <div className={`p-4 rounded-full mb-4 text-2xl ${iconStyle}`}>
+          {/* Icon */}
+          <div className={`w-14 h-14 flex items-center justify-center text-white text-2xl rounded-full shadow-sm mb-4 ${iconStyle}`}>
             {item.icon}
           </div>
-          <h3 className="text-xl font-semibold text-black mb-2">
-            {item.label}
-          </h3>
-          <p className="text-gray-600 text-sm mb-4">{item.description}</p>
-          <div>{item.image}</div>
+
+          {/* Text */}
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.label}</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+
+          {/* Image */}
+          {item.image && (
+            <div className="mt-4 w-full overflow-hidden rounded-xl">
+              <div className="transition-transform duration-300 hover:scale-[1.03]">
+                {item.image}
+              </div>
+            </div>
+          )}
         </motion.div>
       );
     })}
-  </motion.div>
+  </div>
 </motion.section>
 
 
+
     {/* Featured  */}
- <motion.section
+<motion.section
   id="our-work"
-  initial={{ opacity: 0, scale: 0.95 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 1.2, ease: "easeInOut" }}
-  className="bg-white py-20 px-4 md:px-10 lg:px-20 mt-5"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.3 }} // 👈 triggers on both scroll down and up
+  className="py-24 px-4 md:px-10 bg-gradient-to-b from-white to-[#f3f0ff] mt-5"
 >
-  <div className="max-w-5xl mx-auto text-center mb-14">
-    <h2 className="text-4xl font-bold text-[#7a56d6] mb-4">Our Work Speaks</h2>
-    <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-      From real-world projects to digital experiments, our work blends creativity, technology, and purpose.  
+  <div className="max-w-4xl mx-auto mb-20 text-center">
+    <h2 className="text-4xl font-bold text-[#7a56d6] mb-6">Our Work Speaks</h2>
+    <p className="text-gray-700 text-lg max-w-2xl mx-auto leading-relaxed">
+      From real-world projects to digital experiments, our work blends creativity, technology, and purpose.
       We transform ideas into meaningful digital experiences — for learners, local businesses, and global audiences.
     </p>
-    <p className="text-sm text-gray-500 mt-2 italic">
+    <p className="text-sm text-gray-500 italic mt-2">
       From classroom concepts to client-ready deliverables — we take pride in what we build.
     </p>
   </div>
 
-  <motion.div
-    className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
-    initial="hidden"
-    animate="visible"
-    variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
-  >
+  <div className="relative border-l-2 border-[#7a56d6] max-w-3xl mx-auto space-y-12">
     {works.map((work, idx) => {
       const iconStyle = iconColors[idx % iconColors.length];
       return (
         <motion.div
           key={idx}
-          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
-          animate={{ y: [0, -6, 0] }}
-          whileHover={{ scale: 1.05 }}
-          transition={{
-            duration: 2.5,
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "easeInOut",
-            delay: idx * 0.2,
-          }}
+          className="relative pl-10"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: idx * 0.15 }}
+          viewport={{ once: false, amount: 0.3 }}
         >
-          <div className={`p-4 rounded-full mb-4 text-2xl ${iconStyle}`}>
+          {/* Icon Dot */}
+          <span className={`absolute left-[-13px] top-2 w-7 h-7 rounded-full flex items-center justify-center text-xl shadow-md ${iconStyle}`}>
             {work.icon}
+          </span>
+
+          {/* Work Box */}
+          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+            <h3 className="text-xl font-semibold text-gray-800 mb-1">{work.title}</h3>
+            <p className="text-gray-600 text-sm mb-2">{work.description}</p>
+            <a
+              href={work.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-[#7a56d6] font-medium inline-block relative after:block after:w-0 after:h-[2px] after:bg-[#7a56d6] after:transition-all after:duration-300 hover:after:w-full"
+            >
+              {work.linkText}
+            </a>
           </div>
-          <h3 className="text-xl font-semibold text-black mb-2">{work.title}</h3>
-          <p className="text-gray-600 mb-3 text-sm">{work.description}</p>
-          <a href={work.link} className="text-blue-600 underline text-sm">
-            {work.linkText}
-          </a>
         </motion.div>
       );
     })}
-  </motion.div>
+  </div>
 </motion.section>
 
 
-    {/* Who We Help */}
-    <motion.section
-      id="who-we-help"
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1.2, ease: "easeInOut" }}
-      className="py-20 px-4 md:px-10 lg:px-20 mt-5"
-    >
-      <div className="max-w-5xl mx-auto text-center mb-14">
-        <h2 className="text-4xl font-bold text-[#7a56d6] mb-4">
-          Who Is <span className="text-black">EXCELLUP</span> For?
-        </h2>
-        <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-          We empower diverse learners and clients — from curious coders to growing businesses — to succeed in the digital world. Whether you’re starting out or scaling up, EXCELLUP is your tech partner.
-        </p>
-      </div>
 
+    {/* Who We Help */}
+   <motion.section
+  id="who-we-help"
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1.2, ease: "easeInOut" }}
+  className="py-20 px-4 md:px-10 lg:px-20 bg-white"
+>
+  <div className="max-w-6xl mx-auto text-center mb-14">
+    <h2 className="text-4xl font-bold text-[#7a56d6] mb-4">
+      Who Is <span className="text-black">EXCELLUP</span> For?
+    </h2>
+    <p className="text-gray-700 text-lg max-w-3xl mx-auto">
+      We empower diverse learners and clients — from curious coders to growing businesses — to succeed in the digital world. Whether you’re starting out or scaling up, EXCELLUP is your tech partner.
+    </p>
+  </div>
+
+  <motion.div
+    className="max-w-6xl mx-auto flex flex-col gap-8"
+    initial="hidden"
+    animate="visible"
+    variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
+  >
+    {whoWeHelpData.map((item, idx) => (
       <motion.div
-        className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
-        initial="hidden"
-        animate="visible"
-        variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
+        key={idx}
+        className="flex flex-col md:flex-row items-start md:items-center gap-6 p-6 rounded-xl bg-[#9272e2] hover:bg-[#a99fc1]  transition-all "
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: idx * 0.1 }}
       >
-        {whoWeHelpData.map((item, idx) => (
-          <motion.div
-            key={idx}
-            className="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
-            animate={{ y: [0, -6, 0] }}
-            whileHover={{ scale: 1.05 }}
-            transition={{
-              duration: 2.5,
-              repeat: Infinity,
-              repeatType: "loop",
-              ease: "easeInOut",
-              delay: idx * 0.2,
-            }}
-          >
-            <div className={`p-4 rounded-full mb-4 text-2xl ${iconColors[idx % iconColors.length]}`}>
-              {item.icon}
-            </div>
-            <h3 className="text-xl font-bold text-black mb-2">{item.title}</h3>
-            <p className="text-gray-600 text-sm">{item.description}</p>
-          </motion.div>
-        ))}
+        <div className={` p-4 rounded-full text-3xl ${iconColors[idx % iconColors.length]}`}>
+          {item.icon}
+        </div>
+        <div className="flex-1">
+          <h3 className="text-xl font-extrabold text-gray-50  mb-1">{item.title}</h3>
+          <p className="text-gray-900 text-lg">{item.description}</p>
+        </div>
       </motion.div>
-    </motion.section>
+    ))}
+  </motion.div>
+</motion.section>
+
 
       {/* Why Choose Our Platform Section */}
     <motion.div
@@ -658,7 +649,7 @@ const formRef = useRef();
       return (
         <motion.div
           key={idx}
-          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
+          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-yellow-500  hover:shadow-yellow-500 transition-all"
           animate={{ y: [0, -6, 0] }}
           whileHover={{ scale: 1.05 }}
           transition={{
@@ -727,19 +718,26 @@ const formRef = useRef();
     All it takes is the right people by your side, the right skills in your toolkit, and a growth mindset ready to tackle any challenge.
   </p>
 
-  <div className="flex flex-col sm:flex-row justify-center gap-6 max-w-xl mx-auto">
-    <button className="flex items-center gap-3 border-2 border-green-600 font-semibold px-6  rounded-full shadow-sm hover:bg-[#7a56d6] hover:text-white transition">
-      <FaRocket className="text-xl" /> Apply to Bootcamp
-    </button>
+ <div className="flex flex-col sm:flex-row justify-center gap-6 max-w-xl mx-auto">
+  <button className="flex items-center justify-center gap-3 border-2 border-green-600 font-semibold px-6 py-3 min-w-[250px] rounded-full shadow-sm hover:bg-[#7a56d6] hover:text-white transition">
+    <FaRocket className="text-xl" /> Apply to Bootcamp
+  </button>
 
-    <Link to="/courses" className="flex items-center justify-center gap-3 border-2 border-green-600 font-semibold px-6  rounded-full shadow-sm hover:bg-[#7a56d6] hover:text-white transition">
-      <FaBookOpen className="text-xl" /> Start Learning Now
-    </Link>
+  <Link
+    to="/courses"
+    className="flex items-center justify-center gap-3 border-2 border-green-600 font-semibold px-6 py-3 min-w-[250px] rounded-full shadow-sm hover:bg-[#7a56d6] hover:text-white transition"
+  >
+    <FaBookOpen className="text-xl" /> Start Learning Now
+  </Link>
 
-    <Link to="/services" className="flex items-center justify-center gap-3 border-2 border-green-600 font-semibold px-6  rounded-full shadow-sm hover:bg-[#7a56d6] hover:text-white transition">
-      <FaCogs className="text-xl" /> Explore Our Services
-    </Link>
-  </div>
+  <Link
+    to="/services"
+    className="flex items-center justify-center gap-3 border-2 border-green-600 font-semibold px-6 py-3 min-w-[250px] rounded-full shadow-sm hover:bg-[#7a56d6] hover:text-white transition"
+  >
+    <FaCogs className="text-xl" /> Explore Our Services
+  </Link>
+</div>
+
 </section>
       
       {/* Contact Section */}
@@ -865,70 +863,68 @@ const formRef = useRef();
     </div>
 
      {/* Follow Us Section */}
-      <motion.div
+  <motion.div
   initial={{ opacity: 0, scale: 0.95 }}
   animate={{ opacity: 1, scale: 1 }}
   transition={{ duration: 1.2, ease: "easeInOut" }}
-  className="w-full mt-24 flex flex-col items-center justify-center gap-8 overflow-hidden"
+  className="w-full mt-24 flex flex-col items-center justify-center gap-12 px-4"
 >
-  <div className="text-[#7a56d6] text-2xl md:text-3xl font-bold">
-    Follow Us 
-  </div>
+  <h2 className="text-[#7a56d6] text-3xl md:text-4xl font-extrabold text-center">
+    Follow Us on Social Media
+  </h2>
 
-  {/* Social Icons Section with Smooth Looping Animation */}
-  <div className="relative w-full overflow-hidden py-6">
-    <motion.div
-      className="flex gap-16 justify-center flex-wrap w-full will-change-transform"
-      animate={{ y: [0, -10, 0] }}
-      transition={{
-        duration: 2,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
-    >
-      {[
-        {
-          name: "YouTube",
-          src: "https://img.icons8.com/3d-fluency/94/youtube-play.png",
-          link: "https://youtube.com/@excellup_hub?si=HxFhFR3Dr6ql5Tzd",
-        },
-        {
-          name: "LinkedIn",
-          src: "https://img.icons8.com/3d-fluency/94/linkedin.png",
-          link: "https://www.linkedin.com/in/excellup-hub-393700360/",
-        },
-        {
-          name: "Instagram",
-          src: "https://img.icons8.com/3d-fluency/94/instagram-new.png",
-          link: "https://www.instagram.com/excellup_?igsh=YWw0MzhzbHpkaW1p",
-        },
-        {
-          name: "WhatsApp",
-          src: "https://img.icons8.com/3d-fluency/94/whatsapp.png",
-          link: "https://wa.me/",
-        },
-      ].map((icon, index) => (
-        <motion.a
-          key={icon.name}
-          href={icon.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-20 h-20 md:w-24 md:h-24 bg-white rounded-xl flex items-center justify-center hover:scale-110 transition-transform"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.8,
-            delay: index * 0.2,
-            ease: "easeInOut",
-          }}
-          whileHover={{ scale: 1.2 }}
-        >
-          <img src={icon.src} alt={icon.name} className="w-12 h-12 md:w-14 md:h-14" />
-        </motion.a>
-      ))}
-    </motion.div>
+  {/* New Icon Design: Circular Glow Cards */}
+  <div className="grid grid-cols-2 sm:grid-cols-4 gap-10">
+    {[
+      {
+        name: "YouTube",
+        src: "https://img.icons8.com/3d-fluency/94/youtube-play.png",
+        link: "https://youtube.com/@excellup_hub?si=HxFhFR3Dr6ql5Tzd",
+      },
+      {
+        name: "LinkedIn",
+        src: "https://img.icons8.com/3d-fluency/94/linkedin.png",
+        link: "https://www.linkedin.com/in/excellup-hub-393700360/",
+      },
+      {
+        name: "Instagram",
+        src: "https://img.icons8.com/3d-fluency/94/instagram-new.png",
+        link: "https://www.instagram.com/excellup_?igsh=YWw0MzhzbHpkaW1p",
+      },
+      {
+        name: "WhatsApp",
+        src: "https://img.icons8.com/3d-fluency/94/whatsapp.png",
+        link: "https://wa.me/",
+      },
+    ].map((icon, index) => (
+      <motion.a
+        key={icon.name}
+        href={icon.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white shadow-xl flex items-center justify-center transition-all hover:shadow-[0_0_20px_#7a56d6] group"
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: index * 0.2,
+          ease: "easeInOut",
+        }}
+        whileHover={{ scale: 1.15 }}
+      >
+        <img
+          src={icon.src}
+          alt={icon.name}
+          className="w-12 h-12 md:w-14 md:h-14 transition-transform duration-300 group-hover:rotate-12"
+        />
+        <span className="absolute -bottom-8 text-sm font-semibold text-[#7a56d6] opacity-0 group-hover:opacity-100 transition duration-300">
+          {icon.name}
+        </span>
+      </motion.a>
+    ))}
   </div>
 </motion.div>
+
 
       {/* Student story Section */}
      <motion.div
@@ -938,7 +934,7 @@ const formRef = useRef();
   transition={{ duration: 1 }}
   className="w-full mt-32 px-6 md:px-16 text-center bg-[#f9f9f9] py-20"
 >
-  <h2 className="text-black text-3xl md:text-4xl font-bold mb-4">
+  <h2 className="text-[#7a56d6] text-3xl md:text-4xl font-bold mb-4">
     Student Success Stories
   </h2>
   <p className="text-black mb-10">
