@@ -104,30 +104,33 @@ export default function About() {
        </section>
 
        {/* /* Follow Us Section */} 
-<motion.div
- animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
-  className="w-full mt-5 text-center "
+ <motion.div
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1.2, ease: "easeInOut" }}
+  className="w-full mt-24 flex flex-col items-center justify-center gap-12 px-4"
 >
-  <h2 className="text-[#7a56d6] text-2xl md:text-3xl font-bold mb-8">
-    Follow Us <span className="inline-block">🚀</span>
+  <h2 className="text-[#7a56d6] text-3xl md:text-4xl font-extrabold text-center">
+    Follow Us on Social Media
   </h2>
-  <div className="flex justify-center gap-10 md:gap-20 flex-wrap">
+
+  {/* New Icon Design: Circular Glow Cards */}
+  <div className="grid grid-cols-2 sm:grid-cols-4 gap-10">
     {[
       {
         name: "YouTube",
         src: "https://img.icons8.com/3d-fluency/94/youtube-play.png",
-        link: "https://youtube.com",
+        link: "https://youtube.com/@excellup_hub?si=HxFhFR3Dr6ql5Tzd",
       },
       {
         name: "LinkedIn",
         src: "https://img.icons8.com/3d-fluency/94/linkedin.png",
-        link: "https://linkedin.com",
+        link: "https://www.linkedin.com/in/excellup-hub-393700360/",
       },
       {
         name: "Instagram",
         src: "https://img.icons8.com/3d-fluency/94/instagram-new.png",
-        link: "https://instagram.com",
+        link: "https://www.instagram.com/excellup_?igsh=YWw0MzhzbHpkaW1p",
       },
       {
         name: "WhatsApp",
@@ -140,22 +143,24 @@ export default function About() {
         href={icon.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-16 h-16"
-        animate={{ y: [0, -10, 0] }}
+        className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white shadow-xl flex items-center justify-center transition-all hover:shadow-[0_0_20px_#7a56d6] group"
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
         transition={{
-          duration: 2,
-          repeat: Infinity,
-          repeatType: "loop",
-          ease: "easeInOut",
+          duration: 0.8,
           delay: index * 0.2,
+          ease: "easeInOut",
         }}
-        whileHover={{ scale: 1.2 }}
+        whileHover={{ scale: 1.15 }}
       >
         <img
           src={icon.src}
           alt={icon.name}
-          className="w-full h-full"
+          className="w-12 h-12 md:w-14 md:h-14 transition-transform duration-300 group-hover:rotate-12"
         />
+        <span className="absolute -bottom-8 text-sm font-semibold text-[#7a56d6] opacity-0 group-hover:opacity-100 transition duration-300">
+          {icon.name}
+        </span>
       </motion.a>
     ))}
   </div>

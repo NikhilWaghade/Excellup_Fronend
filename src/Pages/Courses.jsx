@@ -14,37 +14,37 @@ const courses = [
   {
     slug: "frontend-development",
     title: "Frontend Development",
-    icon: <FaHtml5 className="text-4xl text-yellow-400" />,
+    icon: <FaHtml5 className="text-4xl text-[#7a56d6]" />,
     description: "HTML, CSS, JavaScript, React & UI/UX fundamentals.",
   },
   {
     slug: "backend-development",
     title: "Backend Development",
-    icon: <FaServer className="text-4xl text-yellow-400" />,
+    icon: <FaServer className="text-4xl text-[#7a56d6]" />,
     description: "Node.js, Express, MongoDB & RESTful APIs.",
   },
   {
     slug: "full-stack-web",
     title: "Full Stack Web Development",
-    icon: <FaLaptopCode className="text-4xl text-yellow-400" />,
+    icon: <FaLaptopCode className="text-4xl text-[#7a56d6]" />,
     description: "Frontend + Backend full-stack development with projects.",
   },
   {
     slug: "programming-fundamentals",
     title: "Programming Fundamentals",
-    icon: <FaCode className="text-4xl text-yellow-400" />,
+    icon: <FaCode className="text-4xl text-[#7a56d6]" />,
     description: "C, C++, Python, Java with real practice.",
   },
   {
     slug: "wordpress-development",
     title: "WordPress Development",
-    icon: <FaWordpress className="text-4xl text-yellow-400" />,
+    icon: <FaWordpress className="text-4xl text-[#7a56d6]" />,
     description: "No-code website development with WordPress.",
   },
   {
     slug: "dsa",
     title: "Data Structures & Algorithms",
-    icon: <FaDatabase className="text-4xl text-yellow-400" />,
+    icon: <FaDatabase className="text-4xl text-[#7a56d6]" />,
     description: "Master DSA and crack coding interviews.",
   },
 ];
@@ -66,7 +66,7 @@ export default function Courses() {
           {courses.map((course, index) => (
             <motion.div
               key={index}
-              className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-xl text-center hover:ring-2 hover:ring-[#7a56d6] transition-all"
+              className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-xl text-center hover:shadow-lg hover:ring-2 hover:ring-yellow-500  hover:shadow-yellow-500 transition-all"
               animate={{ y: [0, -10, 0] }}
               transition={{
                 duration: 3,
