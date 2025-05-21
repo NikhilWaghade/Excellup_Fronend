@@ -9,6 +9,7 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import CourseDetail from './Components/CourseComponents/CourseDetail';
 import { DarkModeProvider } from './Context/DarkModeContext';
+import MouseFollower from './Components/MouseFollower';
 
 function App() {
   return (
@@ -16,8 +17,7 @@ function App() {
     <BrowserRouter>
     <Navbar/>
       <main >
-    {/* <Navbar/> */}
-       
+       <MouseFollower />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

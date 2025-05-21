@@ -15,3 +15,28 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
+/* mouseFlower effect  */
+.mouse-follower {
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
+  transition: transform 0.075s ease-out;
+}
+
+.mouse-outer {
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mouse-inner {
+  width: 8px;
+  height: 8px;
+  background: Black;
+  border-radius: 9999px;
+}

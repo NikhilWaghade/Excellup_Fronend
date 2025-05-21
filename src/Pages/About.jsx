@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import logo from '../assets/Images/Excellup(logo).jpg'
 
 // Replace with your actual team images or URLs
 const teamMembers = [
@@ -70,7 +71,7 @@ export default function About() {
             className="flex justify-center"
           >
             <motion.img
-                src="src\assets\Images\Excellup_logo_-removebg-preview.png"
+                src={logo}
               alt="Excellup Logo"
               className="rounded-3xl  w-full max-w-md md:max-w-lg"
               animate={{ y: [0, -20, 0] }}
