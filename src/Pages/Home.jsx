@@ -489,53 +489,70 @@ const formRef = useRef();
 </motion.section>
 
   {/* Featured  */}
- <section
-      id="our-work"
-      className="py-20 px-4 md:px-10 bg-gradient-to-b from-white to-[#c4c1cf]"
-    >
-      <div className="max-w-4xl mx-auto text-center mb-14">
-        <h2 className="text-4xl font-bold text-[#7a56d6] mb-4">Our Work Speaks</h2>
-        <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-          From real-world projects to digital experiments, our work blends creativity,
-          technology, and purpose — transforming ideas into meaningful experiences.
-        </p>
-      </div>
+<section
+  id="our-work"
+  className="w-full py-20 px-6 md:px-16 bg-gradient-to-b from-white to-[#c4c1cf]"
+>
+  {/* Heading container */}
+  <div className="max-w-4xl mx-auto text-center mb-14 px-2">
+    <h2 className="text-3xl sm:text-4xl font-bold text-[#7a56d6] mb-4">Our Work Speaks</h2>
+    <p className="text-gray-700 text-base sm:text-lg max-w-2xl mx-auto">
+      From real-world projects to digital experiments, our work blends creativity,
+      technology, and purpose — transforming ideas into meaningful experiences.
+    </p>
+  </div>
 
-      <Swiper
-        modules={[Autoplay, Pagination, Navigation]}
-        slidesPerView={1}
-        spaceBetween={30}
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
-        pagination={{ clickable: true }}
-        navigation
-        className="max-w-5xl mx-auto"
-      >
-        {works.map((work, idx) => (
-          <SwiperSlide key={idx}>
-            <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
-              <img
-                src={work.image}
-                alt={work.title}
-                className="w-full md:w-1/2 h-64 object-cover"
-              />
-              <div className="p-6 md:p-8 w-full md:w-1/2">
-                <div className="mb-3 text-[#7a56d6] text-xl">{work.icon}</div>
-                <h3 className="text-2xl font-semibold text-gray-800 mb-2">{work.title}</h3>
-                <p className="text-gray-600 mb-4 text-sm">{work.description}</p>
-                <a
-                  href={work.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#7a56d6] font-medium inline-block text-sm border-b-2 border-transparent hover:border-[#7a56d6] transition"
-                >
-                  {work.linkText}
-                </a>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </section>
+  {/* Swiper container */}
+  <Swiper
+    modules={[Autoplay, Pagination, Navigation]}
+    slidesPerView={1}
+    spaceBetween={30}
+    autoplay={{ delay: 4000, disableOnInteraction: false }}
+    pagination={{ clickable: true }}
+    navigation
+    className="max-w-5xl mx-auto px-2"
+  >
+    {works.map((work, idx) => (
+      <SwiperSlide key={idx}>
+        <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+          
+          {/* Image */}
+          <img
+            src={work.image}
+            alt={work.title}
+            className="
+              w-4/5 mx-auto mb-6 
+              sm:w-3/4 sm:h-56
+              md:w-1/2 md:h-72
+              lg:h-80
+              object-cover
+              rounded-t-2xl md:rounded-none md:rounded-l-2xl
+              "
+          />
+
+          {/* Text content */}
+          <div className="p-6 md:p-8 w-full md:w-1/2">
+            <div className="mb-3 text-[#7a56d6] text-xl">{work.icon}</div>
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">{work.title}</h3>
+            <p className="text-gray-600 mb-4 text-sm sm:text-base">{work.description}</p>
+            <a
+              href={work.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#7a56d6] font-medium inline-block text-sm sm:text-base border-b-2 border-transparent hover:border-[#7a56d6] transition"
+            >
+              {work.linkText}
+            </a>
+          </div>
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</section>
+
+
+
+
 
 
     {/* Who We Help */}
