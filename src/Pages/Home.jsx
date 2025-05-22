@@ -38,12 +38,7 @@ const [text] = useTypewriter({
   // services 
 const combinedItems = [
  
-  {
-    icon: <Code2 className="w-10 h-10 text-blue-600" />,
-    label: "Tech Education",
-    description: "Learn coding from basics to real-world projects.",
-   // image: "/images/coding-education.jpg",//optional but not use this time dummy path
-  },
+  
   {
     icon: <Video className="w-10 h-10 text-red-600" />,
     label: "Content Creation",
@@ -63,16 +58,7 @@ const combinedItems = [
     label: "Tech Bootcamps",
     description: "Hands-on offline training in Web Development, Editing, Design & more.",
   },
-  {
-    icon: <Video className="w-10 h-10 text-pink-600" />,
-    label: "Content Creation",
-    description: "Workshops and services for creators who want to grow with storytelling.",
-  },
-  {
-    icon: <Globe className="w-10 h-10 text-green-600" />,
-    label: "Digital Services",
-    description: "For small brands and businesses — branding, social media, and websites.",
-  },
+  
   {
     icon: <Activity className="w-10 h-10 text-red-600" />,
     label: "Real Projects",
@@ -108,14 +94,16 @@ const works = [
     link: "#",
     linkText: "Watch Reel",
   },
+   
 {
-  icon: <FaLaptopCode size={24} />,
-  title: "💻 C Programming Crash Course",
+  icon: <FaVideo size={24} />, 
+  title: "🎥 Video Editing Masterclass",
   description:
-    "A beginner-friendly crash course video covering the fundamentals of C Programming — variables, loops, functions, and real coding examples.",
+    "Learn professional video editing techniques using CapCut and Adobe Premiere Pro — perfect for content creators and social media managers.",
   link: "#",
-  linkText: "Watch on YouTube",
+  linkText: "Watch Masterclass",
 },
+
   {
     icon: <FaPaintBrush size={24} />,
     title: "🖼️ Business Promo Poster",
@@ -124,22 +112,7 @@ const works = [
     link: "#",
     linkText: "View Sample",
   },
-  {
-  icon: <FaCode size={24} />, 
-  title: "🌐 Web Development Bootcamp",
-  description:
-    "An immersive bootcamp-style video series covering HTML, CSS, JavaScript, and React with real-world projects and deployment tips.",
-  link: "#",
-  linkText: "Explore Course",
-},
-{
-  icon: <FaVideo size={24} />, 
-  title: "🎥 Video Editing Masterclass",
-  description:
-    "Learn professional video editing techniques using CapCut and Adobe Premiere Pro — perfect for content creators and social media managers.",
-  link: "#",
-  linkText: "Watch Masterclass",
-}
+
 ];
 
 
@@ -163,12 +136,7 @@ const whoWeHelpData = [
     description:
       "Need a modern website, social media reel, or digital brand boost? We help turn your business ideas into engaging online experiences — fast, affordable, and effective.",
   },
-  {
-    icon: <FaChalkboardTeacher size={28} />,
-    title: "Parents & Educators",
-    description:
-      "Want to support your child’s tech future or enhance your teaching methods? We provide resources, workshops, and personalized guidance to help you guide the next generation.",
-  },
+ 
   {
     icon: <FaSuitcase size={28} />,
     title: "Freelancers & Career Changers",
@@ -383,7 +351,7 @@ const formRef = useRef();
   >
     {/* Card 1 */}
     <motion.div
-      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-yellow-500  hover:shadow-yellow-500"
+      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6]  hover:shadow-[#7a56d6]"
       animate={{ y: [0, -6, 0] }}
       whileHover={{ scale: 1.05 }}
       transition={{
@@ -404,7 +372,7 @@ const formRef = useRef();
 
     {/* Card 2 */}
     <motion.div
-      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-yellow-500  hover:shadow-yellow-500"
+      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6]  hover:shadow-[#7a56d6]"
       animate={{ y: [0, -6, 0] }}
       whileHover={{ scale: 1.05 }}
       transition={{
@@ -426,7 +394,7 @@ const formRef = useRef();
 
     {/* Card 3 */}
     <motion.div
-      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-yellow-500  hover:shadow-yellow-500"
+      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6]  hover:shadow-[#7a56d6]"
       animate={{ y: [0, -6, 0] }}
       whileHover={{ scale: 1.05 }}
       transition={{
@@ -494,7 +462,7 @@ const formRef = useRef();
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
           viewport={{ once: false, amount: 0.3 }}
-          className="bg-white rounded-3xl border border-gray-100 shadow-md  transition-all p-6 text-center flex flex-col items-center hover:shadow-lg hover:ring-2 hover:ring-yellow-500  hover:shadow-yellow-500"
+          className="bg-white rounded-3xl border border-gray-100 shadow-md  transition-all p-6 text-center flex flex-col items-center hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6]  hover:shadow-[#7a56d6]  "
         >
           {/* Icon */}
           <div className={`w-14 h-14 flex items-center justify-center text-white text-2xl rounded-full shadow-sm mb-4 ${iconStyle}`}>
@@ -519,9 +487,7 @@ const formRef = useRef();
   </div>
 </motion.section>
 
-
-
-    {/* Featured  */}
+  {/* Featured  */}
 <motion.section
   id="our-work"
   initial="hidden"
@@ -576,8 +542,6 @@ const formRef = useRef();
   </div>
 </motion.section>
 
-
-
     {/* Who We Help */}
    <motion.section
   id="who-we-help"
@@ -604,7 +568,7 @@ const formRef = useRef();
     {whoWeHelpData.map((item, idx) => (
       <motion.div
         key={idx}
-        className="flex flex-col md:flex-row items-start md:items-center gap-6 p-6 rounded-xl bg-[#9272e2] hover:bg-[#a99fc1]  transition-all "
+        className="flex flex-col md:flex-row items-start md:items-center gap-6 p-6 rounded-xl bg-[#9c7ee8c5] hover:bg-[#9d8cc0]  transition-all "
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: idx * 0.1 }}
@@ -613,22 +577,17 @@ const formRef = useRef();
           {item.icon}
         </div>
         <div className="flex-1">
-          <h3 className="text-xl font-extrabold text-gray-50  mb-1">{item.title}</h3>
-          <p className="text-gray-900 text-lg">{item.description}</p>
+          <h3 className="text-xl font-extrabold text-black  mb-1">{item.title}</h3>
+          <p className="text-gray-200 text-lg">{item.description}</p>
         </div>
       </motion.div>
     ))}
   </motion.div>
 </motion.section>
 
-
-      {/* Why Choose Our Platform Section */}
-    <motion.div
-  initial={{ opacity: 0, scale: 0.95 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 1.2, ease: "easeInOut" }}
-  className="w-full py-20 text-white text-center mt-16"
->
+    {/* Why Choose Our Platform Section */}
+    <section>
+     <div className="w-full py-20 text-white text-center mt-16">
   <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-black">
     Why Choose <span className="text-[#7a56d6]">EXCELLUP ?</span>
   </h2>
@@ -636,77 +595,30 @@ const formRef = useRef();
     Choose EXCELLUP for a transformative coding experience — where expert guidance, interactive learning, and real-world tech skills come together to help you grow, create, and succeed.
   </p>
 
-  <motion.div
-    className="grid grid-cols-1 md:grid-cols-3 gap-10 px-6 md:px-16"
-    initial="hidden"
-    animate="visible"
-    variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
-  >
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-6 md:px-16">
     {features.map((feature, idx) => {
       const bgColors = ['bg-blue-100 text-blue-600', 'bg-red-100 text-red-600', 'bg-green-100 text-green-600'];
       const iconStyle = bgColors[idx % 3];
 
       return (
-        <motion.div
+        <div
           key={idx}
-          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-yellow-500  hover:shadow-yellow-500 transition-all"
-          animate={{ y: [0, -6, 0] }}
-          whileHover={{ scale: 1.05 }}
-          transition={{
-            duration: 2.5,
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "easeInOut",
-            delay: idx * 0.2,
-          }}
+          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] hover:shadow-[#7a56d6] transition-all"
         >
           <div className={`p-4 rounded-full mb-4 text-2xl ${iconStyle}`}>
             {feature.icon}
           </div>
           <h3 className="text-xl font-semibold text-black mb-2">{feature.title}</h3>
           <p className="text-gray-600 text-sm">{feature.description}</p>
-        </motion.div>
+        </div>
       );
     })}
-  </motion.div>
-</motion.div>
+  </div>
+     </div>
+  </section>
+
      
-     {/* Testimonials Section */}
-  <section className=" py-20 px-6 md:px-16 lg:px-24" id="testimonials">
-  <div className="max-w-4xl mx-auto text-center mb-12">
-    <h2 className="text-4xl font-extrabold text-[#7a56d6] mb-6">Hear From Our Community</h2>
-    <p className="text-gray-700 max-w-xl mx-auto mb-6">
-      At EXCELLUP, we’re proud to support learners and creators from all walks of life.  
-      Our mission is to empower you with skills, confidence, and real-world experience — and soon, you’ll hear directly from those who’ve walked this path.
-    </p>
-    <p className="text-gray-600 max-w-lg mx-auto italic">
-      Whether you’re just starting out or scaling your expertise, EXCELLUP is here to guide you every step of the way.
-    </p>
-  </div>
-
-  {/* Testimonial with image */}
-  <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-10 flex flex-col md:flex-row items-center text-gray-500 italic">
-    <img 
-      src="https://randomuser.me/api/portraits/women/68.jpg" 
-      alt="User avatar" 
-      className="w-24 h-24 rounded-full mb-6 md:mb-0 md:mr-8 object-cover shadow-md"
-    />
-    <div>
-      <p className="mb-6 text-lg leading-relaxed">
-        “Learning to code can be intimidating — but at EXCELLUP, it feels achievable and exciting.  
-        The hands-on projects and supportive community make all the difference.  
-        I can’t wait to share my journey here with others soon!”
-      </p>
-      <span className="block font-semibold text-gray-700">– Future EXCELLUP Learner</span>
-    </div>
-  </div>
-
- {/* add mor student testimonial  */}
-  {/* <p className="mt-12 text-center text-gray-500 text-sm">
-    (Testimonials coming soon — stay tuned as we grow together!)
-  </p> */}
-</section>
-
+  
      {/* final call action section */}    
 <section className="py-20 px-6 md:px-16 text-center max-w-4xl mx-auto">
   <h2 className="text-4xl font-extrabold mb-6 text-[#7a56d6]">
