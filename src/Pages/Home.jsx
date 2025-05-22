@@ -85,6 +85,7 @@ const works = [
       "A responsive website designed for a hometown bakery, featuring online orders, gallery, and real-time offers. Built with React, Tailwind CSS, and Firebase.",
     link: "#",
     linkText: "View Live",
+    image: "https://plus.unsplash.com/premium_photo-1722126194543-ab8a195ce9e5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fHdlYnNpdGV8ZW58MHx8MHx8fDA%3D",
   },
   {
     icon: <FaInstagram size={24} />,
@@ -93,17 +94,17 @@ const works = [
       "A fast-paced, high-impact reel educating students on how algorithms power modern apps. Created using CapCut and Adobe Premiere Pro.",
     link: "#",
     linkText: "Watch Reel",
+    image: "https://images.unsplash.com/photo-1618835350907-653a211d5889?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTg0fHwlRjAlOUYlOEUlQUMlMjBJbnN0YWdyYW0lMjBUZWNoJTIwUmVlbHxlbnwwfHwwfHx8MA%3D%3D",
   },
-   
-{
-  icon: <FaVideo size={24} />, 
-  title: "🎥 Video Editing Masterclass",
-  description:
-    "Learn professional video editing techniques using CapCut and Adobe Premiere Pro — perfect for content creators and social media managers.",
-  link: "#",
-  linkText: "Watch Masterclass",
-},
-
+  {
+    icon: <FaVideo size={24} />,
+    title: "🎥 Video Editing Masterclass",
+    description:
+      "Learn professional video editing techniques using CapCut and Adobe Premiere Pro — perfect for content creators and social media managers.",
+    link: "#",
+    linkText: "Watch Masterclass",
+    image: "https://images.unsplash.com/photo-1576267345152-5e8d10f75cb4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8JUYwJTlGJThFJUE1JTIwVmlkZW8lMjBFZGl0aW5nJTIwTWFzdGVyY2xhc3N8ZW58MHx8MHx8fDA%3D",
+  },
   {
     icon: <FaPaintBrush size={24} />,
     title: "🖼️ Business Promo Poster",
@@ -111,8 +112,8 @@ const works = [
       "A clean, vibrant promotional poster designed for a tech startup, combining strategic layout, bold visuals, and AI-generated slogans.",
     link: "#",
     linkText: "View Sample",
+    image: "https://images.unsplash.com/photo-1637652915488-4be9bbfbb8a2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8",
   },
-
 ];
 
 
@@ -488,59 +489,54 @@ const formRef = useRef();
 </motion.section>
 
   {/* Featured  */}
-<motion.section
-  id="our-work"
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: false, amount: 0.3 }} // 👈 triggers on both scroll down and up
-  className="py-24 px-4 md:px-10 bg-gradient-to-b from-white to-[#f3f0ff] mt-5"
->
-  <div className="max-w-4xl mx-auto mb-20 text-center">
-    <h2 className="text-4xl font-bold text-[#7a56d6] mb-6">Our Work Speaks</h2>
-    <p className="text-gray-700 text-lg max-w-2xl mx-auto leading-relaxed">
-      From real-world projects to digital experiments, our work blends creativity, technology, and purpose.
-      We transform ideas into meaningful digital experiences — for learners, local businesses, and global audiences.
-    </p>
-    <p className="text-sm text-gray-500 italic mt-2">
-      From classroom concepts to client-ready deliverables — we take pride in what we build.
-    </p>
-  </div>
+ <section
+      id="our-work"
+      className="py-20 px-4 md:px-10 bg-gradient-to-b from-white to-[#c4c1cf]"
+    >
+      <div className="max-w-4xl mx-auto text-center mb-14">
+        <h2 className="text-4xl font-bold text-[#7a56d6] mb-4">Our Work Speaks</h2>
+        <p className="text-gray-700 text-lg max-w-2xl mx-auto">
+          From real-world projects to digital experiments, our work blends creativity,
+          technology, and purpose — transforming ideas into meaningful experiences.
+        </p>
+      </div>
 
-  <div className="relative border-l-2 border-[#7a56d6] max-w-3xl mx-auto space-y-12">
-    {works.map((work, idx) => {
-      const iconStyle = iconColors[idx % iconColors.length];
-      return (
-        <motion.div
-          key={idx}
-          className="relative pl-10"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: idx * 0.15 }}
-          viewport={{ once: false, amount: 0.3 }}
-        >
-          {/* Icon Dot */}
-          <span className={`absolute left-[-13px] top-2 w-7 h-7 rounded-full flex items-center justify-center text-xl shadow-md ${iconStyle}`}>
-            {work.icon}
-          </span>
+      <Swiper
+        modules={[Autoplay, Pagination, Navigation]}
+        slidesPerView={1}
+        spaceBetween={30}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        pagination={{ clickable: true }}
+        navigation
+        className="max-w-5xl mx-auto"
+      >
+        {works.map((work, idx) => (
+          <SwiperSlide key={idx}>
+            <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+              <img
+                src={work.image}
+                alt={work.title}
+                className="w-full md:w-1/2 h-64 object-cover"
+              />
+              <div className="p-6 md:p-8 w-full md:w-1/2">
+                <div className="mb-3 text-[#7a56d6] text-xl">{work.icon}</div>
+                <h3 className="text-2xl font-semibold text-gray-800 mb-2">{work.title}</h3>
+                <p className="text-gray-600 mb-4 text-sm">{work.description}</p>
+                <a
+                  href={work.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#7a56d6] font-medium inline-block text-sm border-b-2 border-transparent hover:border-[#7a56d6] transition"
+                >
+                  {work.linkText}
+                </a>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
 
-          {/* Work Box */}
-          <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
-            <h3 className="text-xl font-semibold text-gray-800 mb-1">{work.title}</h3>
-            <p className="text-gray-600 text-sm mb-2">{work.description}</p>
-            <a
-              href={work.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-[#7a56d6] font-medium inline-block relative after:block after:w-0 after:h-[2px] after:bg-[#7a56d6] after:transition-all after:duration-300 hover:after:w-full"
-            >
-              {work.linkText}
-            </a>
-          </div>
-        </motion.div>
-      );
-    })}
-  </div>
-</motion.section>
 
     {/* Who We Help */}
    <motion.section
@@ -617,8 +613,7 @@ const formRef = useRef();
      </div>
   </section>
 
-     
-  
+   
      {/* final call action section */}    
 <section className="py-20 px-6 md:px-16 text-center max-w-4xl mx-auto">
   <h2 className="text-4xl font-extrabold mb-6 text-[#7a56d6]">
