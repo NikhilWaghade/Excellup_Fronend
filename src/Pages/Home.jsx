@@ -8,10 +8,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import { testimonials, features, technologies } from "/src/Data/testimonialData.jsx";
-import logo from '../assets/Images/logo.png'
 import { Users, Laptop, Rocket, Code2, MonitorSmartphone, TrendingUp, Video, Globe, Activity, Calendar } from 'lucide-react';
 import { FaBookOpen, FaChalkboardTeacher, FaCheckCircle, FaCode, FaCogs, FaEnvelope, FaGlobe, FaHandshake, FaInstagram, FaLaptopCode, FaMapMarkerAlt, FaPaintBrush, FaPhoneAlt, FaRocket, FaStore, FaSuitcase, FaTimesCircle, FaUserGraduate, FaUsers, FaVideo, FaYoutube } from "react-icons/fa";
 import emailjs from "emailjs-com";
+import wlclogo from '../assets/Images/wlc_logo.png'
 
 
 
@@ -202,66 +202,50 @@ const formRef = useRef();
   return (
     <div className="min-h-screen w-full flex flex-col items-center bg-white text-black p-6 md:p-12 -mt-20">
       {/* Hero Section */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full mx-auto items-center pt-16 md:pt-32 px-4 md:px-8">
-    {/* Left side content with typewriter */}
-    <motion.div
-      initial={{ opacity: 0, x: -70 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1 }}
-      className="text-white space-y-8"
-    >
-      <h1 className="text-xl md:text-4xl font-extrabold leading-tight">
-        <span className="text-[#7a56d6] mt-20 text-4xl">{text}</span>
-        <Cursor cursorStyle="|" />
-        <br />
-        <span className="text-black text-2xl ">Build Your Future with Emerging Tech</span>
-      </h1>
+   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full mx-auto items-center pt-16 md:pt-32 px-4 md:px-8">
+  {/* Left side content with typewriter */}
+  <div className="text-white space-y-8">
+    <h1 className="text-xl md:text-4xl font-extrabold leading-tight">
+      <span className="text-[#7a56d6] mt-20 text-4xl">{text}</span>
+      <Cursor cursorStyle="|" />
+      <br />
+      <span className="text-black text-2xl">Build Your Future with Emerging Tech</span>
+    </h1>
 
-      <p className="text-black text-lg md:text-xl leading-relaxed max-w-2xl font-inter ">
-        "Level up your coding skills with our cutting-edge education platform.
-        Learn from industry leaders, build real-world projects, and join a thriving
-        community of passionate developers."
-      </p>
+    <p className="text-black text-lg md:text-xl leading-relaxed max-w-2xl font-inter">
+      "Level up your coding skills with our cutting-edge education platform.
+      Learn from industry leaders, build real-world projects, and join a thriving
+      community of passionate developers."
+    </p>
 
-      <div className="flex flex-wrap gap-4 z-10">
-        <Link to="/courses">
-          <button className="bg-[#7a56d6] text-white px-6 py-3 rounded-xl font-semibold hover:bg-yellow-300 transition flex items-center shadow-lg">
-            🚀 Start Learning
-          </button>
-        </Link>
+    <div className="flex flex-wrap gap-4 z-10">
+      <Link to="/courses">
+        <button className="bg-[#7a56d6] text-white px-6 py-3 rounded-xl font-semibold hover:bg-yellow-300 transition flex items-center shadow-lg">
+          🚀 Start Learning
+        </button>
+      </Link>
 
-        <a
-          href="https://youtu.be/ToZSFHUJdHM?si=qCJqiWzIAGUME63x"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="border-2 border-yellow-400 text-black px-6 py-3 rounded-xl font-semibold hover:bg-[#7a56d6] flex items-center shadow-lg"
-        >
-          ▶️ Watch Demo
-        </a>
-      </div>
-    </motion.div>
-
-    {/* Right side image section */}
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1.5, ease: "easeInOut" }}
-      className="flex justify-center"
-    >
-      <motion.img
-        src={logo}
-        alt="Coding Students"
-        className="rounded-3xl w-full max-w-md md:max-w-lg z-0"
-        animate={{ y: [0, -20, 0] }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          repeatType: "loop",
-          ease: "easeInOut",
-        }}
-      />
-    </motion.div>
+      <a
+        href="https://youtu.be/ToZSFHUJdHM?si=qCJqiWzIAGUME63x"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="border-2 border-yellow-400 text-black px-6 py-3 rounded-xl font-semibold hover:bg-[#7a56d6] flex items-center shadow-lg"
+      >
+        ▶️ Watch Demo
+      </a>
+    </div>
   </div>
+
+  {/* Right side image section */}
+  <div className="flex justify-center">
+    <img
+      src={wlclogo}
+      alt="Coding Students"
+      className="rounded-3xl w-full max-w-md md:max-w-lg z-0"
+    />
+  </div>
+</div>
+
 
       {/* Technologies Icons Section */}
          <motion.div
@@ -434,11 +418,8 @@ const formRef = useRef();
 
 
     {/* What We DoSection */}
-<motion.section
+<section
   id="what-we-do"
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
   className="py-24 px-6 md:px-14 bg-white"
 >
   <div className="max-w-6xl mx-auto text-center mb-16">
@@ -457,13 +438,9 @@ const formRef = useRef();
     {combinedItems.map((item, index) => {
       const iconStyle = iconColors[index % iconColors.length];
       return (
-        <motion.div
+        <div
           key={index}
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="bg-white rounded-3xl border border-gray-100 shadow-md  transition-all p-6 text-center flex flex-col items-center hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6]  hover:shadow-[#7a56d6]  "
+          className="bg-white rounded-3xl border border-gray-100 shadow-md transition-all p-6 text-center flex flex-col items-center hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] hover:shadow-[#7a56d6]"
         >
           {/* Icon */}
           <div className={`w-14 h-14 flex items-center justify-center text-white text-2xl rounded-full shadow-sm mb-4 ${iconStyle}`}>
@@ -482,11 +459,12 @@ const formRef = useRef();
               </div>
             </div>
           )}
-        </motion.div>
+        </div>
       );
     })}
   </div>
-</motion.section>
+</section>
+
 
   {/* Featured  */}
 <section
@@ -549,10 +527,6 @@ const formRef = useRef();
     ))}
   </Swiper>
 </section>
-
-
-
-
 
 
     {/* Who We Help */}
