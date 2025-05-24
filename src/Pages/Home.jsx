@@ -80,7 +80,7 @@ const combinedItems = [
 const works = [
   {
     icon: <FaGlobe size={24} />,
-    title: "🌐 Global & Local Website",
+    title: " Global & Local Website",
     description:
       "A responsive website designed for a hometown bakery, featuring online orders, gallery, and real-time offers. Built with React, Tailwind CSS, and Firebase.",
     link: "#",
@@ -89,7 +89,7 @@ const works = [
   },
   {
     icon: <FaInstagram size={24} />,
-    title: "🎬 Instagram Tech Reel",
+    title: " Instagram Tech Reel",
     description:
       "A fast-paced, high-impact reel educating students on how algorithms power modern apps. Created using CapCut and Adobe Premiere Pro.",
     link: "#",
@@ -98,7 +98,7 @@ const works = [
   },
   {
     icon: <FaVideo size={24} />,
-    title: "🎥 Video Editing Masterclass",
+    title: " Video Editing Masterclass",
     description:
       "Learn professional video editing techniques using CapCut and Adobe Premiere Pro — perfect for content creators and social media managers.",
     link: "#",
@@ -107,7 +107,7 @@ const works = [
   },
   {
     icon: <FaPaintBrush size={24} />,
-    title: "🖼️ Business Promo Poster",
+    title: " Business Promo Poster",
     description:
       "A clean, vibrant promotional poster designed for a tech startup, combining strategic layout, bold visuals, and AI-generated slogans.",
     link: "#",
@@ -207,7 +207,7 @@ const formRef = useRef();
         {/* Left side content with typewriter */}
         <div className="text-white space-y-8 md:mb-56">
           <h1 className="text-xl md:text-4xl font-extrabold leading-tight">
-            <span className="text-[#7a56d6] md:text-3xl text-2xl md:font-lato">{text}</span>
+            <span className="text-[#7a56d6] md:text-3xl text-2xl md:font-lato uppercase">{text}</span>
             <Cursor cursorStyle="|" />
             <br />
             <span className="text-black text-2xl">Build Your Future with Emerging Tech</span>
@@ -267,25 +267,6 @@ const formRef = useRef();
             className="w-12 h-12 sm:w-16 sm:h-16"
           />
         </motion.a>
-
-        {/* Instagram */}
-        <motion.a
-          href="https://www.instagram.com/excellup_"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-400 shadow-lg flex items-center justify-center cursor-pointer hover:shadow-[0_0_20px_#C13584] transition-all"
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
-          whileHover={{ scale: 1.15 }}
-          aria-label="Instagram"
-        >
-          <img
-            src="https://img.icons8.com/3d-fluency/94/instagram-new.png"
-            alt="Instagram"
-            className="w-12 h-12 sm:w-16 sm:h-16"
-          />
-        </motion.a>
       </div>
     </section>
 
@@ -298,7 +279,7 @@ const formRef = useRef();
     transition={{ duration: 1.2, ease: "easeInOut" }}
     className="w-full mt-16 flex flex-col items-center justify-center gap-6"
   >
-    <div className="text-[#7a56d6] text-center w-full text-3xl md:text-3xl font-bold font-lato">
+    <div className="text-[#7a56d6] text-center w-full text-3xl md:text-4xl font-bold font-lato">
       Trusted by Leading Technologies Worldwide
     </div>
 
@@ -321,7 +302,7 @@ const formRef = useRef();
           {[...technologies, ...technologies].map((tech, index) => (
             <motion.div
               key={`${tech.name}-${index}`}
-              className="w-24 md:w-28 h-28 md:h-32 flex-shrink-0 flex flex-col items-center justify-center text-4xl bg-white rounded-xl"
+              className="w-24 md:w-28 h-28 md:h-32 flex-shrink-0 flex flex-col items-center justify-center text-4xl rounded-xl"
               animate={startAnim ? { y: [0, -10, 0] } : { y: 0 }}
               transition={
                 startAnim
@@ -358,7 +339,7 @@ const formRef = useRef();
   viewport={{ once: true }}
   className="max-w-6xl mx-auto px-4 text-center"
 >
-  <h2 className="text-3xl md:text-3xl font-bold text-[#7a56d6] mb-6 font-lato">
+  <h2 className="text-3xl md:text-4xl font-bold text-[#7a56d6] mb-6 font-lato">
     Who We Are
   </h2>
  <p className="text-gray-700 text-justify max-w-3xl mx-auto mb-12 font-inter px-4 leading-relaxed mt-4">
@@ -475,7 +456,7 @@ const formRef = useRef();
   className="w-full py-14 px-6 md:px-14 bg-[#D8DDF1]"
 >
   <div className="max-w-6xl mx-auto text-center mb-10">
-    <h2 className="text-3xl md:text-3xl font-extrabold text-gray-800 mb-4 font-lato">
+    <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4 font-lato">
       What We Do at <span className="text-[#7a56d6] ">EXCELLUP</span>
     </h2>
     <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
@@ -521,11 +502,11 @@ const formRef = useRef();
   {/* Featured  */}
 <section
   id="our-work"
-  className="w-full py-20 px-6 md:px-16 "
+  className="w-full py-20 px-6 md:px-16"
 >
   {/* Heading container */}
   <div className="max-w-4xl mx-auto text-center mb-14 px-2">
-    <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-[#7a56d6] mb-4">Our Work Speaks</h2>
+    <h2 className="text-3xl md:text-4xl font-bold text-[#7a56d6] mb-4">Our Work Speaks</h2>
     <p className="text-gray-700 text-base sm:text-lg max-w-2xl mx-auto">
       From real-world projects to digital experiments, our work blends creativity,
       technology, and purpose — transforming ideas into meaningful experiences.
@@ -534,34 +515,28 @@ const formRef = useRef();
 
   {/* Swiper container */}
   <Swiper
-    modules={[Autoplay, Pagination, Navigation]}
+    modules={[Autoplay, Pagination]} // Removed Navigation
     slidesPerView={1}
     spaceBetween={30}
     autoplay={{ delay: 4000, disableOnInteraction: false }}
     pagination={{ clickable: true }}
-    navigation
-    className="max-w-5xl mx-auto px-2"
+    className="max-w-6xl mx-auto px-2"
   >
     {works.map((work, idx) => (
       <SwiperSlide key={idx}>
-        <div className="flex flex-col md:flex-row items-center bg-[#ebf5fb] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 md:w-[65rem] md:pt-">
+        <div className="flex flex-col md:flex-row items-center bg-[#ebf5fb] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
           
-          {/* Image */}
-          <img
-            src={work.image}
-            alt={work.title}
-            className="
-              w-4/5 mx-auto mb-6 
-              sm:w-3/4 sm:h-56
-              md:w-1/2 md:h-72
-              lg:h-80
-              object-cover
-              rounded-2xl  md:rounded-2xl mt-5
-              "
-          />
+          {/* Image Section */}
+          <div className="w-full md:w-1/2 flex justify-center items-center p-4">
+            <img
+              src={work.image}
+              alt={work.title}
+              className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover rounded-xl"
+            />
+          </div>
 
-          {/* Text content */}
-          <div className="p-6 md:p-8 w-full md:w-1/2 ">
+          {/* Text Section */}
+          <div className="w-full md:w-1/2 p-6 md:p-8">
             <div className="mb-3 text-[#7a56d6] text-xl">{work.icon}</div>
             <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">{work.title}</h3>
             <p className="text-gray-600 mb-4 text-sm sm:text-base">{work.description}</p>
@@ -581,6 +556,7 @@ const formRef = useRef();
 </section>
 
 
+
     {/* Who We Help */}
   <motion.section
   id="who-we-help"
@@ -590,7 +566,7 @@ const formRef = useRef();
   className="py-20 px-4 md:px-10 lg:px-20 bg-[#D8DDF1] w-full -mt-2"
 >
   <div className="max-w-6xl mx-auto text-center mb-14">
-    <h2 className="text-3xl md:text-3xl font-bold text-[#7a56d6] mb-4 font-lato">
+    <h2 className="text-3xl md:text-4xl font-bold text-[#7a56d6] mb-4 font-lato">
       Who Is <span className="text-black">EXCELLUP</span> For?
     </h2>
     <p className="text-gray-700 text-lg max-w-3xl mx-auto">
@@ -628,7 +604,7 @@ const formRef = useRef();
     {/* Why Choose Our Platform Section */}
     <section>
      <div className="w-full py-20 text-white text-center ">
-  <h2 className="text-3xl md:text-3xl font-extrabold mb-6 text-black font-lato">
+  <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-black font-lato">
     Why Choose <span className="text-[#7a56d6]">EXCELLUP ?</span>
   </h2>
 <p className="text-black max-w-3xl mx-auto mb-12 font-inter px-4 leading-relaxed mt-4 text-justify">
@@ -675,7 +651,7 @@ const formRef = useRef();
      {/* final call action section */}    
  <section id="container" className="bg-[#D8DDF1] w-full ">
     <div className="py-20 px-6 md:px-16 text-center max-w-4xl mx-auto ">
-  <h2 className="text-3xl font-bold mb-6 text-[#7a56d6] font-lato">
+  <h2 className="text-3xl font-bold mb-6 text-[#7a56d6] font-lato md:text-4xl">
     Ready to <span className=" ">Start Your Journey  ?</span>
   </h2>
 
@@ -830,15 +806,78 @@ const formRef = useRef();
       </AnimatePresence>
     </div>
 
+     
+         {/* Student story Section */}
+   <motion.div
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1 }}
+  className="w-full px-6 md:px-16 text-center md:py-20 py-16 bg-[#D8DDF1]"
+>
+  <h2 className="text-[#7a56d6] text-3xl md:text-4xl font-bold mb-4 font-lato">
+    Student Success Stories
+  </h2>
+  <p className="text-black mb-10">
+    Hear from our graduates who have transformed their careers through our courses
+  </p>
+
+  <Swiper
+    modules={[Navigation, Pagination, Autoplay]}
+    spaceBetween={30}
+    slidesPerView={1}
+    breakpoints={{
+      640: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    }}
+    autoplay={{ delay: 5000 }}
+    pagination={{ clickable: true }}
+    className="pb-16"
+  >
+    {testimonials.map((student, index) => (
+      <SwiperSlide key={index}>
+        <motion.div
+          className="bg-white text-black p-6 rounded-2xl shadow-xl min-h-[300px] flex flex-col justify-start gap-4 mt-6 border hover:shadow-2xl hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
+          animate={{ y: [0, -10, 0] }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut",
+            delay: index * 0.3,
+          }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <div className="flex items-center mb-2">
+            <img
+              src={student.img}
+              alt={student.name}
+              className="w-14 h-14 mr-3 rounded-full object-cover"
+            />
+            <div className="text-left">
+              <h3 className="font-semibold">{student.name}</h3>
+              <p className="text-yellow-600 text-sm">{student.title}</p>
+              <div className="text-yellow-500 text-sm mt-1">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <p className="text-gray-700 leading-relaxed">{student.review}</p>
+        </motion.div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</motion.div>
+
+
      {/* Follow Us Section */}
-     <section id="container" className="bg-[#D8DDF1] w-full h-64 md:h-80">
+     <section id="container" className=" w-full h-64 md:h-80">
            <motion.div
   initial={{ opacity: 0, scale: 0.95 }}
   animate={{ opacity: 1, scale: 1 }}
   transition={{ duration: 1.2, ease: "easeInOut" }}
   className="w-full mt-14 flex flex-col items-center justify-center gap-12 px-4 "
 >
-  <h2 className="text-[#7a56d6] text-3xl md:text-3xl font-bold  text-center font-lato ">
+  <h2 className="text-[#7a56d6] text-3xl md:text-4xl font-bold  text-center font-lato ">
     Follow Us on Social Media
   </h2>
 
@@ -895,69 +934,6 @@ const formRef = useRef();
 </motion.div>
      </section>
  
-
-
-      {/* Student story Section */}
-     <motion.div
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 1 }}
-  className="w-full  px-6 md:px-16 text-center md:py-20 py-16"
->
-  <h2 className="text-[#7a56d6] text-3xl md:text-4xl font-bold mb-4 font-lato">
-    Student Success Stories
-  </h2>
-  <p className="text-black mb-10">
-    Hear from our graduates who have transformed their careers through our courses
-  </p>
-
-  <Swiper
-    modules={[Navigation, Pagination, Autoplay]}
-    spaceBetween={30}
-    slidesPerView={1}
-    breakpoints={{
-      640: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
-    }}
-    autoplay={{ delay: 5000 }}
-    pagination={{ clickable: true }}
-    className="pb-16"
-  >
-    {testimonials.map((student, index) => (
-      <SwiperSlide key={index}>
-        <motion.div
-          className="bg-white text-black p-6 rounded-2xl shadow-xl min-h-[300px] flex flex-col justify-between mt-6 border hover:shadow-2xl hover:ring-2 hover:ring-[#7a56d6] transition-all hover:shadow-[#7a56d6]"
-          animate={{ y: [0, -10, 0] }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "easeInOut",
-            delay: index * 0.3,
-          }}
-          whileHover={{ scale: 1.05 }}
-        >
-          <div className="flex items-center mb-4">
-            <img
-              src={student.img}
-              alt={student.name}
-              className="w-14 h-14 mr-3 rounded-full object-cover"
-            />
-            <div className="text-left">
-              <h3 className="font-semibold">{student.name}</h3>
-              <p className="text-yellow-600 text-sm">{student.title}</p>
-              <div className="text-yellow-500 text-sm mt-1">⭐⭐⭐⭐⭐</div>
-            </div>
-          </div>
-          <p className=" text-gray-700 ">{student.review}</p>
-        </motion.div>
-      </SwiperSlide>
-    ))}
-  </Swiper>
-</motion.div>
-
 
     </div>
   );
