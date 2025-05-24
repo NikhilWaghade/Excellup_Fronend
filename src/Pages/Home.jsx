@@ -759,7 +759,7 @@ const formRef = useRef();
           </div>
           <button
             type="submit"
-            className="w-full bg-[#7a56d6] text-black py-3 rounded-lg font-semibold hover:bg-purple-600 transition shadow-lg"
+            className="w-full bg-[#7a56d6] text-white py-3 rounded-lg font-semibold hover:bg-purple-600 transition shadow-lg"
           >
             Send Message
           </button>
@@ -870,7 +870,7 @@ const formRef = useRef();
 
 
      {/* Follow Us Section */}
-     <section id="container" className=" w-full h-64 md:h-80">
+     <section id="container" className=" w-full h-72 md:h-80">
            <motion.div
   initial={{ opacity: 0, scale: 0.95 }}
   animate={{ opacity: 1, scale: 1 }}
