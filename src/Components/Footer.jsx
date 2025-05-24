@@ -13,10 +13,10 @@ const Footer = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="grid grid-cols-2 md:grid-cols-4 gap-10"
+        className="grid grid-cols-2 md:grid-cols-4 gap-10 "
       >
         {/* About */}
-        <div>
+        <div className="md:ml-0 ml-10">
           <h4 className="font-semibold mb-3">About</h4>
           <ul className="space-y-2 text-gray-300 text-sm">
             <li><Link to="/about">Who We Are</Link></li>
@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
 
         {/* Services */}
-        <div>
+        <div className="md:ml-14">
           <h4 className="font-semibold mb-3">Services</h4>
           <ul className="space-y-2 text-gray-300 text-sm">
             <li><Link to="/courses">Courses</Link></li>
@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
 
         {/* Learn */}
-        <div>
+        <div className="md:ml-28 ml-10">
           <h4 className="font-semibold mb-3">Learn</h4>
           <ul className="space-y-2 text-gray-300 text-sm">
             <li><Link to="/blog">Blog</Link></li>
@@ -46,9 +46,9 @@ const Footer = () => {
         </div>
 
         {/* Contact */}
-        <div>
+        <div className="md:ml-36">
           <h4 className="font-semibold mb-3">Contact</h4>
-          <ul className="space-y-2 text-gray-300 text-sm">
+          <ul className="space-y-2 text-gray-300 text-sm ">
             <li>📞 +91 6263911619</li>
             <li>📞 +91 1234567890</li>
             <li>📧 excellup.hub@gmail.com</li>

@@ -21,8 +21,8 @@ const [text] = useTypewriter({
   words: [
     "Master the Future",
     "Learn New Tech Skills",
-    "Empower Your Coding Journey",
-    "Unlock Limitless Opportunities",
+    "Code Your Dream Career",
+    "Level Up Your Skills",
   ],
   loop: true,
   delaySpeed: 2000,
@@ -200,89 +200,129 @@ const formRef = useRef();
 
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center bg-white text-black p-6 md:p-12 -mt-20">
+    <div className="min-h-screen w-full flex flex-col items-center bg-white text-black p- -mt-20">
       {/* Hero Section */}
-   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full mx-auto items-center pt-16 md:pt-32 px-4 md:px-8">
-  {/* Left side content with typewriter */}
-  <div className="text-white space-y-8">
-    <h1 className="text-xl md:text-4xl font-extrabold leading-tight">
-      <span className="text-[#7a56d6] mt-20 text-4xl">{text}</span>
-      <Cursor cursorStyle="|" />
-      <br />
-      <span className="text-black text-2xl">Build Your Future with Emerging Tech</span>
-    </h1>
+    <section id="hero" className="relative w-full min-h-screen">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full mx-auto items-center pt-16 md:pt-32 px-4 md:px-8 mt-10">
+        {/* Left side content with typewriter */}
+        <div className="text-white space-y-8 md:mb-56">
+          <h1 className="text-xl md:text-4xl font-extrabold leading-tight">
+            <span className="text-[#7a56d6] md:text-3xl text-2xl md:font-lato">{text}</span>
+            <Cursor cursorStyle="|" />
+            <br />
+            <span className="text-black text-2xl">Build Your Future with Emerging Tech</span>
+          </h1>
 
-    <p className="text-black text-lg md:text-xl leading-relaxed max-w-2xl font-inter">
-      "Level up your coding skills with our cutting-edge education platform.
-      Learn from industry leaders, build real-world projects, and join a thriving
-      community of passionate developers."
-    </p>
+          <p className="text-black text-lg md:text-xl leading-relaxed max-w-2xl font-inter">
+            "Level up your coding skills with our cutting-edge education platform.
+            Learn from industry leaders, build real-world projects, and join a thriving
+            community of passionate developers."
+          </p>
 
-    <div className="flex flex-wrap gap-4 z-10">
-      <Link to="/courses">
-        <button className="bg-[#7a56d6] text-white px-6 py-3 rounded-xl font-semibold hover:bg-yellow-300 transition flex items-center shadow-lg">
-          🚀 Start Learning
-        </button>
-      </Link>
+          <div className="flex flex-wrap gap-4 z-10">
+            <Link to="/courses">
+              <button className="bg-[#7a56d6] text-white px-6 py-3 rounded-xl font-semibold hover:bg-yellow-300 transition flex items-center shadow-lg">
+                🚀 Start Learning
+              </button>
+            </Link>
 
-      <a
-        href="https://youtu.be/ToZSFHUJdHM?si=qCJqiWzIAGUME63x"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="border-2 border-yellow-400 text-black px-6 py-3 rounded-xl font-semibold hover:bg-[#7a56d6] flex items-center shadow-lg"
-      >
-        ▶️ Watch Demo
-      </a>
-    </div>
-  </div>
+            <a
+              href="https://youtu.be/ToZSFHUJdHM?si=qCJqiWzIAGUME63x"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-yellow-400 text-black px-6 py-3 rounded-xl font-semibold hover:bg-[#7a56d6] flex items-center shadow-lg"
+            >
+              ▶️ Watch Demo
+            </a>
+          </div>
+        </div>
 
-  {/* Right side image section */}
-  <div className="flex justify-center">
-    <img
-      src={wlclogo}
-      alt="Coding Students"
-      className="rounded-3xl w-full max-w-md md:max-w-lg z-0"
-    />
-  </div>
-</div>
+        {/* Right side image section */}
+        <div className="flex justify-center md:-mt-8">
+          <img
+            src={wlclogo}
+            alt="Coding Students"
+            className="rounded-3xl w-full max-w-md md:max-w-lg z-0"
+          />
+        </div>
+      </div>
+
+      {/* Fixed social icons - WhatsApp and Instagram vertically */}
+      <div className="fixed bottom-8 right-8 flex flex-col gap-6 z-50">
+        {/* WhatsApp */}
+        <motion.a
+          href="https://wa.me/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-green-500 shadow-lg flex items-center justify-center cursor-pointer hover:shadow-[0_0_20px_#25d366] transition-all"
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          whileHover={{ scale: 1.15 }}
+          aria-label="WhatsApp"
+        >
+          <img
+            src="https://img.icons8.com/3d-fluency/94/whatsapp.png"
+            alt="WhatsApp"
+            className="w-12 h-12 sm:w-16 sm:h-16"
+          />
+        </motion.a>
+
+        {/* Instagram */}
+        <motion.a
+          href="https://www.instagram.com/excellup_"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-400 shadow-lg flex items-center justify-center cursor-pointer hover:shadow-[0_0_20px_#C13584] transition-all"
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
+          whileHover={{ scale: 1.15 }}
+          aria-label="Instagram"
+        >
+          <img
+            src="https://img.icons8.com/3d-fluency/94/instagram-new.png"
+            alt="Instagram"
+            className="w-12 h-12 sm:w-16 sm:h-16"
+          />
+        </motion.a>
+      </div>
+    </section>
 
 
       {/* Technologies Icons Section */}
-         <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1.2, ease: "easeInOut" }}
-      className="w-full mt-16 flex flex-col items-center justify-center gap-6 overflow-hidden"
-    >
-      <div className="text-[#7a56d6] text-2xl md:text-2xl font-bold md:mt-32">
-        Trusted by Leading Technologies Worldwide
-      </div>
+<section className="bg-[#D8DDF1] w-full overflow-hidden mt-16">
+  <motion.div
+    initial={{ opacity: 0, scale: 0.95 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1.2, ease: "easeInOut" }}
+    className="w-full mt-16 flex flex-col items-center justify-center gap-6"
+  >
+    <div className="text-[#7a56d6] text-center w-full text-3xl md:text-3xl font-bold font-lato">
+      Trusted by Leading Technologies Worldwide
+    </div>
 
-      {/* Marquee Section */}
-      <div className="relative w-full overflow-hidden py-6">
+    {/* Marquee Section */}
+    <div className="relative w-full overflow-hidden py-6">
+      <div className="w-full">
         <motion.div
           className="flex gap-12 w-max will-change-transform"
           animate={startAnim ? { x: ["0%", "-50%"] } : { x: "0%" }}
           transition={
             startAnim
               ? {
-                  duration: 30, // Faster speed
+                  duration: 30,
                   repeat: Infinity,
                   ease: "linear",
                 }
               : {}
           }
         >
-          {/* Two sets for perfect seamless loop */}
           {[...technologies, ...technologies].map((tech, index) => (
             <motion.div
               key={`${tech.name}-${index}`}
-              className="w-24 md:w-28 h-28 md:h-32 flex-shrink-0 flex flex-col items-center justify-center text-4xl bg-white rounded-xl  will-change-transform"
-              animate={
-                startAnim
-                  ? { y: [0, -10, 0] }
-                  : { y: 0 }
-              }
+              className="w-24 md:w-28 h-28 md:h-32 flex-shrink-0 flex flex-col items-center justify-center text-4xl bg-white rounded-xl"
+              animate={startAnim ? { y: [0, -10, 0] } : { y: 0 }}
               transition={
                 startAnim
                   ? {
@@ -303,22 +343,34 @@ const formRef = useRef();
           ))}
         </motion.div>
       </div>
-    </motion.div>
+    </div>
+  </motion.div>
+</section>
+
+     
   
     {/* About section  */}
       <section className="bg-white py-16 px-4 md:px-10 lg:px-20" id="about-us">
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    viewport={{ once: true }}
-    className="max-w-6xl mx-auto text-center"
-  >
-    <h2 className="text-4xl font-bold text-[#7a56d6] mb-6">Who We Are</h2>
-    <p className="text-gray-700 text-lg max-w-3xl mx-auto mb-12">
-      We’re a passionate team of innovators, developers, and tech educators from <strong>Balaghat, Madhya Pradesh</strong> — building <span className="text-blue-600 font-semibold">EXCELLUP</span> as a vibrant platform to democratize programming skills, ignite digital creativity, and empower individuals and businesses to thrive in a tech-driven world.
-    </p>
-  </motion.div>
+ <motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  className="max-w-6xl mx-auto px-4 text-center"
+>
+  <h2 className="text-3xl md:text-3xl font-bold text-[#7a56d6] mb-6 font-lato">
+    Who We Are
+  </h2>
+ <p className="text-gray-700 text-justify max-w-3xl mx-auto mb-12 font-inter px-4 leading-relaxed mt-4">
+  <span className="relative font-semibold text-black">We’re</span>{' '}
+  <span className="relative ">
+    a passionate team of innovators, developers, and tech educators from <strong>Balaghat, Madhya Pradesh</strong> — building <span className="text-blue-600 font-semibold">EXCELLUP</span> as a vibrant platform to democratize programming skills, ignite digital creativity, and empower individuals and businesses to thrive in a tech-driven world.
+  </span>
+</p>
+
+</motion.div>
+
+
 
   {/* Animated Cards Section */}
   <motion.div
@@ -420,16 +472,16 @@ const formRef = useRef();
     {/* What We DoSection */}
 <section
   id="what-we-do"
-  className="py-24 px-6 md:px-14 bg-white"
+  className="w-full py-14 px-6 md:px-14 bg-[#D8DDF1]"
 >
-  <div className="max-w-6xl mx-auto text-center mb-16">
-    <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
-      What We Do at <span className="text-[#7a56d6]">EXCELLUP</span>
+  <div className="max-w-6xl mx-auto text-center mb-10">
+    <h2 className="text-3xl md:text-3xl font-extrabold text-gray-800 mb-4 font-lato">
+      What We Do at <span className="text-[#7a56d6] ">EXCELLUP</span>
     </h2>
     <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
       Empowering future coders, creators, and digital leaders with real-world, project-based learning in tech, design, and innovation.
     </p>
-    <p className="text-sm text-gray-400 italic mt-2">
+    <p className="text-sm text-gray-600 italic mt-2">
       Based in <strong>Balaghat, Madhya Pradesh</strong>
     </p>
   </div>
@@ -469,11 +521,11 @@ const formRef = useRef();
   {/* Featured  */}
 <section
   id="our-work"
-  className="w-full py-20 px-6 md:px-16 bg-gradient-to-b from-white to-[#c4c1cf]"
+  className="w-full py-20 px-6 md:px-16 "
 >
   {/* Heading container */}
   <div className="max-w-4xl mx-auto text-center mb-14 px-2">
-    <h2 className="text-3xl sm:text-4xl font-bold text-[#7a56d6] mb-4">Our Work Speaks</h2>
+    <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-[#7a56d6] mb-4">Our Work Speaks</h2>
     <p className="text-gray-700 text-base sm:text-lg max-w-2xl mx-auto">
       From real-world projects to digital experiments, our work blends creativity,
       technology, and purpose — transforming ideas into meaningful experiences.
@@ -492,7 +544,7 @@ const formRef = useRef();
   >
     {works.map((work, idx) => (
       <SwiperSlide key={idx}>
-        <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+        <div className="flex flex-col md:flex-row items-center bg-[#ebf5fb] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 md:w-[65rem] md:pt-">
           
           {/* Image */}
           <img
@@ -504,12 +556,12 @@ const formRef = useRef();
               md:w-1/2 md:h-72
               lg:h-80
               object-cover
-              rounded-t-2xl md:rounded-none md:rounded-l-2xl
+              rounded-2xl  md:rounded-2xl mt-5
               "
           />
 
           {/* Text content */}
-          <div className="p-6 md:p-8 w-full md:w-1/2">
+          <div className="p-6 md:p-8 w-full md:w-1/2 ">
             <div className="mb-3 text-[#7a56d6] text-xl">{work.icon}</div>
             <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">{work.title}</h3>
             <p className="text-gray-600 mb-4 text-sm sm:text-base">{work.description}</p>
@@ -530,15 +582,15 @@ const formRef = useRef();
 
 
     {/* Who We Help */}
-   <motion.section
+  <motion.section
   id="who-we-help"
   initial={{ opacity: 0, scale: 0.95 }}
   animate={{ opacity: 1, scale: 1 }}
   transition={{ duration: 1.2, ease: "easeInOut" }}
-  className="py-20 px-4 md:px-10 lg:px-20 bg-white"
+  className="py-20 px-4 md:px-10 lg:px-20 bg-[#D8DDF1] w-full -mt-2"
 >
   <div className="max-w-6xl mx-auto text-center mb-14">
-    <h2 className="text-4xl font-bold text-[#7a56d6] mb-4">
+    <h2 className="text-3xl md:text-3xl font-bold text-[#7a56d6] mb-4 font-lato">
       Who Is <span className="text-black">EXCELLUP</span> For?
     </h2>
     <p className="text-gray-700 text-lg max-w-3xl mx-auto">
@@ -555,16 +607,16 @@ const formRef = useRef();
     {whoWeHelpData.map((item, idx) => (
       <motion.div
         key={idx}
-        className="flex flex-col md:flex-row items-start md:items-center gap-6 p-6 rounded-xl bg-[#9c7ee8c5] hover:bg-[#9d8cc0]  transition-all "
+        className="flex flex-col md:flex-row items-center md:items-start gap-6 p-6 rounded-xl bg-[#9c7ee8c5] hover:bg-[#9d8cc0] transition-all"
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: idx * 0.1 }}
       >
-        <div className={` p-4 rounded-full text-3xl ${iconColors[idx % iconColors.length]}`}>
+        <div className={`p-4 rounded-full text-3xl ${iconColors[idx % iconColors.length]} mx-auto md:mx-0`}>
           {item.icon}
         </div>
-        <div className="flex-1">
-          <h3 className="text-xl font-extrabold text-black  mb-1">{item.title}</h3>
+        <div className="flex-1 text-center md:text-left">
+          <h3 className="text-xl font-extrabold text-black mb-1">{item.title}</h3>
           <p className="text-gray-200 text-lg">{item.description}</p>
         </div>
       </motion.div>
@@ -572,15 +624,30 @@ const formRef = useRef();
   </motion.div>
 </motion.section>
 
+
     {/* Why Choose Our Platform Section */}
     <section>
-     <div className="w-full py-20 text-white text-center mt-16">
-  <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-black">
+     <div className="w-full py-20 text-white text-center ">
+  <h2 className="text-3xl md:text-3xl font-extrabold mb-6 text-black font-lato">
     Why Choose <span className="text-[#7a56d6]">EXCELLUP ?</span>
   </h2>
-  <p className="text-black max-w-3xl mx-auto mb-12">
-    Choose EXCELLUP for a transformative coding experience — where expert guidance, interactive learning, and real-world tech skills come together to help you grow, create, and succeed.
-  </p>
+<p className="text-black max-w-3xl mx-auto mb-12 font-inter px-4 leading-relaxed mt-4 text-justify">
+  <span className="relative font-semibold text-blue-600">Choose</span>{' '}
+  <span className="relative top-1">
+    EXCELLUP for a transformative coding experience — where expert guidance,
+    interactive learning, and real-world tech skills come together to help you grow, create,
+    and succeed.
+  </span>
+  <br />
+  <span className="block text-center mt-2">
+    grow, create, and succeed.
+  </span>
+</p>
+
+
+
+
+
 
   <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-6 md:px-16">
     {features.map((feature, idx) => {
@@ -596,7 +663,7 @@ const formRef = useRef();
             {feature.icon}
           </div>
           <h3 className="text-xl font-semibold text-black mb-2">{feature.title}</h3>
-          <p className="text-gray-600 text-sm">{feature.description}</p>
+          <p className="text-gray-600 ">{feature.description}</p>
         </div>
       );
     })}
@@ -606,12 +673,13 @@ const formRef = useRef();
 
    
      {/* final call action section */}    
-<section className="py-20 px-6 md:px-16 text-center max-w-4xl mx-auto">
-  <h2 className="text-4xl font-extrabold mb-6 text-[#7a56d6]">
+ <section id="container" className="bg-[#D8DDF1] w-full ">
+    <div className="py-20 px-6 md:px-16 text-center max-w-4xl mx-auto ">
+  <h2 className="text-3xl font-bold mb-6 text-[#7a56d6] font-lato">
     Ready to <span className=" ">Start Your Journey  ?</span>
   </h2>
 
-  <p className="text-gray-600 text-lg md:text-xl mb-12 leading-relaxed">
+  <p className="text-gray-600 text-lg md:text-xl mb-12 leading-relaxed font-inter">
     You don’t need a fancy degree to build the future you want.  
     All it takes is the right people by your side, the right skills in your toolkit, and a growth mindset ready to tackle any challenge.
   </p>
@@ -636,7 +704,9 @@ const formRef = useRef();
   </Link>
 </div>
 
-</section>
+</div>
+ </section>
+
       
       {/* Contact Section */}
    <div className="min-h-screen bg-white from-black via-[#1a0033] to-black text-white px-4 py-16 flex items-center justify-center">
@@ -761,18 +831,19 @@ const formRef = useRef();
     </div>
 
      {/* Follow Us Section */}
-  <motion.div
+     <section id="container" className="bg-[#D8DDF1] w-full h-64 md:h-80">
+           <motion.div
   initial={{ opacity: 0, scale: 0.95 }}
   animate={{ opacity: 1, scale: 1 }}
   transition={{ duration: 1.2, ease: "easeInOut" }}
-  className="w-full mt-24 flex flex-col items-center justify-center gap-12 px-4"
+  className="w-full mt-14 flex flex-col items-center justify-center gap-12 px-4 "
 >
-  <h2 className="text-[#7a56d6] text-3xl md:text-4xl font-extrabold text-center">
+  <h2 className="text-[#7a56d6] text-3xl md:text-3xl font-bold  text-center font-lato ">
     Follow Us on Social Media
   </h2>
 
   {/* New Icon Design: Circular Glow Cards */}
-  <div className="grid grid-cols-2 sm:grid-cols-4 gap-10">
+  <div className="grid grid-cols-4 sm:grid-cols-4 gap-10 ">
     {[
       {
         name: "YouTube",
@@ -800,7 +871,7 @@ const formRef = useRef();
         href={icon.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white shadow-xl flex items-center justify-center transition-all hover:shadow-[0_0_20px_#7a56d6] group"
+        className="relative w-16 h-16 sm:w-28 sm:h-28 rounded-full bg-white shadow-xl flex items-center justify-center transition-all hover:shadow-[0_0_20px_#7a56d6] group "
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{
@@ -822,6 +893,8 @@ const formRef = useRef();
     ))}
   </div>
 </motion.div>
+     </section>
+ 
 
 
       {/* Student story Section */}
@@ -830,9 +903,9 @@ const formRef = useRef();
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
   transition={{ duration: 1 }}
-  className="w-full mt-32 px-6 md:px-16 text-center bg-[#f9f9f9] py-20"
+  className="w-full  px-6 md:px-16 text-center md:py-20 py-16"
 >
-  <h2 className="text-[#7a56d6] text-3xl md:text-4xl font-bold mb-4">
+  <h2 className="text-[#7a56d6] text-3xl md:text-4xl font-bold mb-4 font-lato">
     Student Success Stories
   </h2>
   <p className="text-black mb-10">
@@ -878,7 +951,7 @@ const formRef = useRef();
               <div className="text-yellow-500 text-sm mt-1">⭐⭐⭐⭐⭐</div>
             </div>
           </div>
-          <p className="text-sm text-gray-700">{student.review}</p>
+          <p className=" text-gray-700 ">{student.review}</p>
         </motion.div>
       </SwiperSlide>
     ))}

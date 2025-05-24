@@ -9,7 +9,8 @@ export default {
     extend: {
       fontFamily: {
   inter: ['"Inter Tight"', 'sans-serif'],
-  exile: ['"Exile"', 'system-ui'], // fixed quotes
+  exile: ['"Exile"', 'system-ui'], 
+  lato: ["Lato", 'sans-serif'],
 },
 
     },
