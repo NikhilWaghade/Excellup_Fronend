@@ -202,92 +202,93 @@ const formRef = useRef();
   return (
     <div className="min-h-screen w-full flex flex-col items-center bg-white text-black p- -mt-20">
       {/* Hero Section */}
-    <section id="hero" className="relative w-full min-h-screen">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full mx-auto items-center pt-16 md:pt-32 px-4 md:px-8 mt-10">
-        {/* Left side content with typewriter */}
-        <div className="text-white space-y-8 md:mb-56">
-          <h1 className="text-xl md:text-4xl font-extrabold leading-tight">
-            <span className="text-[#7a56d6] md:text-3xl text-2xl md:font-lato uppercase">{text}</span>
-            <Cursor cursorStyle="|" />
-            <br />
-            <span className="text-black text-2xl">Build Your Future with Emerging Tech</span>
-          </h1>
+   <section id="hero" className="relative w-full min-h-screen">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 sm:px-6 md:px-8 pt-24 md:pt-32 pb-12">
+    {/* Left side content */}
+    <div className="space-y-6">
+      <h1 className="text-xl md:text-4xl font-extrabold leading-tight text-white md:-mt-48">
+        <span className="text-[#7a56d6] md:text-3xl text-2xl uppercase">{text}</span>
+        <Cursor cursorStyle="|" />
+        <br />
+        <span className="text-black text-2xl">Build Your Future with Emerging Tech</span>
+      </h1>
 
-          <p className="text-black text-lg md:text-xl leading-relaxed max-w-2xl font-inter">
-            "Level up your coding skills with our cutting-edge education platform.
-            Learn from industry leaders, build real-world projects, and join a thriving
-            community of passionate developers."
-          </p>
+      <p className="text-black text-lg md:text-xl leading-relaxed max-w-2xl font-inter">
+        "Level up your coding skills with our cutting-edge education platform.
+        Learn from industry leaders, build real-world projects, and join a thriving
+        community of passionate developers."
+      </p>
 
-          <div className="flex flex-wrap gap-4 z-10">
-            <Link to="/courses">
-              <button className="bg-[#7a56d6] text-white px-6 py-3 rounded-xl font-semibold hover:bg-yellow-300 transition flex items-center shadow-lg">
-                🚀 Start Learning
-              </button>
-            </Link>
+      <div className="flex flex-wrap gap-4">
+        <Link to="/courses">
+          <button className="bg-[#7a56d6] text-white px-6 py-3 rounded-xl font-semibold hover:bg-yellow-300 transition flex items-center shadow-lg">
+            🚀 Start Learning
+          </button>
+        </Link>
 
-            <a
-              href="https://youtu.be/ToZSFHUJdHM?si=qCJqiWzIAGUME63x"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-2 border-yellow-400 text-black px-6 py-3 rounded-xl font-semibold hover:bg-[#7a56d6] flex items-center shadow-lg"
-            >
-              ▶️ Watch Demo
-            </a>
-          </div>
-        </div>
-
-        {/* Right side image section */}
-        <div className="flex justify-center md:-mt-8">
-          <img
-            src={wlclogo}
-            alt="Coding Students"
-            className="rounded-3xl w-full max-w-md md:max-w-lg z-0"
-          />
-        </div>
-      </div>
-
-      {/* Fixed social icons - WhatsApp and Instagram vertically */}
-      <div className="fixed bottom-8 right-8 flex flex-col gap-6 z-50">
-        {/* WhatsApp */}
-        <motion.a
-          href="https://wa.me/"
+        <a
+          href="https://youtu.be/ToZSFHUJdHM?si=qCJqiWzIAGUME63x"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-green-500 shadow-lg flex items-center justify-center cursor-pointer hover:shadow-[0_0_20px_#25d366] transition-all"
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          whileHover={{ scale: 1.15 }}
-          aria-label="WhatsApp"
+          className="border-2 border-yellow-400 text-black px-6 py-3 rounded-xl font-semibold hover:bg-[#7a56d6] flex items-center shadow-lg"
         >
-          <img
-            src="https://img.icons8.com/3d-fluency/94/whatsapp.png"
-            alt="WhatsApp"
-            className="w-12 h-12 sm:w-16 sm:h-16"
-          />
-        </motion.a>
+          ▶️ Watch Demo
+        </a>
       </div>
-    </section>
+    </div>
+
+    {/* Right side image */}
+    <div className="flex justify-center mt-10 md:mt-0">
+      <img
+        src={wlclogo}
+        alt="Coding Students"
+        className="rounded-3xl w-full max-w-[320px] sm:max-w-[400px] md:max-w-lg z-0"
+      />
+    </div>
+  </div>
+
+  {/* Fixed WhatsApp icon */}
+  <div className="fixed bottom-8 right-6 sm:right-8 flex flex-col gap-6 z-50">
+    <motion.a
+      href="https://wa.me/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-green-500 shadow-lg flex items-center justify-center hover:shadow-[0_0_20px_#25d366] transition-all"
+      initial={{ scale: 0.9, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      whileHover={{ scale: 1.15 }}
+      aria-label="WhatsApp"
+    >
+      <img
+        src="https://img.icons8.com/3d-fluency/94/whatsapp.png"
+        alt="WhatsApp"
+        className="w-10 h-10 sm:w-12 sm:h-12"
+      />
+    </motion.a>
+  </div>
+</section>
+
 
 
       {/* Technologies Icons Section */}
-<section className="bg-[#D8DDF1] w-full overflow-hidden mt-16">
+<section className="bg-[#D8DDF1] w-full overflow-hidden h-72">
   <motion.div
     initial={{ opacity: 0, scale: 0.95 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 1.2, ease: "easeInOut" }}
-    className="w-full mt-16 flex flex-col items-center justify-center gap-6"
+    className="w-full pt-14 px-4 sm:px-6 md:px-12 flex flex-col items-center justify-center gap-10"
   >
-    <div className="text-[#7a56d6] text-center w-full text-3xl md:text-4xl font-bold font-lato">
+    {/* Heading */}
+    <div className="text-[#7a56d6] text-center text-2xl sm:text-3xl md:text-4xl font-bold font-lato">
       Trusted by Leading Technologies Worldwide
     </div>
 
     {/* Marquee Section */}
-    <div className="relative w-full overflow-hidden py-6">
+    <div className="relative w-full overflow-hidden">
       <div className="w-full">
         <motion.div
-          className="flex gap-12 w-max will-change-transform"
+          className="flex gap-10 sm:gap-12 md:gap-16 w-max will-change-transform pb-32"
           animate={startAnim ? { x: ["0%", "-50%"] } : { x: "0%" }}
           transition={
             startAnim
@@ -302,7 +303,7 @@ const formRef = useRef();
           {[...technologies, ...technologies].map((tech, index) => (
             <motion.div
               key={`${tech.name}-${index}`}
-              className="w-24 md:w-28 h-28 md:h-32 flex-shrink-0 flex flex-col items-center justify-center text-4xl rounded-xl"
+              className="w-20 sm:w-24 md:w-28 h-24 sm:h-28 md:h-32 flex-shrink-0 flex flex-col items-center justify-center rounded-xl"
               animate={startAnim ? { y: [0, -10, 0] } : { y: 0 }}
               transition={
                 startAnim
@@ -317,7 +318,7 @@ const formRef = useRef();
               }
             >
               {tech.icon}
-              <span className="text-lg mt-2 text-black text-center">
+              <span className="text-sm sm:text-base mt-2 text-black text-center font-medium">
                 {tech.name}
               </span>
             </motion.div>
@@ -328,30 +329,29 @@ const formRef = useRef();
   </motion.div>
 </section>
 
+
      
   
     {/* About section  */}
-      <section className="bg-white py-16 px-4 md:px-10 lg:px-20" id="about-us">
- <motion.div
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  viewport={{ once: true }}
-  className="max-w-6xl mx-auto px-4 text-center"
->
-  <h2 className="text-3xl md:text-4xl font-bold text-[#7a56d6] mb-6 font-lato">
-    Who We Are
-  </h2>
- <p className="text-gray-700 text-justify max-w-3xl mx-auto mb-12 font-inter px-4 leading-relaxed mt-4">
-  <span className="relative font-semibold text-black">We’re</span>{' '}
-  <span className="relative ">
-    a passionate team of innovators, developers, and tech educators from <strong>Balaghat, Madhya Pradesh</strong> — building <span className="text-blue-600 font-semibold">EXCELLUP</span> as a vibrant platform to democratize programming skills, ignite digital creativity, and empower individuals and businesses to thrive in a tech-driven world.
-  </span>
-</p>
-
-</motion.div>
-
-
+<section className="bg-white py-16 px-4 sm:px-6 md:px-10 lg:px-20" id="about-us">
+  {/* Heading + Description */}
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    viewport={{ once: true }}
+    className="max-w-6xl mx-auto text-center"
+  >
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#7a56d6] mb-6 font-lato">
+      Who We Are
+    </h2>
+    <p className="text-gray-700 text-justify text-sm sm:text-base max-w-3xl mx-auto mb-12 font-inter px-2 sm:px-4 leading-relaxed mt-4">
+      <span className="relative font-semibold text-black">We’re</span>{' '}
+      <span className="relative">
+        a passionate team of innovators, developers, and tech educators from <strong>Balaghat, Madhya Pradesh</strong> — building <span className="text-blue-600 font-semibold">EXCELLUP</span> as a vibrant platform to democratize programming skills, ignite digital creativity, and empower individuals and businesses to thrive in a tech-driven world.
+      </span>
+    </p>
+  </motion.div>
 
   {/* Animated Cards Section */}
   <motion.div
@@ -365,11 +365,11 @@ const formRef = useRef();
         },
       },
     }}
-    className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-10 px-2 sm:px-4"
   >
     {/* Card 1 */}
     <motion.div
-      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6]  hover:shadow-[#7a56d6]"
+      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] hover:shadow-[#7a56d6]"
       animate={{ y: [0, -6, 0] }}
       whileHover={{ scale: 1.05 }}
       transition={{
@@ -379,18 +379,18 @@ const formRef = useRef();
         ease: "easeInOut",
       }}
     >
-      <div className="p-4 rounded-full bg-blue-100 text-blue-600 text-2xl mb-4 ">
+      <div className="p-4 rounded-full bg-blue-100 text-blue-600 text-2xl mb-4">
         <Laptop className="w-8 h-8" />
       </div>
-      <h3 className="text-xl font-semibold mb-2">Tech Education</h3>
-      <p className="text-gray-600 text-sm">
+      <h3 className="text-lg md:text-xl font-semibold mb-2">Tech Education</h3>
+      <p className="text-gray-600 text-sm sm:text-base">
         Make tech education fun, local, and practical for students and learners in every corner of India.
       </p>
     </motion.div>
 
     {/* Card 2 */}
     <motion.div
-      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6]  hover:shadow-[#7a56d6]"
+      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] hover:shadow-[#7a56d6]"
       animate={{ y: [0, -6, 0] }}
       whileHover={{ scale: 1.05 }}
       transition={{
@@ -404,15 +404,15 @@ const formRef = useRef();
       <div className="p-4 rounded-full bg-green-100 text-green-600 text-2xl mb-4">
         <Rocket className="w-8 h-8" />
       </div>
-      <h3 className="text-xl font-semibold mb-2">Digital Empowerment</h3>
-      <p className="text-gray-600 text-sm">
+      <h3 className="text-lg md:text-xl font-semibold mb-2">Digital Empowerment</h3>
+      <p className="text-gray-600 text-sm sm:text-base">
         Help local brands go digital with websites, videos, and online marketing tools.
       </p>
     </motion.div>
 
     {/* Card 3 */}
     <motion.div
-      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer  hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6]  hover:shadow-[#7a56d6]"
+      className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] hover:shadow-[#7a56d6]"
       animate={{ y: [0, -6, 0] }}
       whileHover={{ scale: 1.05 }}
       transition={{
@@ -426,8 +426,8 @@ const formRef = useRef();
       <div className="p-4 rounded-full bg-purple-100 text-purple-600 text-2xl mb-4">
         <Users className="w-8 h-8" />
       </div>
-      <h3 className="text-xl font-semibold mb-2">Creator-Led Brand</h3>
-      <p className="text-gray-600 text-sm">
+      <h3 className="text-lg md:text-xl font-semibold mb-2">Creator-Led Brand</h3>
+      <p className="text-gray-600 text-sm sm:text-base">
         Build a strong creator-led tech brand shaping India’s digital future from the ground up.
       </p>
     </motion.div>
@@ -439,52 +439,55 @@ const formRef = useRef();
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.7, delay: 0.2 }}
     viewport={{ once: true }}
-    className="mt-16 text-center"
+    className="mt-16 text-center px-4"
   >
     <img
       src="https://img.freepik.com/premium-photo/team-celebrating-project-success_1265500-96079.jpg?ga=GA1.1.924705394.1747313358&semt=ais_hybrid&w=740"
       alt="Team EXCELLUP"
-      className="rounded-2xl mx-auto shadow-lg w-full max-w-4xl"
+      className="rounded-2xl mx-auto shadow-lg w-full max-w-5xl object-cover"
     />
   </motion.div>
 </section>
 
 
+
     {/* What We DoSection */}
 <section
   id="what-we-do"
-  className="w-full py-14 px-6 md:px-14 bg-[#D8DDF1]"
+  className="w-full py-14 px-4 sm:px-6 md:px-10 lg:px-20 bg-[#D8DDF1]"
 >
-  <div className="max-w-6xl mx-auto text-center mb-10">
-    <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4 font-lato">
-      What We Do at <span className="text-[#7a56d6] ">EXCELLUP</span>
+  <div className="max-w-6xl mx-auto text-center mb-12 px-2">
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 mb-4 font-lato">
+      What We Do at <span className="text-[#7a56d6]">EXCELLUP</span>
     </h2>
-    <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+    <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
       Empowering future coders, creators, and digital leaders with real-world, project-based learning in tech, design, and innovation.
     </p>
-    <p className="text-sm text-gray-600 italic mt-2">
+    <p className="text-xs sm:text-sm text-gray-600 italic mt-2">
       Based in <strong>Balaghat, Madhya Pradesh</strong>
     </p>
   </div>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 max-w-6xl mx-auto px-2 sm:px-0">
     {combinedItems.map((item, index) => {
       const iconStyle = iconColors[index % iconColors.length];
       return (
         <div
           key={index}
-          className="bg-white rounded-3xl border border-gray-100 shadow-md transition-all p-6 text-center flex flex-col items-center hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] hover:shadow-[#7a56d6]"
+          className="bg-white rounded-3xl border border-gray-100 shadow-md p-5 sm:p-6 text-center flex flex-col items-center transition-all hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] hover:shadow-[#7a56d6]"
         >
           {/* Icon */}
-          <div className={`w-14 h-14 flex items-center justify-center text-white text-2xl rounded-full shadow-sm mb-4 ${iconStyle}`}>
+          <div className={`w-12 sm:w-14 h-12 sm:h-14 flex items-center justify-center text-white text-xl sm:text-2xl rounded-full shadow-sm mb-4 ${iconStyle}`}>
             {item.icon}
           </div>
 
           {/* Text */}
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.label}</h3>
-          <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{item.label}</h3>
+          <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+            {item.description}
+          </p>
 
-          {/* Image */}
+          {/* Optional Image */}
           {item.image && (
             <div className="mt-4 w-full overflow-hidden rounded-xl">
               <div className="transition-transform duration-300 hover:scale-[1.03]">
@@ -499,15 +502,18 @@ const formRef = useRef();
 </section>
 
 
+
   {/* Featured  */}
 <section
   id="our-work"
-  className="w-full py-20 px-6 md:px-16"
+  className="w-full py-16 sm:py-20 px-4 sm:px-6 md:px-12 lg:px-16"
 >
   {/* Heading container */}
-  <div className="max-w-4xl mx-auto text-center mb-14 px-2">
-    <h2 className="text-3xl md:text-4xl font-bold text-[#7a56d6] mb-4">Our Work Speaks</h2>
-    <p className="text-gray-700 text-base sm:text-lg max-w-2xl mx-auto">
+  <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-14 px-2">
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#7a56d6] mb-4">
+      Our Work Speaks
+    </h2>
+    <p className="text-gray-700 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
       From real-world projects to digital experiments, our work blends creativity,
       technology, and purpose — transforming ideas into meaningful experiences.
     </p>
@@ -515,7 +521,7 @@ const formRef = useRef();
 
   {/* Swiper container */}
   <Swiper
-    modules={[Autoplay, Pagination]} // Removed Navigation
+    modules={[Autoplay, Pagination]}
     slidesPerView={1}
     spaceBetween={30}
     autoplay={{ delay: 4000, disableOnInteraction: false }}
@@ -531,15 +537,19 @@ const formRef = useRef();
             <img
               src={work.image}
               alt={work.title}
-              className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover rounded-xl"
+              className="w-full h-56 sm:h-64 md:h-80 lg:h-96 object-cover rounded-xl"
             />
           </div>
 
           {/* Text Section */}
-          <div className="w-full md:w-1/2 p-6 md:p-8">
-            <div className="mb-3 text-[#7a56d6] text-xl">{work.icon}</div>
-            <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">{work.title}</h3>
-            <p className="text-gray-600 mb-4 text-sm sm:text-base">{work.description}</p>
+          <div className="w-full md:w-1/2 p-5 sm:p-6 md:p-8">
+            <div className="mb-2 text-[#7a56d6] text-lg sm:text-xl">{work.icon}</div>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-800 mb-2">
+              {work.title}
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">
+              {work.description}
+            </p>
             <a
               href={work.link}
               target="_blank"
@@ -557,25 +567,28 @@ const formRef = useRef();
 
 
 
+
     {/* Who We Help */}
-  <motion.section
+<motion.section
   id="who-we-help"
   initial={{ opacity: 0, scale: 0.95 }}
   animate={{ opacity: 1, scale: 1 }}
   transition={{ duration: 1.2, ease: "easeInOut" }}
-  className="py-20 px-4 md:px-10 lg:px-20 bg-[#D8DDF1] w-full -mt-2"
+  className="py-16 sm:py-20 px-4 sm:px-6 md:px-10 lg:px-20 bg-[#D8DDF1] w-full -mt-2"
 >
-  <div className="max-w-6xl mx-auto text-center mb-14">
-    <h2 className="text-3xl md:text-4xl font-bold text-[#7a56d6] mb-4 font-lato">
+  {/* Section Header */}
+  <div className="max-w-6xl mx-auto text-center mb-10 sm:mb-14">
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#7a56d6] mb-4 font-lato">
       Who Is <span className="text-black">EXCELLUP</span> For?
     </h2>
-    <p className="text-gray-700 text-lg max-w-3xl mx-auto">
+    <p className="text-sm sm:text-base md:text-lg text-gray-700 max-w-3xl mx-auto">
       We empower diverse learners and clients — from curious coders to growing businesses — to succeed in the digital world. Whether you’re starting out or scaling up, EXCELLUP is your tech partner.
     </p>
   </div>
 
+  {/* Card List */}
   <motion.div
-    className="max-w-6xl mx-auto flex flex-col gap-8"
+    className="max-w-6xl mx-auto flex flex-col gap-6 sm:gap-8"
     initial="hidden"
     animate="visible"
     variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
@@ -583,17 +596,25 @@ const formRef = useRef();
     {whoWeHelpData.map((item, idx) => (
       <motion.div
         key={idx}
-        className="flex flex-col md:flex-row items-center md:items-start gap-6 p-6 rounded-xl bg-[#9c7ee8c5] hover:bg-[#9d8cc0] transition-all"
+        className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 p-5 sm:p-6 md:p-8 rounded-xl bg-[#9c7ee8c5] hover:bg-[#9d8cc0] transition-all"
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6, delay: idx * 0.1 }}
       >
-        <div className={`p-4 rounded-full text-3xl ${iconColors[idx % iconColors.length]} mx-auto md:mx-0`}>
+        {/* Icon */}
+        <div className={`p-4 rounded-full text-2xl sm:text-3xl ${iconColors[idx % iconColors.length]} mx-auto sm:mx-0`}>
           {item.icon}
         </div>
-        <div className="flex-1 text-center md:text-left">
-          <h3 className="text-xl font-extrabold text-black mb-1">{item.title}</h3>
-          <p className="text-gray-200 text-lg">{item.description}</p>
+
+        {/* Text Content */}
+        <div className="flex-1 text-center sm:text-left">
+          <h3 className="text-lg sm:text-xl md:text-2xl font-extrabold text-black mb-1">
+            {item.title}
+          </h3>
+          <p className="text-sm sm:text-base md:text-lg text-gray-200">
+            {item.description}
+          </p>
         </div>
       </motion.div>
     ))}
@@ -601,235 +622,248 @@ const formRef = useRef();
 </motion.section>
 
 
+
     {/* Why Choose Our Platform Section */}
-    <section>
-     <div className="w-full py-20 text-white text-center ">
-  <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-black font-lato">
-    Why Choose <span className="text-[#7a56d6]">EXCELLUP ?</span>
-  </h2>
-<p className="text-black max-w-3xl mx-auto mb-12 font-inter px-4 leading-relaxed mt-4 text-justify">
-  <span className="relative font-semibold text-blue-600">Choose</span>{' '}
-  <span className="relative top-1">
-    EXCELLUP for a transformative coding experience — where expert guidance,
-    interactive learning, and real-world tech skills come together to help you grow, create,
-    and succeed.
-  </span>
-  <br />
-  <span className="block text-center mt-2">
-    grow, create, and succeed.
-  </span>
-</p>
+  <section className="bg-[#f5f5fa]">
+  <div className="w-full py-16 sm:py-20 text-white text-center">
+    {/* Heading */}
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4 sm:mb-6 text-black font-lato">
+      Why Choose <span className="text-[#7a56d6]">EXCELLUP?</span>
+    </h2>
 
+    {/* Subtext */}
+    <p className="text-black max-w-4xl mx-auto font-inter px-4 text-sm sm:text-base md:text-lg leading-relaxed mt-4 text-justify">
+      <span className="relative font-semibold text-blue-600">Choose</span>{' '}
+      <span className="relative top-1">
+        EXCELLUP for a transformative coding experience — where expert guidance,
+        interactive learning, and real-world tech skills come together to help you grow, create,
+        and succeed.
+      </span>
+      <br />
+      <span className="block text-center mt-3 text-base font-medium">
+        Grow, create, and succeed.
+      </span>
+    </p>
 
+    {/* Features Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 px-6 sm:px-10 md:px-16 mt-12">
+      {features.map((feature, idx) => {
+        const bgColors = [
+          'bg-blue-100 text-blue-600',
+          'bg-red-100 text-red-600',
+          'bg-green-100 text-green-600',
+        ];
+        const iconStyle = bgColors[idx % 3];
 
-
-
-
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-6 md:px-16">
-    {features.map((feature, idx) => {
-      const bgColors = ['bg-blue-100 text-blue-600', 'bg-red-100 text-red-600', 'bg-green-100 text-green-600'];
-      const iconStyle = bgColors[idx % 3];
-
-      return (
-        <div
-          key={idx}
-          className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] hover:shadow-[#7a56d6] transition-all"
-        >
-          <div className={`p-4 rounded-full mb-4 text-2xl ${iconStyle}`}>
-            {feature.icon}
+        return (
+          <div
+            key={idx}
+            className="bg-white p-6 sm:p-7 rounded-2xl shadow-md flex flex-col items-center text-center cursor-pointer hover:shadow-lg hover:ring-2 hover:ring-[#7a56d6] hover:shadow-[#7a56d6]/30 transition-all duration-300"
+          >
+            <div className={`p-4 rounded-full mb-4 text-2xl ${iconStyle}`}>
+              {feature.icon}
+            </div>
+            <h3 className="text-lg sm:text-xl font-semibold text-black mb-2">
+              {feature.title}
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600">
+              {feature.description}
+            </p>
           </div>
-          <h3 className="text-xl font-semibold text-black mb-2">{feature.title}</h3>
-          <p className="text-gray-600 ">{feature.description}</p>
-        </div>
-      );
-    })}
+        );
+      })}
+    </div>
   </div>
-     </div>
-  </section>
+</section>
+
 
    
      {/* final call action section */}    
- <section id="container" className="bg-[#D8DDF1] w-full ">
-    <div className="py-20 px-6 md:px-16 text-center max-w-4xl mx-auto ">
-  <h2 className="text-3xl font-bold mb-6 text-[#7a56d6] font-lato md:text-4xl">
-    Ready to <span className=" ">Start Your Journey  ?</span>
-  </h2>
+<section id="container" className="bg-[#D8DDF1] w-full">
+  <div className="py-16 sm:py-20 px-4 sm:px-6 md:px-16 text-center max-w-5xl mx-auto">
+    {/* Heading */}
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-[#7a56d6] font-lato">
+      Ready to <span className="text-black">Start Your Journey?</span>
+    </h2>
 
-  <p className="text-gray-600 text-lg md:text-xl mb-12 leading-relaxed font-inter">
-    You don’t need a fancy degree to build the future you want.  
-    All it takes is the right people by your side, the right skills in your toolkit, and a growth mindset ready to tackle any challenge.
-  </p>
+    {/* Paragraph */}
+    <p className="text-gray-600 text-base sm:text-lg md:text-xl mb-10 sm:mb-12 leading-relaxed font-inter px-2 sm:px-6">
+      You don’t need a fancy degree to build the future you want.  
+      All it takes is the right people by your side, the right skills in your toolkit, and a growth mindset ready to tackle any challenge.
+    </p>
 
- <div className="flex flex-col sm:flex-row justify-center gap-6 max-w-xl mx-auto">
-  <button className="flex items-center justify-center gap-3 border-2 border-green-600 font-semibold px-6 py-3 min-w-[250px] rounded-full shadow-sm hover:bg-[#7a56d6] hover:text-white transition">
-    <FaRocket className="text-xl" /> Apply to Bootcamp
-  </button>
+    {/* Buttons */}
+    <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6 max-w-3xl mx-auto">
+      <button className="flex items-center justify-center gap-3 border-2 border-green-600 text-sm sm:text-base font-semibold px-6 py-3 min-w-[240px] rounded-full shadow-sm hover:bg-[#7a56d6] hover:text-white transition duration-300">
+        <FaRocket className="text-lg sm:text-xl" /> Apply to Bootcamp
+      </button>
 
-  <Link
-    to="/courses"
-    className="flex items-center justify-center gap-3 border-2 border-green-600 font-semibold px-6 py-3 min-w-[250px] rounded-full shadow-sm hover:bg-[#7a56d6] hover:text-white transition"
-  >
-    <FaBookOpen className="text-xl" /> Start Learning Now
-  </Link>
+      <Link
+        to="/courses"
+        className="flex items-center justify-center gap-3 border-2 border-green-600 text-sm sm:text-base font-semibold px-6 py-3 min-w-[240px] rounded-full shadow-sm hover:bg-[#7a56d6] hover:text-white transition duration-300"
+      >
+        <FaBookOpen className="text-lg sm:text-xl" /> Start Learning Now
+      </Link>
 
-  <Link
-    to="/services"
-    className="flex items-center justify-center gap-3 border-2 border-green-600 font-semibold px-6 py-3 min-w-[250px] rounded-full shadow-sm hover:bg-[#7a56d6] hover:text-white transition"
-  >
-    <FaCogs className="text-xl" /> Explore Our Services
-  </Link>
-</div>
+      <Link
+        to="/services"
+        className="flex items-center justify-center gap-3 border-2 border-green-600 text-sm sm:text-base font-semibold px-6 py-3 min-w-[240px] rounded-full shadow-sm hover:bg-[#7a56d6] hover:text-white transition duration-300"
+      >
+        <FaCogs className="text-lg sm:text-xl" /> Explore Our Services
+      </Link>
+    </div>
+  </div>
+</section>
 
-</div>
- </section>
 
       
       {/* Contact Section */}
-   <div className="min-h-screen bg-white from-black via-[#1a0033] to-black text-white px-4 py-16 flex items-center justify-center">
-      <div className="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-        {/* Contact Info */}
+  <div className="min-h-screen bg-white from-black via-[#1a0033] to-black text-white px-4 sm:px-6 md:px-12 py-12 sm:py-16 flex items-center justify-center">
+  <div className="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+    {/* Contact Info */}
+    <motion.div
+      initial={{ opacity: 0, x: -40 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      className="space-y-6"
+    >
+      <h2 className="text-4xl font-bold text-[#7a56d6] mb-4">Get in Touch</h2>
+      <p className="text-black">
+        We’d love to hear from you. Fill out the form or contact us directly below.
+      </p>
+      <div className="space-y-4">
+        <div className="flex items-center gap-4">
+          <FaPhoneAlt className="text-[#7a56d6] text-xl" />
+          <span className="text-black">+91 6263911619</span>
+        </div>
+        <div className="flex items-center gap-4">
+          <FaPhoneAlt className="text-[#7a56d6] text-xl" />
+          <span className="text-black">+91 7999786513</span>
+        </div>
+        <div className="flex items-center gap-4">
+          <FaEnvelope className="text-[#7a56d6] text-xl" />
+          <span className="text-black">excellup.hub@gmail.com</span>
+        </div>
+        <div className="flex items-center gap-4">
+          <FaMapMarkerAlt className="text-[#7a56d6] text-xl" />
+          <span className="text-black">Balaghat, Madhya Pradesh, India</span>
+        </div>
+      </div>
+    </motion.div>
+
+    {/* Contact Form */}
+    <motion.form
+      ref={formRef}
+      onSubmit={sendEmail}
+      initial={{ opacity: 0, x: 40 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-2xl space-y-6"
+    >
+      <div>
+        <label className="block text-sm font-semibold text-[#7a56d6] mb-1">Name</label>
+        <input
+          type="text"
+          name="user_name"
+          required
+          placeholder="Your Name"
+          className="w-full p-3 rounded-lg bg-white/20 text-black border border-gray-500 placeholder-gray-500 outline-none focus:ring-2 focus:ring-yellow-400"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-semibold text-[#7a56d6] mb-1">Email</label>
+        <input
+          type="email"
+          name="user_email"
+          required
+          placeholder="Your Email"
+          className="w-full p-3 rounded-lg bg-white/20 text-black border border-gray-500 placeholder-gray-500 outline-none focus:ring-2 focus:ring-yellow-400"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-semibold text-[#7a56d6] mb-1">Message</label>
+        <textarea
+          name="message"
+          required
+          placeholder="Your Message"
+          rows={5}
+          className="w-full p-3 rounded-lg bg-white/20 text-black border border-gray-500 placeholder-gray-500 outline-none focus:ring-2 focus:ring-yellow-400"
+        />
+      </div>
+      <button
+        type="submit"
+        className="w-full bg-[#7a56d6] text-white py-3 rounded-lg font-semibold hover:bg-purple-600 transition shadow-lg"
+      >
+        Send Message
+      </button>
+    </motion.form>
+  </div>
+
+  {/* Feedback Popup */}
+  <AnimatePresence>
+    {showPopup && (
+      <motion.div
+        className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-6"
+          className={`bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-xl max-w-sm mx-4 border-2 text-center ${
+            feedback.type === "success" ? "border-green-500" : "border-red-500"
+          }`}
+          initial={{ scale: 0.8 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0.8 }}
+          transition={{ duration: 0.3 }}
         >
-          <h2 className="text-4xl font-bold text-[#7a56d6] mb-4">Get in Touch</h2>
-          <p className="text-black">
-            We’d love to hear from you. Fill out the form or contact us directly below.
-          </p>
-          <div className="space-y-4">
-            <div className="flex items-center gap-4">
-              <FaPhoneAlt className="text-[#7a56d6] text-xl" />
-              <span className="text-black">+91 6263911619</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <FaPhoneAlt className="text-[#7a56d6] text-xl" />
-              <span className="text-black">+91 7999786513</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <FaEnvelope className="text-[#7a56d6] text-xl" />
-              <span className="text-black"> excellup.hub@gmail.com</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <FaMapMarkerAlt className="text-[#7a56d6] cla text-xl" />
-              <span className="text-black">Balaghat, Madhya Pradesh, India</span>
-            </div>
+          {feedback.type === "success" ? (
+            <FaCheckCircle className="text-green-400 text-3xl mx-auto mb-2" />
+          ) : (
+            <FaTimesCircle className="text-red-400 text-3xl mx-auto mb-2" />
+          )}
+          <p className="text-white text-lg mb-4">{feedback.message}</p>
+          <div className="h-1 bg-white/40 rounded-full overflow-hidden">
+            <motion.div
+              className={`${
+                feedback.type === "success" ? "bg-green-400" : "bg-red-400"
+              }`}
+              initial={{ width: "100%" }}
+              animate={{ width: "0%" }}
+              transition={{ duration: 1, ease: "linear" }}
+            />
           </div>
         </motion.div>
+      </motion.div>
+    )}
+  </AnimatePresence>
+</div>
 
-        {/* Contact Form */}
-        <motion.form
-          ref={formRef}
-          onSubmit={sendEmail}
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-2xl space-y-6"
-        >
-          <div>
-            <label className="block text-sm font-semibold text-[#7a56d6] mb-1">Name</label>
-            <input
-              type="text"
-              name="user_name"
-              required
-              placeholder="Your Name"
-              className="w-full p-3 rounded-lg bg-white/20 text-black border border-gray-500  placeholder-gray-500 outline-none focus:ring-2 focus:ring-yellow-400"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-semibold text-[#7a56d6] mb-1">Email</label>
-            <input
-              type="email"
-              name="user_email"
-              required
-              placeholder="Your Email"
-              className="w-full p-3 rounded-lg bg-white/20 text-black border border-gray-500 placeholder-gray-500 outline-none focus:ring-2 focus:ring-yellow-400"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-semibold text-[#7a56d6] mb-1">Message</label>
-            <textarea
-              name="message"
-              required
-              placeholder="Your Message"
-              rows={5}
-              className="w-full p-3 rounded-lg bg-white/20 text-black border border-gray-500 placeholder-gray-500 outline-none focus:ring-2 focus:ring-yellow-400"
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-[#7a56d6] text-white py-3 rounded-lg font-semibold hover:bg-purple-600 transition shadow-lg"
-          >
-            Send Message
-          </button>
-        </motion.form>
-      </div>
-
-      {/* Feedback Popup */}
-      <AnimatePresence>
-        {showPopup && (
-          <motion.div
-            className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <motion.div
-              className={`
-                bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-xl max-w-sm mx-4 border-2 text-center
-                ${feedback.type === "success" ? "border-green-500" : "border-red-500"}
-              `}
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
-              transition={{ duration: 0.3 }}
-            >
-              {feedback.type === "success" ? (
-                <FaCheckCircle className="text-green-400 text-3xl mx-auto mb-2" />
-              ) : (
-                <FaTimesCircle className="text-red-400 text-3xl mx-auto mb-2" />
-              )}
-              <p className="text-white text-lg mb-4">{feedback.message}</p>
-              {/* Progress Bar */}
-              <div className="h-1 bg-white/40 rounded-full overflow-hidden">
-                <motion.div
-                  className={`${feedback.type === "success" ? "bg-green-400" : "bg-red-400"}`}
-                  initial={{ width: "100%" }}
-                  animate={{ width: "0%" }}
-                  transition={{ duration: 1, ease: "linear" }}
-                />
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
 
      
          {/* Student story Section */}
-   <motion.div
+ <motion.div
   initial={{ opacity: 0, y: 40 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
   transition={{ duration: 1 }}
-  className="w-full px-6 md:px-16 text-center md:py-20 py-16 bg-[#D8DDF1]"
+  className="w-full px-4 sm:px-8 md:px-16 text-center md:py-20 py-12 bg-[#D8DDF1]"
 >
-  <h2 className="text-[#7a56d6] text-3xl md:text-4xl font-bold mb-4 font-lato">
+  <h2 className="text-[#7a56d6] text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-lato">
     Student Success Stories
   </h2>
-  <p className="text-black mb-10">
+  <p className="text-black mb-10 max-w-3xl mx-auto px-2 sm:px-0 text-sm sm:text-base">
     Hear from our graduates who have transformed their careers through our courses
   </p>
 
   <Swiper
     modules={[Navigation, Pagination, Autoplay]}
-    spaceBetween={30}
+    spaceBetween={20}
     slidesPerView={1}
     breakpoints={{
-      640: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
+      640: { slidesPerView: 1, spaceBetween: 20 },
+      768: { slidesPerView: 2, spaceBetween: 30 },
+      1024: { slidesPerView: 3, spaceBetween: 40 },
     }}
     autoplay={{ delay: 5000 }}
     pagination={{ clickable: true }}
@@ -853,15 +887,15 @@ const formRef = useRef();
             <img
               src={student.img}
               alt={student.name}
-              className="w-14 h-14 mr-3 rounded-full object-cover"
+              className="w-12 h-12 sm:w-14 sm:h-14 mr-3 rounded-full object-cover"
             />
             <div className="text-left">
-              <h3 className="font-semibold">{student.name}</h3>
-              <p className="text-yellow-600 text-sm">{student.title}</p>
-              <div className="text-yellow-500 text-sm mt-1">⭐⭐⭐⭐⭐</div>
+              <h3 className="font-semibold text-sm sm:text-base">{student.name}</h3>
+              <p className="text-yellow-600 text-xs sm:text-sm">{student.title}</p>
+              <div className="text-yellow-500 text-xs sm:text-sm mt-1">⭐⭐⭐⭐⭐</div>
             </div>
           </div>
-          <p className="text-gray-700 leading-relaxed">{student.review}</p>
+          <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">{student.review}</p>
         </motion.div>
       </SwiperSlide>
     ))}
@@ -869,70 +903,72 @@ const formRef = useRef();
 </motion.div>
 
 
-     {/* Follow Us Section */}
-     <section id="container" className=" w-full h-72 md:h-80">
-           <motion.div
-  initial={{ opacity: 0, scale: 0.95 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 1.2, ease: "easeInOut" }}
-  className="w-full mt-14 flex flex-col items-center justify-center gap-12 px-4 "
->
-  <h2 className="text-[#7a56d6] text-3xl md:text-4xl font-bold  text-center font-lato ">
-    Follow Us on Social Media
-  </h2>
 
-  {/* New Icon Design: Circular Glow Cards */}
-  <div className="grid grid-cols-4 sm:grid-cols-4 gap-10 ">
-    {[
-      {
-        name: "YouTube",
-        src: "https://img.icons8.com/3d-fluency/94/youtube-play.png",
-        link: "https://youtube.com/@excellup_hub?si=HxFhFR3Dr6ql5Tzd",
-      },
-      {
-        name: "LinkedIn",
-        src: "https://img.icons8.com/3d-fluency/94/linkedin.png",
-        link: "https://www.linkedin.com/in/excellup-hub-393700360/",
-      },
-      {
-        name: "Instagram",
-        src: "https://img.icons8.com/3d-fluency/94/instagram-new.png",
-        link: "https://www.instagram.com/excellup_?igsh=YWw0MzhzbHpkaW1p",
-      },
-      {
-        name: "WhatsApp",
-        src: "https://img.icons8.com/3d-fluency/94/whatsapp.png",
-        link: "https://wa.me/",
-      },
-    ].map((icon, index) => (
-      <motion.a
-        key={icon.name}
-        href={icon.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="relative w-16 h-16 sm:w-28 sm:h-28 rounded-full bg-white shadow-xl flex items-center justify-center transition-all hover:shadow-[0_0_20px_#7a56d6] group "
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{
-          duration: 0.8,
-          delay: index * 0.2,
-          ease: "easeInOut",
-        }}
-        whileHover={{ scale: 1.15 }}
-      >
-        <img
-          src={icon.src}
-          alt={icon.name}
-          className="w-12 h-12 md:w-14 md:h-14 transition-transform duration-300 group-hover:rotate-12"
-        />
-        <span className="absolute -bottom-8 text-sm font-semibold text-[#7a56d6] opacity-0 group-hover:opacity-100 transition duration-300">
-          {icon.name}
-        </span>
-      </motion.a>
-    ))}
-  </div>
-</motion.div>
-     </section>
+     {/* Follow Us Section */}
+    <section id="container" className="w-full h-96 md:h-80 py-10 md:py-16 ml-16 md:ml-0">
+  <motion.div
+    initial={{ opacity: 0, scale: 0.95 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1.2, ease: "easeInOut" }}
+    className="w-full flex flex-col items-center justify-center gap-10 px-6 sm:px-12"
+  >
+    <h2 className="text-[#7a56d6] text-2xl sm:text-3xl md:text-4xl font-bold text-center font-lato mr-16 ">
+      Follow Us on Social Media
+    </h2>
+
+    {/* Icons grid */}
+   <div className="grid grid-cols-2 sm:grid-cols-4 gap-1 w-full max-w-xl sm:max-w-4xl">
+      {[
+        {
+          name: "YouTube",
+          src: "https://img.icons8.com/3d-fluency/94/youtube-play.png",
+          link: "https://youtube.com/@excellup_hub?si=HxFhFR3Dr6ql5Tzd",
+        },
+        {
+          name: "LinkedIn",
+          src: "https://img.icons8.com/3d-fluency/94/linkedin.png",
+          link: "https://www.linkedin.com/in/excellup-hub-393700360/",
+        },
+        {
+          name: "Instagram",
+          src: "https://img.icons8.com/3d-fluency/94/instagram-new.png",
+          link: "https://www.instagram.com/excellup_?igsh=YWw0MzhzbHpkaW1p",
+        },
+        {
+          name: "WhatsApp",
+          src: "https://img.icons8.com/3d-fluency/94/whatsapp.png",
+          link: "https://wa.me/",
+        },
+      ].map((icon, index) => (
+        <motion.a
+          key={icon.name}
+          href={icon.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full bg-white shadow-xl flex items-center justify-center transition-all hover:shadow-[0_0_20px_#7a56d6] group"
+          initial={{ scale: 0.9, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: index * 0.2,
+            ease: "easeInOut",
+          }}
+          whileHover={{ scale: 1.15 }}
+        >
+          <img
+            src={icon.src}
+            alt={icon.name}
+            className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 transition-transform duration-300 group-hover:rotate-12"
+          />
+          <span className="absolute -bottom-8 text-xs sm:text-sm font-semibold text-[#7a56d6] opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap">
+            {icon.name}
+          </span>
+        </motion.a>
+      ))}
+    </div>
+  </motion.div>
+</section>
+
  
 
     </div>
