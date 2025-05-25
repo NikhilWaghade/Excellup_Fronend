@@ -290,7 +290,7 @@ const formRef = useRef();
         {[...technologies, ...technologies].map((tech, index) => (
           <motion.div
             key={`${tech.name}-${index}`}
-            className="w-20 sm:w-24 md:w-28 h-24 sm:h-28 md:h-32 flex-shrink-0 flex flex-col items-center justify-center"
+            className="w-24 sm:w-28 md:w-32 h-28 sm:h-32 md:h-36 flex-shrink-0 flex flex-col items-center justify-center"
             animate={startAnim ? { y: [0, -10, 0] } : { y: 0 }}
             transition={
               startAnim
@@ -304,7 +304,9 @@ const formRef = useRef();
                 : {}
             }
           >
-            {tech.icon}
+            <div className="text-5xl sm:text-6xl md:text-7xl">
+              {tech.icon}
+            </div>
             <span className="text-sm sm:text-base mt-2 text-black text-center font-medium">
               {tech.name}
             </span>
@@ -314,6 +316,7 @@ const formRef = useRef();
     </div>
   </motion.div>
 </section>
+
 
 
 
