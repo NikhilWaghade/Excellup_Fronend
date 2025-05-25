@@ -917,7 +917,7 @@ const formRef = useRef();
     </h2>
 
     {/* Icons grid */}
-   <div className="grid grid-cols-2 sm:grid-cols-4 gap-1 w-full max-w-xl sm:max-w-4xl">
+   <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 w-full max-w-xl sm:max-w-4xl">
       {[
         {
           name: "YouTube",
