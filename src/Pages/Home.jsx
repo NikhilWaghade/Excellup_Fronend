@@ -201,54 +201,49 @@ const formRef = useRef();
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center bg-white text-black p- -mt-20">
-      {/* Hero Section */}
-   <section id="hero" className="relative w-full min-h-screen">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 sm:px-6 md:px-8 pt-24 md:pt-32 pb-12">
-    {/* Left side content */}
-    <div className="space-y-6">
-      <h1 className="text-xl md:text-4xl font-extrabold leading-tight text-white md:-mt-48">
-        <span className="text-[#7a56d6] md:text-3xl text-2xl uppercase">{text}</span>
+  {/* Hero Section */}
+<section id="hero" className="relative w-full min-h-screen bg-white ">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 sm:px-6 md:px-12 pt-24 md:pt-32 pb-12">
+    {/* Left Side */}
+    <div className="space-y-6 md:space-y-8 md:-mt-36">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-black leading-tight">
+        <span className="text-[#7a56d6] uppercase">{text}</span>
         <Cursor cursorStyle="|" />
         <br />
-        <span className="text-black text-2xl">Build Your Future with Emerging Tech</span>
+        <span className="block mt-2">Build Your Future with Emerging Tech</span>
       </h1>
-
-      <p className="text-black text-lg md:text-xl leading-relaxed max-w-2xl font-inter">
-        "Level up your coding skills with our cutting-edge education platform.
-        Learn from industry leaders, build real-world projects, and join a thriving
-        community of passionate developers."
+      <p className="text-base sm:text-lg md:text-xl leading-relaxed text-black font-inter">
+        Level up your coding skills with our cutting-edge education platform. Learn from industry leaders, build real-world projects, and join a thriving community of passionate developers.
       </p>
-
       <div className="flex flex-wrap gap-4">
         <Link to="/courses">
-          <button className="bg-[#7a56d6] text-white px-6 py-3 rounded-xl font-semibold hover:bg-yellow-300 transition flex items-center shadow-lg">
+          <button className="bg-[#7a56d6] text-white px-6 py-3 rounded-xl font-semibold hover:bg-yellow-300 transition shadow-lg">
             🚀 Start Learning
           </button>
         </Link>
-
         <a
           href="https://youtu.be/ToZSFHUJdHM?si=qCJqiWzIAGUME63x"
           target="_blank"
           rel="noopener noreferrer"
-          className="border-2 border-yellow-400 text-black px-6 py-3 rounded-xl font-semibold hover:bg-[#7a56d6] flex items-center shadow-lg"
+          className="border-2 border-yellow-400 text-black px-6 py-3 rounded-xl font-semibold hover:bg-[#7a56d6] hover:text-white transition shadow-lg"
         >
           ▶️ Watch Demo
         </a>
       </div>
     </div>
 
-    {/* Right side image */}
+    {/* Right Side Image */}
     <div className="flex justify-center mt-10 md:mt-0">
       <img
         src={wlclogo}
         alt="Coding Students"
-        className="rounded-3xl w-full max-w-[320px] sm:max-w-[400px] md:max-w-lg z-0"
+        className="rounded-3xl w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px]"
       />
     </div>
   </div>
 
-  {/* Fixed WhatsApp icon */}
-  <div className="fixed bottom-8 right-6 sm:right-8 flex flex-col gap-6 z-50">
+  {/* Fixed WhatsApp Icon */}
+  <div className="fixed bottom-8 right-6 sm:right-8 z-50">
     <motion.a
       href="https://wa.me/"
       target="_blank"
@@ -258,7 +253,6 @@ const formRef = useRef();
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
       whileHover={{ scale: 1.15 }}
-      aria-label="WhatsApp"
     >
       <img
         src="https://img.icons8.com/3d-fluency/94/whatsapp.png"
@@ -269,65 +263,58 @@ const formRef = useRef();
   </div>
 </section>
 
-
-
-      {/* Technologies Icons Section */}
-<section className="bg-[#D8DDF1] w-full overflow-hidden h-72">
+{/* Technologies Section */}
+<section className="bg-[#D8DDF1] w-full overflow-hidden py-16 px-4 sm:px-6 md:px-12">
   <motion.div
     initial={{ opacity: 0, scale: 0.95 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 1.2, ease: "easeInOut" }}
-    className="w-full pt-14 px-4 sm:px-6 md:px-12 flex flex-col items-center justify-center gap-10"
+    className="flex flex-col items-center justify-center gap-10"
   >
     {/* Heading */}
-    <div className="text-[#7a56d6] text-center text-2xl sm:text-3xl md:text-4xl font-bold font-lato">
+    <h2 className="text-[#7a56d6] text-center text-2xl sm:text-3xl md:text-4xl font-bold font-lato">
       Trusted by Leading Technologies Worldwide
-    </div>
+    </h2>
 
     {/* Marquee Section */}
     <div className="relative w-full overflow-hidden">
-      <div className="w-full">
-        <motion.div
-          className="flex gap-10 sm:gap-12 md:gap-16 w-max will-change-transform pb-32"
-          animate={startAnim ? { x: ["0%", "-50%"] } : { x: "0%" }}
-          transition={
-            startAnim
-              ? {
-                  duration: 30,
-                  repeat: Infinity,
-                  ease: "linear",
-                }
-              : {}
-          }
-        >
-          {[...technologies, ...technologies].map((tech, index) => (
-            <motion.div
-              key={`${tech.name}-${index}`}
-              className="w-20 sm:w-24 md:w-28 h-24 sm:h-28 md:h-32 flex-shrink-0 flex flex-col items-center justify-center rounded-xl"
-              animate={startAnim ? { y: [0, -10, 0] } : { y: 0 }}
-              transition={
-                startAnim
-                  ? {
-                      duration: 2,
-                      delay: (index % technologies.length) * 0.1,
-                      repeat: Infinity,
-                      repeatType: "loop",
-                      ease: "easeInOut",
-                    }
-                  : {}
-              }
-            >
-              {tech.icon}
-              <span className="text-sm sm:text-base mt-2 text-black text-center font-medium">
-                {tech.name}
-              </span>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
+      <motion.div
+        className="flex gap-10 sm:gap-12 md:gap-16 w-max will-change-transform"
+        animate={startAnim ? { x: ["0%", "-50%"] } : { x: "0%" }}
+        transition={
+          startAnim
+            ? { duration: 30, repeat: Infinity, ease: "linear" }
+            : {}
+        }
+      >
+        {[...technologies, ...technologies].map((tech, index) => (
+          <motion.div
+            key={`${tech.name}-${index}`}
+            className="w-20 sm:w-24 md:w-28 h-24 sm:h-28 md:h-32 flex-shrink-0 flex flex-col items-center justify-center"
+            animate={startAnim ? { y: [0, -10, 0] } : { y: 0 }}
+            transition={
+              startAnim
+                ? {
+                    duration: 2,
+                    delay: (index % technologies.length) * 0.1,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "easeInOut",
+                  }
+                : {}
+            }
+          >
+            {tech.icon}
+            <span className="text-sm sm:text-base mt-2 text-black text-center font-medium">
+              {tech.name}
+            </span>
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   </motion.div>
 </section>
+
 
 
      
