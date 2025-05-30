@@ -46,8 +46,8 @@ export default function Contact() {
   }, [showPopup, countdown]);
 
   return (
-    <div className="min-h-screen bg-white from-black via-[#1a0033] to-black text-white px-4 py-16 flex items-center justify-center">
-      <div className="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+    <div className="min-h-screen bg-gradient-to-br from-white to-purple-100  px-4 py-16 flex items-center justify-center">
+      <div className="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start mt-10">
         {/* Contact Info */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}

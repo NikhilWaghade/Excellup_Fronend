@@ -1,21 +1,32 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import PrimaryBtn from "./PrimaryBtn";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsOpen(false); // Close mobile menu on route change
+  }, [location]);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navLinks = [
+    { path: "/courses", label: "Courses" },
+    { path: "/services", label: "Services" },
+    { path: "/community", label: "Community" },
+    { path: "/contact", label: "Contact" },
+  ];
 
   return (
     <motion.nav
@@ -28,36 +39,32 @@ const Navbar = () => {
           : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-3 sm:px-6  xl:px-0">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 xl:px-0">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <h1>
-            <motion.a
-              href="#"
-              className="text-2xl font-light text-white"
-              whileHover={{ scale: 1.05 }}
-            >
-              <img
-                src="/assets/images/linear-light.svg"
-                className="w-44 sm:w-48 md:w-52"
-                alt="excellup"
-              />
-            </motion.a>
+            <motion.div whileHover={{ scale: 1.05 }}>
+              <Link to="/">
+                <img
+                  src="/assets/images/linear-light.svg"
+                  className="w-44 sm:w-48 md:w-52"
+                  alt="Excellup"
+                />
+              </Link>
+            </motion.div>
           </h1>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
-            {["Courses", "Services", "Community", "Contact"].map(
-              (item, index) => (
-                <motion.a
-                  key={index}
-                  href="#"
-                  className="text-black/80 hover:text-brand transition-colors duration-300 text-sm uppercase font-outfit"
-                >
-                  {item}
-                </motion.a>
-              )
-            )}
+            {navLinks.map((item, index) => (
+              <Link
+                key={index}
+                to={item.path}
+                className="text-black/80 hover:text-brand transition-colors duration-300 text-sm uppercase font-outfit"
+              >
+                {item.label}
+              </Link>
+            ))}
             <PrimaryBtn>Register Now</PrimaryBtn>
           </div>
 
@@ -71,49 +78,46 @@ const Navbar = () => {
             {isOpen ? <X size={24} /> : <Menu size={28} />}
           </motion.button>
         </div>
-
-        {/* Mobile Navigation */}
-        {/* {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-white/95 backdrop-blur-sm z-40"
-          >
-            <div className="relative h-full w-full p-8">
-              <motion.div
-                className="flex flex-col items-start justify-center h-full gap-8 px-4"
-                variants={containerVariants}
-                initial="hidden"
-                animate="show"
-              >
-                {[
-                  { path: "/", label: "Home" },
-                  { path: "/magazine", label: "Magazine" },
-                  { path: "/careers", label: "Careers" },
-                  { path: "/team", label: "Our Team" },
-                  { path: "/manifesto", label: "Manifesto" },
-                  { path: "/contact", label: "Contact us" },
-                ].map((item, i) => (
-                  <motion.div
-                    key={item.path}
-                    variants={itemVariants}
-                    custom={i}
-                  >
-                    <Link
-                      to={item.path}
-                      className="text-3xl font-light font-outfit text-brand uppercase hover:opacity-70 transition-opacity"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </div>
-          </motion.div>
-        )} */}
       </div>
+
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-white/95 backdrop-blur-sm z-40"
+        >
+          {/* Close Button */}
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-6 right-6 z-50 text-brand hover:scale-110 transition-transform"
+          >
+            <X size={32} />
+          </button>
+
+          <div className="relative h-full w-full px-6 py-10">
+            <motion.div
+              className="flex flex-col items-start justify-center h-full gap-6 sm:gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              animate="show"
+            >
+              {[{ path: "/", label: "Home" }, ...navLinks].map((item, i) => (
+                <motion.div key={item.path} variants={itemVariants} custom={i}>
+                  <Link
+                    to={item.path}
+                    className="text-2xl sm:text-3xl font-light font-outfit text-brand uppercase hover:opacity-70 transition-opacity"
+                  >
+                    {item.label}
+                  </Link>
+                </motion.div>
+              ))}
+              <PrimaryBtn className="mt-8 sm:mt-10">Register Now</PrimaryBtn>
+            </motion.div>
+          </div>
+        </motion.div>
+      )}
     </motion.nav>
   );
 };

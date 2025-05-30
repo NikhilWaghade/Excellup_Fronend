@@ -51,6 +51,10 @@ import {
   FaYoutube,
   FaBriefcase,
   FaCertificate,
+  FaHtml5,
+  FaServer,
+  FaWordpress,
+  FaDatabase,
 } from "react-icons/fa";
 import emailjs from "emailjs-com";
 import Marquee from "react-fast-marquee";
@@ -291,71 +295,87 @@ const Hero = () => {
 };
 
 const CourseShowcase = () => {
-  const courses = [
-    {
-      category: "Web Development",
-      title: "MERN Stack Development",
-      description:
-        "Master full-stack development with MongoDB, Express.js, React, and Node.js",
-      duration: "6 months",
-      projects: "4+ Projects",
-      rating: 4.8,
-      icon: <FaLaptopCode className="w-8 h-8" />,
-      bannerImage:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
-      features: ["MongoDB", "Express.js", "React", "Node.js"],
-    },
-    {
-      category: "Mobile Development",
-      title: "App Development",
-      description:
-        "Build native and cross-platform mobile apps with React Native and Flutter",
-      duration: "5 months",
-      projects: "6+ Applications",
-      rating: 4.7,
-      icon: <FaMobile className="w-8 h-8" />,
-      bannerImage:
-        "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-      features: ["React Native", "Flutter", "Firebase", "Redux"],
-    },
-    {
-      category: "Programming",
-      title: "DSA & System Design",
-      description:
-        "Master Data Structures, Algorithms, and System Design for tech interviews",
-      duration: "4 months",
-      projects: "100+ Problems",
-      rating: 4.9,
-      icon: <FaChartLine className="w-8 h-8" />,
-      bannerImage:
-        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-      features: ["Java", "Python", "C++", "System Design"],
-    },
-    {
-      category: "AI & ML",
-      title: "Python & AI Development",
-      description: "Learn Python programming and build AI/ML applications",
-      duration: "6 months",
-      projects: "5 AI/ML Projects",
-      rating: 4.8,
-      icon: <FaRobot className="w-8 h-8" />,
-      bannerImage:
-        "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-      features: ["TensorFlow", "PyTorch", "Scikit-learn", "OpenCV"],
-    },
-    {
-      category: "Cloud & DevOps",
-      title: "Cloud Computing & DevOps",
-      description: "Master AWS, Azure, Docker, Kubernetes, and CI/CD pipelines",
-      duration: "5 months",
-      projects: "4+ Projects",
-      rating: 4.7,
-      icon: <FaCloud className="w-8 h-8" />,
-      bannerImage:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
-      features: ["AWS", "Docker", "Kubernetes", "Jenkins"],
-    },
-  ];
+ const courses = [
+   {
+     slug: "frontend-development",
+     title: "Frontend Development",
+     icon: <FaHtml5 className="w-6 h-6 text-[#7a56d6]" />,
+     description: "HTML, CSS, JavaScript, React & UI/UX fundamentals.",
+     category: "Frontend",
+     duration: "4 Months",
+     projects: "3+ Projects",
+     rating: 4.7,
+     bannerImage:
+       "https://images.unsplash.com/photo-1667372393086-9d4001d51cf1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8RnJvbnRlbmR8ZW58MHx8MHx8fDA%3D",
+     features: ["HTML", "CSS", "JavaScript", "React", "UI/UX"],
+   },
+   {
+     slug: "backend-development",
+     title: "Backend Development",
+     icon: <FaServer className="w-6 h-6 text-[#7a56d6]" />,
+     description: "Node.js, Express, MongoDB & RESTful APIs.",
+     category: "Backend",
+     duration: "4 Months",
+     projects: "3+ Projects",
+     rating: 4.6,
+     bannerImage:
+       "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja2VuZHxlbnwwfHwwfHx8MA%3D%3D",
+     features: ["Node.js", "Express", "MongoDB", "API"],
+   },
+   {
+     slug: "full-stack-web",
+     title: "Full Stack Web Development",
+     icon: <FaLaptopCode className="w-6 h-6 text-[#7a56d6]" />,
+     description:
+       "Frontend + Backend full-stack development with real projects.",
+     category: "Full Stack",
+     duration: "6 Months",
+     projects: "6+ Projects",
+     rating: 4.9,
+     bannerImage:
+       "https://plus.unsplash.com/premium_photo-1663023612721-e588768ef403?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RnVsbCUyMHN0YWNrJTIwZGV2ZWxvcGVyfGVufDB8fDB8fHww",
+     features: ["Frontend", "Backend", "MongoDB", "React", "Node.js"],
+   },
+   {
+     slug: "programming-fundamentals",
+     title: "Programming Fundamentals",
+     icon: <FaCode className="w-6 h-6 text-[#7a56d6]" />,
+     description: "C, C++, Python, Java with real problem solving practice.",
+     category: "Programming",
+     duration: "3 Months",
+     projects: "100+ Problems",
+     rating: 4.8,
+     bannerImage:
+       "https://plus.unsplash.com/premium_photo-1661872817492-fd0c30404d74?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8UHJvZ3JhbWluZ3xlbnwwfHwwfHx8MA%3D%3D",
+     features: ["C", "C++", "Python", "Java"],
+   },
+  //  {
+  //    slug: "wordpress-development",
+  //    title: "WordPress Development",
+  //    icon: <FaWordpress className="w-6 h-6 text-[#7a56d6]" />,
+  //    description: "No-code website development using WordPress CMS.",
+  //    category: "No-Code",
+  //    duration: "2 Months",
+  //    projects: "2+ Sites",
+  //    rating: 4.5,
+  //    bannerImage:
+  //      "https://images.unsplash.com/photo-1678341859828-bfb1a2bd527a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d29yZHByZXNzfGVufDB8fDB8fHww",
+  //    features: ["WordPress", "Themes", "Plugins", "SEO"],
+  //  },
+  //  {
+  //    slug: "dsa",
+  //    title: "Data Structures & Algorithms",
+  //    icon: <FaDatabase className="w-6 h-6 text-[#7a56d6]" />,
+  //    description: "Master DSA and crack coding interviews.",
+  //    category: "DSA",
+  //    duration: "5 Months",
+  //    projects: "200+ Problems",
+  //    rating: 4.9,
+  //    bannerImage:
+  //      "https://plus.unsplash.com/premium_photo-1681810994162-43dbe0919d3f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGRhdGElMjBzdHJ1Y3R1cmUlMjBhbmQlMjBhbGdvcml0aGFtfGVufDB8fDB8fHww",
+  //    features: ["Arrays", "Trees", "Graphs", "Recursion", "DP"],
+  //  },
+ ];
 
   const createSlug = (title) => {
     return title
@@ -418,7 +438,7 @@ const CourseShowcase = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col cursor-pointer"
+                  className="bg-red-5 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col cursor-pointer"
                 >
                   <div className="relative h-48">
                     <img
@@ -481,7 +501,7 @@ const CourseShowcase = () => {
 
                       <div className="">
                         <Link
-                          to={`/courses/${createSlug(course.title)}`}
+                           to={`/courses/${course.slug}`}
                           className="inline-flex items-center bg-brand text-white px-4 py-2.5 sm:py-1.5 rounded-full font-medium w-full sm:w-auto justify-center font-outfit border border-brand hover:bg-white hover:text-brand"
                         >
                           Enroll Now
@@ -831,8 +851,10 @@ const StudentSuccess = () => {
 
         {/* CTA */}
         <div className="flex items-center justify-center w-full">
-          <PrimaryBtn>Join Our Community</PrimaryBtn>
-        </div>
+          <Link to="/community">
+             <PrimaryBtn>Join Our Community</PrimaryBtn>
+         </Link>
+       </div>
       </div>
     </section>
   );

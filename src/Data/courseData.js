@@ -8,8 +8,9 @@ const courseData = {
       discount: "₹10,000",
       videoLink: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       projects: [
-        { title: "Personal Portfolio", videoLink: "https://www.youtube.com/embed/ABC123" },
-        { title: "E-commerce Website", videoLink: "https://www.youtube.com/embed/XYZ456" },
+        { title: "Blog Website", imageLink: "https://media.istockphoto.com/id/2196854874/photo/businessman-holding-virtual-interface-panel-of-digital-device-on-global-networking-innovation.webp?a=1&b=1&s=612x612&w=0&k=20&c=fr5N3pEEOVKeYQSRWcbznXDKDdqgG1LDXh1DOm1K9Sk=" },
+
+        { title: "E-commerce Website", imageLink: "https://media.istockphoto.com/id/2123096316/photo/api-integration-seamless-connectivity-cutting-edge-solutions-businessman-touch-api-related.webp?a=1&b=1&s=612x612&w=0&k=20&c=PpnPhPgfTJiLUJi9Tkr8LK4WlhjkhThYZsPKmibf9_w=" },
       ],
       syllabus: [
         "Introduction to HTML & CSS",
@@ -28,8 +29,9 @@ const courseData = {
       discount: "₹13,000",
       videoLink: "https://www.youtube.com/embed/2Vv-BfVoq4g",
       projects: [
-        { title: "API Development", videoLink: "https://www.youtube.com/embed/DEF789" },
-        { title: "Database Management", videoLink: "https://www.youtube.com/embed/GHI123" },
+        { title: "API Development", imageLink: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFja2VuZHxlbnwwfHwwfHx8MA%3D%3D" },
+
+        { title: "Database Management", imageLink: "https://plus.unsplash.com/premium_photo-1678566111481-8e275550b700?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YmFja2VuZHxlbnwwfHwwfHx8MA%3D%3D" },
       ],
       syllabus: [
         "Introduction to Node.js",
@@ -48,8 +50,8 @@ const courseData = {
       discount: "₹18,000",
       videoLink: "https://www.youtube.com/embed/fullstackvid",
       projects: [
-        { title: "Job Portal", videoLink: "https://www.youtube.com/embed/fsproject1" },
-        { title: "Online Learning Platform", videoLink: "https://www.youtube.com/embed/fsproject2" },
+        { title: "Job Portal", imageLink: "https://plus.unsplash.com/premium_photo-1685086785054-d047cdc0e525?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RnVsbCUyMHN0YWNrfGVufDB8fDB8fHww" },
+        { title: "Online Learning Platform", imageLink: "https://plus.unsplash.com/premium_photo-1685086785636-2a1a0e5b591f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8RnVsbCUyMHN0YWNrfGVufDB8fDB8fHww" },
       ],
       syllabus: [
         "Frontend with HTML, CSS, JavaScript & React",
@@ -68,8 +70,9 @@ const courseData = {
       discount: "₹8,000",
       videoLink: "https://www.youtube.com/embed/progfundamentals",
       projects: [
-        { title: "Library Management System", videoLink: "https://www.youtube.com/embed/projlib" },
-        { title: "Banking App CLI", videoLink: "https://www.youtube.com/embed/projbank" },
+        { title: "Library Management System", imageLink: "https://images.unsplash.com/photo-1670057037226-b3d65909424f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZ3JhbWluZ3xlbnwwfHwwfHx8MA%3D%3D" },
+
+        { title: "Banking App CLI", imageLink: "https://images.unsplash.com/photo-1685558589023-3297b012d8bc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2dyYW1pbmd8ZW58MHx8MHx8fDA%3D" },
       ],
       syllabus: [
         "C and C++ Programming",
@@ -88,8 +91,8 @@ const courseData = {
       discount: "₹6,000",
       videoLink: "https://www.youtube.com/embed/wordpressvid",
       projects: [
-        { title: "Business Website", videoLink: "https://www.youtube.com/embed/wpbiz" },
-        { title: "Blog Website", videoLink: "https://www.youtube.com/embed/wpblog" },
+        { title: "Business Website", imageLink: "https://images.unsplash.com/photo-1566207474742-de921626ad0c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29yZHByZXNzfGVufDB8fDB8fHww" },
+        { title: "Blog Website", imageLink: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHdvcmRwcmVzc3xlbnwwfHwwfHx8MA%3D%3D" },
       ],
       syllabus: [
         "Installing & Configuring WordPress",
@@ -108,8 +111,8 @@ const courseData = {
       discount: "₹9,000",
       videoLink: "https://www.youtube.com/embed/dsavideo",
       projects: [
-        { title: "Sorting Visualizer", videoLink: "https://www.youtube.com/embed/dsaproj1" },
-        { title: "Pathfinding Algorithm", videoLink: "https://www.youtube.com/embed/dsaproj2" },
+        { title: "Sorting Visualizer", imageLink: "https://images.unsplash.com/photo-1664854953181-b12e6dda8b7c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGF0YSUyMHN0cnVjdHVyZSUyMGFuZCUyMGFsZ29yaXRoYW18ZW58MHx8MHx8fDA%3D" },
+        { title: "Pathfinding Algorithm", imageLink: "https://images.unsplash.com/photo-1675044794037-9262cedb6d5d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGRhdGElMjBzdHJ1Y3R1cmUlMjBhbmQlMjBhbGdvcml0aGFtfGVufDB8fDB8fHww" },
       ],
       syllabus: [
         "Arrays and Strings",

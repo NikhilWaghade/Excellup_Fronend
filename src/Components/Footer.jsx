@@ -42,7 +42,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/excellup-hub-393700360/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#5865F2] text-white p-2 rounded-full hover:scale-110 transition-transform"
@@ -50,7 +50,7 @@ const Footer = () => {
                 <FaLinkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/excellup_?igsh=YWw0MzhzbHpkaW1p"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#E4405F] text-white p-2 rounded-full hover:scale-110 transition-transform"
@@ -58,7 +58,7 @@ const Footer = () => {
                 <FaInstagram className="w-5 h-5" />
               </a>
               <a
-                href="https://youtube.com"
+                href="https://youtube.com/@excellup_hub?si=HxFhFR3Dr6ql5Tzd"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#FF0000] text-white p-2 rounded-full hover:scale-110 transition-transform"
@@ -119,16 +119,16 @@ const Footer = () => {
             <ul className="space-y-2 font-outfit text-sm sm:text-base">
               <li className="flex items-start text-gray-600">
                 <FaMapMarkerAlt className="w-4 h-4 mr-2 mt-1" />
-                123 Tech Park, Sector 15
-                <br className="hidden sm:block" /> Noida, UP 201301
+                Gondiya Road , Balaghat 
+                <br className="hidden sm:block" />, Madhay Pradesh 481001
               </li>
               <li className="flex items-center text-gray-600">
                 <FaPhone className="w-4 h-4 mr-2" />
                 +91 98765 43210
               </li>
               <li className="flex items-center text-gray-600">
-                <FaEnvelope className="w-4 h-4 mr-2" />
-                contact@excellup.com
+                <FaEnvelope className="w-5 h-4 mr-2" />
+                excellup.hub@gmail.com
               </li>
             </ul>
           </div>
