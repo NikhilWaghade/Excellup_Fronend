@@ -1,3 +1,4 @@
+import React from "react";
 import { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {  FaCheckCircle, FaTimesCircle, FaPhoneAlt,  FaEnvelope,FaMapMarkerAlt,} from "react-icons/fa";
@@ -47,37 +48,15 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-purple-100  px-4 py-16 flex items-center justify-center">
-      <div className="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start mt-10">
-        {/* Contact Info */}
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-6"
-        >
-          <h2 className="text-4xl font-bold text-[#7a56d6] mb-4">Get in Touch</h2>
-          <p className="text-black">
-            We’d love to hear from you. Fill out the form or contact us directly below.
-          </p>
-          <div className="space-y-4">
-            <div className="flex items-center gap-4">
-              <FaPhoneAlt className="text-[#7a56d6] text-xl" />
-              <span className="text-black">+91 6263911619</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <FaPhoneAlt className="text-[#7a56d6] text-xl" />
-              <span className="text-black">+91 7999786513</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <FaEnvelope className="text-[#7a56d6] text-xl" />
-              <span className="text-black">excellup.hub@gmail.com</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <FaMapMarkerAlt className="text-[#7a56d6] cla text-xl" />
-              <span className="text-black">Balaghat, Madhya Pradesh, India</span>
-            </div>
-          </div>
-        </motion.div>
+     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 space-y-12">
+      {/* Grid Section: Image + Form */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        {/* Left Side Image */}
+        <img
+          src="https://img.freepik.com/free-vector/contact-us-concept-illustration_114360-2299.jpg?ga=GA1.1.924705394.1747313358&semt=ais_hybrid&w=740"
+          alt="Contact Illustration"
+          className="w-full rounded-lg shadow-md"
+        />
 
         {/* Contact Form */}
         <motion.form
@@ -126,6 +105,38 @@ export default function Contact() {
           </button>
         </motion.form>
       </div>
+
+      {/* Full Width Contact Info Section */}
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="w-full bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-2xl space-y-6"
+      >
+        <h2 className="text-4xl font-bold text-[#7a56d6] mb-4">Get in Touch</h2>
+        <p className="text-black">
+          We’d love to hear from you. Fill out the form or contact us directly below.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="flex items-center gap-4">
+            <FaPhoneAlt className="text-[#7a56d6] text-xl" />
+            <span className="text-black">+91 6263911619</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <FaPhoneAlt className="text-[#7a56d6] text-xl" />
+            <span className="text-black">+91 7999786513</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <FaEnvelope className="text-[#7a56d6] text-xl" />
+            <span className="text-black">excellup.hub@gmail.com</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <FaMapMarkerAlt className="text-[#7a56d6] text-xl" />
+            <span className="text-black">Balaghat, Madhya Pradesh, India</span>
+          </div>
+        </div>
+      </motion.div>
+    </div>
 
       {/* Feedback Popup */}
       <AnimatePresence>
