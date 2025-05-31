@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import lalit from '../assets/Team Members/lalit.jpg';
 import Nikhil from '../assets/Team Members/Nikhil.jpg';
@@ -26,21 +27,21 @@ const teamMembers = [
     role: "Workshop Coordinator",
     image: Shivam
   },
-  {
-    name: "Sulabh Hathi ",
-    role: "Workshop Coordinator",
-    image: Sulabh
-  },
+  // {
+  //   name: "Sulabh Hathi ",
+  //   role: "Workshop Coordinator",
+  //   image: Sulabh
+  // },
    {
     name: "Lalit  Choudhary",
     role: "Full Stack Instructor",
     image: lalit
   },
-    {
-    name: "Sulabh Hathi ",
-    role: "Workshop Coordinator",
-    image: Sulabh
-  },
+  //   {
+  //   name: "Sulabh Hathi ",
+  //   role: "Workshop Coordinator",
+  //   image: Sulabh
+  // },
    {
     name: "Lalit  Choudhary",
     role: "Full Stack Instructor",
@@ -54,6 +55,7 @@ const communityWork = [
   "Conducting Video Editing Sessions",
   "Running Graphic Design Bootcamps",
   "Organizing Coding & Tech Workshops",
+   "Conducting Video Editing Sessions",
 ];
 
 const Community = () => {

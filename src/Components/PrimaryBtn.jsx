@@ -1,8 +1,9 @@
+import React from "react";
 const PrimaryBtn = ({ className, href, onClick, children, px, py, bg }) => {
   const classes = `relative inline-block  text-base font-outfit font-medium drop-shadow-lg rounded-full ${
     bg ||
     "text-white bg-brand hover:bg-white hover:text-brand border border-brand"
-  } transition-all ease-in-out duration-300 ${px || "px-7 sm:px-8"} ${
+  } transition-all ease-in-out duration-300 ${px || "px-7 sm:px-4 `  md:px-4"} ${
     py || "py-3"
   } ${className || ""}`;
   const spanClasses = "relative z-10";

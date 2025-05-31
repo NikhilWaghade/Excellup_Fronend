@@ -1,11 +1,12 @@
+import React from "react";
 import {
   FaLinkedin,
   FaInstagram,
   FaYoutube,
   FaTwitter,
   FaMapMarkerAlt,
-  FaPhone,
   FaEnvelope,
+  FaPhoneAlt,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -123,7 +124,7 @@ const Footer = () => {
                 <br className="hidden sm:block" />, Madhay Pradesh 481001
               </li>
               <li className="flex items-center text-gray-600">
-                <FaPhone className="w-4 h-4 mr-2" />
+                <FaPhoneAlt  className="w-4 h-4 mr-2" />
                 +91 98765 43210
               </li>
               <li className="flex items-center text-gray-600">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   FaHtml5,
   FaServer,
@@ -111,71 +112,84 @@ const Courses = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition duration-300 flex flex-col"
-            >
-              <div className="relative h-48">
-                <img
-                  src={course.bannerImage}
-                  alt={course.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black/30"></div>
-                <div className="absolute top-4 left-4 flex gap-2">
-                  <span className="bg-white/90 text-[#7a56d6] px-3 py-1 rounded-full text-sm font-medium font-inter">
-                    {course.category}
-                  </span>
-                  <span className="bg-white/90 px-2 py-1 rounded-full flex items-center gap-1 text-sm font-medium font-inter">
-                    <FaStar className="text-yellow-400 w-4 h-4" />
-                    {course.rating}
-                  </span>
-                </div>
-              </div>
-
-              <div className="p-5 space-y-4 flex flex-col flex-grow">
-                <div className="flex justify-between items-center">
-                  <h2 className="text-xl font-bold text-gray-900 font-outfit">
-                    {course.title}
-                  </h2>
-                  {course.icon}
-                </div>
-
-                <p className="text-sm text-gray-600 font-inter">
-                  {course.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2">
-                  {course.features.map((feature, i) => (
-                    <span
-                      key={i}
-                      className="bg-[#7a56d6]/10 text-[#7a56d6] px-3 py-1 rounded-full text-xs font-inter"
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex justify-between items-center text-sm text-gray-500 mt-auto pt-4 border-t">
-                  <div className="flex gap-2 items-center">
-                    <FaClock className="text-[#7a56d6] w-4 h-4" />
-                    {course.duration}
-                  </div>
-                  <div className="flex gap-2 items-center">
-                    <FaCodeBranch className="text-[#7a56d6] w-4 h-4" />
-                    {course.projects}
-                  </div>
-                </div>
-
-                <Link
-                  to={`/courses/${course.slug}`}
-                  className="mt-4 inline-flex items-center justify-center px-4 py-2 text-sm font-medium font-outfit bg-[#7a56d6] text-white rounded-full hover:bg-[#7a56d6]/90 transition"
+            <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="bg-red-5 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col cursor-pointer"
                 >
-                  View Details
-                  <FaArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </div>
-            </div>
+                  <div className="relative h-48">
+                    <img
+                      src={course.bannerImage}
+                      alt={`${course.title} - ${course.description}`}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/40"></div>
+                    <div className="absolute top-4 left-4 flex items-center gap-2">
+                      <span className="px-3 py-1 rounded-full text-sm font-inter bg-white/90 text-[#7a56d6] font-medium">
+                        {course.category}
+                      </span>
+                      <div className="flex items-center gap-1 bg-white/90 px-2 py-1 rounded-full">
+                        <FaStar className="text-yellow-400 w-4 h-4" />
+                        <span className="text-sm font-medium">
+                          {course.rating}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-4 sm:p-6 space-y-4 flex flex-col justify-between h-full">
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-xl font-semibold font-outfit text-gray-900">
+                          {course.title}
+                        </h3>
+                        <div className="text-[#7a56d6]">{course.icon}</div>
+                      </div>
+
+                      <p className="text-gray-600 text-sm font-inter">
+                        {course.description}
+                      </p>
+
+                      <div className="flex flex-wrap gap-2">
+                        {course.features.map((feature, idx) => (
+                          <span
+                            key={idx}
+                            className="px-3 py-1 rounded-full text-xs font-inter bg-[#7a56d6]/10 text-[#7a56d6]"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="space-y-4 flex flex-col sm:flex-row justify-between">
+                      <div className="flex items-center justify-between text-sm text-gray-600 pt-4 border-t">
+                        <div className="flex justify-between w-full items-center gap-4">
+                          <div className="flex items-center gap-1">
+                            <FaClock className="text-[#7a56d6] w-4 h-4" />
+                            <span>{course.duration}</span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <FaCode className="text-[#7a56d6] w-4 h-4" />
+                            <span>{course.projects}</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="">
+                        <Link
+                           to={`/courses/${course.slug}`}
+                          className="inline-flex items-center bg-brand text-white px-4 py-2.5 sm:py-1.5 rounded-full font-medium w-full sm:w-auto justify-center font-outfit border border-brand hover:bg-white hover:text-brand"
+                        >
+                          Enroll Now
+                          <FaArrowRight className="ml-1 w-4 h-4" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
           ))}
         </div>
       </div>

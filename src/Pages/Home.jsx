@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
@@ -63,7 +64,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // components
-import PrimaryBtn from "../components/PrimaryBtn";
+import PrimaryBtn from "../Components/PrimaryBtn";
 import SecondaryBtn from "../components/SecondaryBtn";
 
 export default function HomePage() {
@@ -134,7 +135,7 @@ export default function HomePage() {
   }, [showPopup, countdown]);
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center bg-white text-black">
+    <div className="min-h-screen w-full flex flex-col items-center bg-white text-black ">
       {/* Hero Section */}
       <Hero />
 
@@ -208,7 +209,7 @@ const Hero = () => {
           {/* Left Side - Content */}
           <div className="space-y-8 relative z-10 flex flex-col items-center md:items-start justify-center text-center md:text-left">
             {/* Main Heading */}
-            <div className="mb-8 md:mb-12">
+            <div className="mb-8 -mt-20 sm:mt- md:mb-12">
               <h1 className="text-5xl sm:text-5xl md:text-6xl font-bold font-outfit mb-4 max-w-2xl leading-[1.2] lg:leading-[1.2]">
                 <span className="text-[#7a56d6]">Transform</span> Your Future
                 with <span className="text-[#7a56d6]">Tech Skills</span>
@@ -224,9 +225,9 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 child:w-full sm:child:w-fit w-full sm:w-fit">
               <Link
                 to="/courses"
-                className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-brand rounded-full hover:bg-brand/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
-              >
-                <GraduationCap className="w-5 h-5 mr-2" />
+                className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-brand rounded-full hover:bg-brand/90 transition-colors duration-300 shadow-lg hover:shadow-xl "
+              > <GraduationCap className="w-5 sm:w-40 md:w-5 h-5 mr-2" />
+               
                 Start Learning
               </Link>
               <Link
@@ -253,6 +254,7 @@ const Hero = () => {
                 <span>Career Guidance</span>
               </div>
             </div>
+            
           </div>
 
           {/* Right Side - Visual */}
@@ -386,7 +388,7 @@ const CourseShowcase = () => {
   };
 
   return (
-    <section className="w-full py-10 sm:py-20 bg-gradient-to-t from-gray-100 via-gray-200 to-white overflow-hidden relative">
+    <section className="w-full py-10 sm:py-20 bg-gradient-to-t from-gray-100 via-gray-200 to-white overflow-hidden relative ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 xl:px-0 rounded-xl">
         <div className="text-center mb-8 sm:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold font-outfit text-gray-900 mb-4">

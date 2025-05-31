@@ -1,4 +1,4 @@
-// src/context/DarkModeContext.js
+import React from "react";
 import { createContext, useContext, useEffect, useState } from "react";
 
 const DarkModeContext = createContext();

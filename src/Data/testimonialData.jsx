@@ -1,4 +1,4 @@
-// testimonials.jsx
+import React from "react";
 import { FaHtml5, FaCss3Alt,  FaJs, FaReact,  FaNodeJs,  FaGithub,  FaCode,  FaRocket,  FaUsers, FaBrain, FaVideo, FaShieldAlt,} from "react-icons/fa";
 import { SiMongodb, SiExpress, SiTailwindcss } from "react-icons/si";
 
